@@ -1,0 +1,163 @@
+\begin{thebibliography}{10}
+\providecommand{\bibauthor}[1]{#1}
+\providecommand{\bibeditor}[1]{#1}
+\providecommand{\bibtranslator}[1]{#1}
+\providecommand{\bibtitle}[1]{#1}
+\providecommand{\bibbooktitle}[1]{#1}
+\providecommand{\bibjournal}[1]{#1}
+\providecommand{\bibmark}[1]{#1}
+\providecommand{\bibcountry}[1]{#1}
+\providecommand{\bibpatentid}[1]{#1}
+\providecommand{\bibedition}[1]{#1}
+\providecommand{\biborganization}[1]{#1}
+\providecommand{\bibaddress}[1]{#1}
+\providecommand{\bibpublisher}[1]{#1}
+\providecommand{\bibinstitution}[1]{#1}
+\providecommand{\bibschool}[1]{#1}
+\providecommand{\bibvolume}[1]{#1}
+\providecommand{\bibnumber}[1]{#1}
+\providecommand{\bibversion}[1]{#1}
+\providecommand{\bibpages}[1]{#1}
+\providecommand{\bibmodifydate}[1]{#1}
+\providecommand{\bibcitedate}[1]{#1}
+\providecommand{\bibyear}[1]{#1}
+\providecommand{\bibdate}[1]{#1}
+\providecommand{\biburl}[1]{\newline\url{#1}}
+
+\bibitem{haixiang2017learning}
+\bibauthor{HAIXIANG G\@, YIJING L\@, SHANG J, et~al}\@. \bibtitle{Learning from
+  class-imbalanced data: Review of methods and applications}\bibmark{[J]}\@.
+  \bibjournal{Expert Systems with Applications}\@, \bibyear{2017}\@,
+  \bibvolume{73}\thinspace{}\textnormal{:
+  }\bibpages{220\thinspace{}\textnormal{--}\thinspace{}239}\@.
+
+\bibitem{wang2012multiclass}
+\bibauthor{WANG S\@, YAO X}\@. \bibtitle{Multiclass Imbalance Problems:
+  Analysis and Potential Solutions}\bibmark{[J]}\@. \bibjournal{IEEE
+  Transactions on Systems Man \& Cybernetics Part B}\@, \bibyear{2012}\@,
+  \bibvolume{42}\bibnumber{(4)}\thinspace{}\textnormal{:
+  }\bibpages{1119\thinspace{}\textnormal{--}\thinspace{}1130}\@.
+
+\bibitem{he2008learning}
+\bibauthor{HE H\@, GARCIA E~A}\@. \bibtitle{Learning from imbalanced
+  data}\bibmark{[J]}\@. \bibjournal{IEEE Transactions on Knowledge \& Data
+  Engineering}\@, \bibyear{2008}\bibnumber{(9)}\thinspace{}\textnormal{:
+  }\bibpages{1263\thinspace{}\textnormal{--}\thinspace{}1284}\@.
+
+\bibitem{van2009knowledge}
+\bibauthor{VAN~HULSE J\@, KHOSHGOFTAAR T}\@. \bibtitle{Knowledge discovery from
+  imbalanced and noisy data}\bibmark{[J]}\@. \bibjournal{Data \& Knowledge
+  Engineering}\@, \bibyear{2009}\@,
+  \bibvolume{68}\bibnumber{(12)}\thinspace{}\textnormal{:
+  }\bibpages{1513\thinspace{}\textnormal{--}\thinspace{}1542}\@.
+
+\bibitem{garcia2012effectiveness}
+\bibauthor{GARC{\'I}A V\@, S{\'A}NCHEZ J~S\@, MOLLINEDA R~A}\@. \bibtitle{On
+  the effectiveness of preprocessing methods when dealing with different levels
+  of class imbalance}\bibmark{[J]}\@. \bibjournal{Knowledge-Based Systems}\@,
+  \bibyear{2012}\@, \bibvolume{25}\bibnumber{(1)}\thinspace{}\textnormal{:
+  }\bibpages{13\thinspace{}\textnormal{--}\thinspace{}21}\@.
+
+\bibitem{spelmen2018review}
+\bibauthor{SPELMEN V~S\@, PORKODI R}\@. \bibtitle{A Review on Handling
+  Imbalanced Data}\bibmark{[C]} //\thinspace{}\bibbooktitle{2018 International
+  Conference on Current Trends towards Converging Technologies (ICCTCT)}\@.
+  \bibyear{2018}\thinspace{}\textnormal{:
+  }\bibpages{1\thinspace{}\textnormal{--}\thinspace{}11}\@.
+
+\bibitem{ling1998data}
+\bibauthor{LING C~X\@, LI C}\@. \bibtitle{Data mining for direct marketing:
+  Problems and solutions.}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Kdd\thinspace{}\textnormal{: }Vol~98}\@.
+  \bibyear{1998}\thinspace{}\textnormal{:
+  }\bibpages{73\thinspace{}\textnormal{--}\thinspace{}79}\@.
+
+\bibitem{chawla2002smote}
+\bibauthor{CHAWLA N~V\@, BOWYER K~W\@, HALL L~O, et~al}\@. \bibtitle{SMOTE:
+  synthetic minority over-sampling technique}\bibmark{[J]}\@.
+  \bibjournal{Journal of artificial intelligence research}\@, \bibyear{2002}\@,
+  \bibvolume{16}\thinspace{}\textnormal{:
+  }\bibpages{321\thinspace{}\textnormal{--}\thinspace{}357}\@.
+
+\bibitem{han2005borderline}
+\bibauthor{HAN H\@, WANG W-Y\@, MAO B-H}\@. \bibtitle{Borderline-SMOTE: a new
+  over-sampling method in imbalanced data sets learning}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{International conference on intelligent
+  computing}\@. \bibyear{2005}\thinspace{}\textnormal{:
+  }\bibpages{878\thinspace{}\textnormal{--}\thinspace{}887}\@.
+
+\bibitem{saez2015smote}
+\bibauthor{S{\'A}EZ J~A\@, LUENGO J\@, STEFANOWSKI J, et~al}\@.
+  \bibtitle{SMOTE--IPF: Addressing the noisy and borderline examples problem in
+  imbalanced classification by a re-sampling method with
+  filtering}\bibmark{[J]}\@. \bibjournal{Information Sciences}\@,
+  \bibyear{2015}\@, \bibvolume{291}\thinspace{}\textnormal{:
+  }\bibpages{184\thinspace{}\textnormal{--}\thinspace{}203}\@.
+
+\bibitem{hu2009msmote}
+\bibauthor{HU S\@, LIANG Y\@, MA L, et~al}\@. \bibtitle{MSMOTE: Improving
+  classification performance when training data is imbalanced}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{2009 second international workshop on computer
+  science and engineering\thinspace{}\textnormal{: }Vol~2}\@.
+  \bibyear{2009}\thinspace{}\textnormal{:
+  }\bibpages{13\thinspace{}\textnormal{--}\thinspace{}17}\@.
+
+\bibitem{ali2019imbalance}
+\bibauthor{ALI H\@, SALLEH M~N~M\@, SAEDUDIN R, et~al}\@. \bibtitle{Imbalance
+  class problems in data mining: a review}\bibmark{[J]}\@.
+  \bibjournal{Indonesian Journal of Electrical Engineering and Computer
+  Science}\@, \bibyear{2019}\@,
+  \bibvolume{14}\bibnumber{(3)}\thinspace{}\textnormal{:
+  }\bibpages{1560\thinspace{}\textnormal{--}\thinspace{}1571}\@.
+
+\bibitem{wilson1972asymptotic}
+\bibauthor{WILSON D~L}\@. \bibtitle{Asymptotic properties of nearest neighbor
+  rules using edited data}\bibmark{[J]}\@. \bibjournal{IEEE Transactions on
+  Systems, Man, and Cybernetics}\@,
+  \bibyear{1972}\bibnumber{(3)}\thinspace{}\textnormal{:
+  }\bibpages{408\thinspace{}\textnormal{--}\thinspace{}421}\@.
+
+\bibitem{kubat1997addressing}
+\bibauthor{KUBAT M\@, MATWIN S\@, OTHERS}\@. \bibtitle{Addressing the curse of
+  imbalanced training sets: one-sided selection}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Icml\thinspace{}\textnormal{: }Vol~97}\@.
+  \bibyear{1997}\thinspace{}\textnormal{:
+  }\bibpages{179\thinspace{}\textnormal{--}\thinspace{}186}\@.
+
+\bibitem{ha2016new}
+\bibauthor{HA J\@, LEE J-S}\@. \bibtitle{A new under-sampling method using
+  genetic algorithm for imbalanced data classification}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Proceedings of the 10th International Conference
+  on Ubiquitous Information Management and Communication}\@.
+  \bibyear{2016}\thinspace{}\textnormal{: }\bibpages{95}\@.
+
+\bibitem{shimizu2018balanced}
+\bibauthor{SHIMIZU R\@, ASAKO K\@, OJIMA H, et~al}\@. \bibtitle{Balanced
+  Mini-Batch Training for Imbalanced Image Data Classification with Neural
+  Network}\bibmark{[C]} //\thinspace{}\bibbooktitle{2018 First International
+  Conference on Artificial Intelligence for Industries (AI4I)}\@.
+  \bibyear{2018}\thinspace{}\textnormal{:
+  }\bibpages{27\thinspace{}\textnormal{--}\thinspace{}30}\@.
+
+\bibitem{cenggoro2018deep}
+\bibauthor{CENGGORO T~W\@, OTHERS}\@. \bibtitle{Deep Learning for Imbalance
+  Data Classification using Class Expert Generative Adversarial
+  Network}\bibmark{[J]}\@. \bibjournal{Procedia Computer Science}\@,
+  \bibyear{2018}\@, \bibvolume{135}\thinspace{}\textnormal{:
+  }\bibpages{60\thinspace{}\textnormal{--}\thinspace{}67}\@.
+
+\bibitem{zhou2018gan}
+\bibauthor{ZHOU T\@, LIU W\@, ZHOU C, et~al}\@. \bibtitle{GAN-based
+  semi-supervised for imbalanced data classification}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{2018 4th International Conference on Information
+  Management (ICIM)}\@. \bibyear{2018}\thinspace{}\textnormal{:
+  }\bibpages{17\thinspace{}\textnormal{--}\thinspace{}21}\@.
+
+\bibitem{Chen2018CGAN}
+\bibauthor{陈文兵\@, 管正雄\@, 陈允杰}\@.
+  \bibtitle{基于条件生成式对抗网络的数据增强方法}\bibmark{[J]}\@.
+  \bibjournal{计算机应用}\@, \bibyear{2018}\@,
+  \bibvolume{38}\bibnumber{(11)}\thinspace{}\textnormal{:
+  }\bibpages{3305\thinspace{}\textnormal{--}\thinspace{}3311}\@.
+
+\end{thebibliography}

@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.14pt}
+\beamer@sectionintoc {1}{课题来源及研究的目的和意义}{3}{0}{1}
+\beamer@sectionintoc {2}{国内外研究现状}{16}{0}{2}
+\beamer@sectionintoc {3}{主要研究内容及创新点}{27}{0}{3}
+\beamer@sectionintoc {4}{研究方案及进度安排}{48}{0}{4}
+\beamer@sectionintoc {5}{研究过程中可能遇到的困难以及解决措施}{51}{0}{5}
