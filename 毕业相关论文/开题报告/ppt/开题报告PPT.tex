@@ -226,6 +226,14 @@
     将多数样本划分为K个子集后，各个子集与上采样后的少数类样本构成一个相对平衡的数据集，但是我们无法知道当平衡比例达到多少时就可以有效的训练分类器。针对这一问题，决定研究数据集在不同平衡比例下分类器性能的变化，找到一个合适的平衡比例。
 \end{frame}
 
+\begin{frame}{主要研究内容6}\pause
+    \begin{figure}[t]
+        \includegraphics[scale=0.25]{smote.png}
+        \caption{smote采样示意}
+    \end{figure}
+    将smote在数据空间采样的方式，能否转换到隐空间？（通过GAN和VAE的思想）
+\end{frame}
+
 \begin{frame}{创新点}\pause
     \begin{itemize}
         \item 基于生成对抗网络或者变分自编码器对两类不平衡大数据进行数据生成
