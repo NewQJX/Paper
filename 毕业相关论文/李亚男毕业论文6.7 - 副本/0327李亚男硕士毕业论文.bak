@@ -1,0 +1,2034 @@
+\documentclass[12pt,a4paper,twoside]{wthesis}
+\usepackage{}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{caption2}
+\usepackage{amscd}
+\pagestyle{plain}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{rotating}
+\usepackage{graphicx}
+\input myhead.sty
+
+
+\baselineskip=12pt  \parindent=22pt \oddsidemargin=1.055 truecm
+\textwidth=15truecm \evensidemargin=0.5 truecm
+\textheight=23truecm  
+\setlength{\parindent}{2em}
+\topmargin=0.25cm 
+\headsep=10truemm 
+\headheight=5truemm
+\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\captionlabeldelim}{~}
+\renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\thefigure}{\arabic{figure}} 
+\renewcommand{\theequation}{\arabic{equation}}
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoer}{\fontsize{120bp}{21bp}\selectfont}
+
+\songti\zihao{-4}\normalsize \baselineskip=20pt
+\parskip=0pt
+\renewcommand{\baselinestretch}{1.18}
+\renewcommand{\arraystretch}{0.8}
+\renewcommand{\baselinestretch}{1.5}
+\thispagestyle{empty}
+\newcounter{mychapter}
+\title{}
+\author{}
+\date{}
+
+\def\ZHANGZI{\heiti\zihao{3}\bf\Large }
+\def\JIEZI{\heiti\zihao{4}\bf\large }
+\def\XIAOJIEZI{\heiti\zihao{-4}\bf} %\normalsize 
+\def\XIAOXIAOJIEZI{\heiti\zihao{-4}\bf}%\normalsize
+\def\ZHENGWENZI{\songti\zihao{-4}}%\normalsize
+\def\BIAOTUZI{\songti\zihao{5}}%\small
+\def\WENXIANMEIZI{\songti\zihao{5} }%\small
+
+\def\WS{{\rm WS}}
+\def\x{{\mbox{\boldmath $x$}}}
+\def\y{{\mbox{\boldmath $y$}}}
+\def\z{{\mbox{\boldmath $z$}}}
+\def\boldxi{{\mbox{\boldmath $\xi$}}}
+\def\E{{\rm E}}
+\def\R{{\rm R}}
+\def\V{{\rm V}}
+\def\Pr{{\rm Pr}}
+\def \Pos{{\rm Pos}}
+\def \Nec{{\rm Nec}}
+\def \Cr{{\rm Cr}}
+\def \CV{{\rm CV}}
+%\def \Ch{{\rm Ch}}
+%\def \opt{{\rm opt}}
+\def \lxi{{\mbox{\footnotesize $\xi$}}}
+\def \lhxi{{\mbox{\boldmath {\footnotesize $\hxi$}}}}
+\def \hxi{{\mbox{\boldmath $\xi$}}}
+\def \x{{\mbox{\boldmath $x$}}}
+\def \Fit{{\mbox{\boldmath $Fit$}}}
+\def \a{{\mbox{\boldmath $a$}}}
+\def \hzeta{{\mbox{\boldmath $\zeta$}}}
+\def \bxi{{\mbox{\boldmath {\footnotesize $\xi$}}}}
+\def \heta{{\mbox{\boldmath $\eta$}}}
+\def \htau{{\mbox{\boldmath $\tau$}}}
+\def \homega{{\mbox{\boldmath $\omega$}}}
+\def \fa{{\mbox{\boldmath $\tilde a$}}}
+\def \dr{{\rm dr}}
+\def \ln{{\rm ln}}
+\def \PPos{{\rm \tilde{P}os}}
+\def \CCr{{\rm \tilde{C}r}}
+\def \mmu{{\mbox{$\tilde{\mu}$}}}
+\def \xxi{\tilde{\xi}}
+\def \eeta{\tilde{\eta}}
+\def \zzeta{\tilde{\zeta}}
+\def \EE{{\rm \tilde{E}}}
+\def \st{{\rm ~such~that~}}
+\def\intd{{\rm d}}
+\def\1){{\rm 1)}}
+\def\2){{\rm 2)}}
+\def\3){{\rm 3)}}
+\def\1{{\rm 1}}
+\def\2{{\rm 2}}
+\def\3{{\rm 3}}
+\def\P{{\rm \mathcal{P}}}
+\def\ye{{\rm P}}
+\def\(14){{\rm (14)}}
+\def\VSPACEA{\vspace{30pt}}
+\def\VSPACEB{\vspace{18pt}}
+\def\VSPACEC{\vspace{12pt}}
+
+\begin{document}
+\allowdisplaybreaks
+\newtheorem{theorem}{\heiti \hspace{1.5em}定理}[mychapter]
+\newtheorem{definition}{\heiti \hspace{1.5em}定义}[mychapter]
+\newtheorem{lemma}{\heiti \hspace{1.5em}引理}[mychapter]
+\newtheorem{proposition}{\heiti \hspace{1.5em}命题}[mychapter]
+\newtheorem{rem}{\heiti \hspace{1.5em} 注}[mychapter]
+\newtheorem{example}{\heiti \hspace{1.5em}例}[mychapter]
+\newtheorem{corollary}{\heiti \hspace{1.5em}推论}[mychapter]
+\newtheorem{algorithm}{\heiti 算法}[mychapter]
+\newcommand{\pf}[1]{{\heiti \hspace{1.5em}证明 } }
+\def\pf{{\heiti \hspace{2em}证明\ }}
+\def\pfd{\hfill □}
+
+
+
+\newcommand{\dps}{\displaystyle}
+
+\newcommand{\kp}{\kappa}
+\newcommand{\Gm}{\Gamma}
+\newcommand{\Og}{\Omega}
+\newcommand{\nb}{\nabla}
+\newcommand{\bt}{\beta}
+\newcommand{\f}[2]{\frac{#1}{#2}}
+\newcommand{\pp}[2]{\f{\partial #1}{\partial #2}}
+\newcommand{\tht}{\theta}
+\newcommand{\thtp}{{\theta}^{\prime}}
+\newcommand{\supp}[1]{{\rm supp}(#1)}
+\newcommand{\bb}[1]{\left(#1\right)}
+\newcommand{\n}[1]{\vert#1\vert}
+\newcommand{\nn}[1]{\Vert#1\Vert}
+\newcommand{\pn}[3]{\frac{\partial^{#1}#2}{\partial{#3}^{#1}}}
+\newcommand{\s}[2]{\sum_{#1}^{#2}}
+\newcommand{\ipi}{\int_{0}^{2\pi}}
+
+\newcommand{\ab}{\left(a_n\cos n\theta+b_n\sin n\theta\right)}
+\newcommand{\cd}{\left(c_n\cos n\theta+d_n\sin n\theta\right)}
+\newcommand{\ef}{\left(e_n\cos n\theta+f_n\sin n\theta\right)}
+
+\renewcommand{\thesection}{\arabic{mychapter}.\arabic{section}}
+
+
+
+\makeatletter
+\def\@cite#1#2{\textsuperscript{[{#1\if@tempswa , #2\fi}]}}
+\makeatother
+
+
+\vspace{1truecm}
+
+%-------------------------------------------中文封皮---------------------------------------------------
+\newpage
+\begin{titlepage}
+\thispagestyle{empty}
+
+%\begin{center}
+%\begin{figure}\vskip -3em\hspace{-4pt}\includegraphics[width=1in,height=1.27in]{dd2.eps}
+%\end{figure}
+%\end{center}
+
+\vskip -3.3em 
+\noindent{\zihao{-4}\songti 密\hspace{2.3mm}级:\hspace{102mm}学校代码:10075\\
+\noindent\zihao{-4} 分类号:\hspace{103.5mm}学 \hspace{6.27mm}号:20121005\\}
+\vskip 1.8truecm
+
+
+\begin{center}
+{\zihao{2}\songti 理\ 学\ 硕\ 士\ 学\ 位\ 论\ 文 \\ }
+\vspace*{1.6truecm} {\biaosong\zihao{1}\bf{全球生产计划模糊优化方法的研究}}
+\end{center}
+\vspace*{7truecm} \indent\hspace*{50truemm}
+\begin{minipage}{36truemm}
+\zihao{4}\heiti
+学\hfill 位\hfill 申\hfill 请\hfill 人: \\
+指\hfill 导\hfill 教\hfill 师 : \\
+学\hfill 位\hfill 类\hfill 别 : \\
+学\hfill 科\hfill 专\hfill 业 : \\
+授\hfill 予\hfill 单\hfill 位 : \\
+答\hfill 辩\hfill 日\hfill 期 : \\
+\end{minipage}
+\hspace*{-14pt}
+\begin{minipage}{40truemm}
+%\zihao{4}\heiti
+%~\\[5mm]
+%孙~洁\\
+%~\\
+%刘~彦~奎~~教~授\\
+%理~学~硕~士\\
+%数~学\\
+%河~北~大~学\\
+%二\hspace{-1.5mm}{\zihao{3}\bf○\hspace{-3mm}}一\hspace{-1.5mm}{\zihao{3}五\hspace{-1.5mm}{\zihao{3}}}~年~六~月\\
+%\end{minipage}
+%\end{titlepage}
+\zihao{4}\heiti
+孙~洁\\
+刘~彦~奎~~教~授\\
+理~学~硕~士\\
+数~学\\
+河~北~大~学\\
+二\hspace{-1.5mm}{\zihao{3}\bf○\hspace{-3mm}}一\hspace{-1.5mm}{\zihao{3}五\hspace{-1.5mm}{\zihao{3}}}~年~六~月\\
+\end{minipage}
+\end{titlepage}
+
+%---------------------------------------------------------------------------------------------------英文封皮
+
+\newpage
+\begin{titlepage}
+\thispagestyle{empty}%%%%%%%%%%%%%%%%%%
+\noindent{Classified\ Index:\hspace{87mm}CODE:\ 10075}\\
+\noindent{U.D.C :\hspace{103mm} NO\hspace{4mm}:20121005 }\\
+\vspace*{1.2truecm}
+\begin{center}
+{\Large\rm A Dissertation for the Degree of M. Science \\}
+ \vspace*{1.3truecm} {\Huge\bf  Study on Fuzzy Optimization Method for    Global  Production Planning Problems \\}
+\end{center}
+\vspace*{5.6truecm} 
+
+\begin{center}
+\begin{minipage}{15.6truecm}
+\large
+$\begin{array}{rl}
+\rm \bf Candidate:&\rm Sun\ Jie\vspace{2mm}\\
+\rm \bf Supervisor:&\rm  Prof.\ Liu\ Yankui\vspace{2mm}\\
+\rm\bf  Academic\ Degree\ Applied\ for:&\rm Master\ of\ Science\vspace{2mm}\\
+\rm \bf Speciality:&\rm Mathmatics\vspace{2mm}\\
+\rm \bf University:&\rm Hebei\ University\vspace{2mm}\\
+\rm \bf Date\ of\ Oral\ Examination:&\rm  June ,\  2015\vspace{2mm}\\
+\end{array}$
+\end{minipage}
+\end{center}
+\end{titlepage}
+
+%---------------------------------摘要--------摘要----摘要------------------------------------------------------------
+\newpage
+\pagenumbering{Roman} \makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\footnotesize Abstract}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\footnotesize\zihao{5}摘\hspace{1.5mm}要}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{
+\centerline{\footnotesize\songti\zihao{-5}\thepage}}
+\def\@oddfoot{\centerline{\footnotesize\songti\zihao{-5}\thepage}} 
+
+%\makeatother \hspace{1mm}
+\hspace*{0.5cm}
+\begin{center}
+{\heiti \zihao{3}  摘~~~~~要}
+\end{center}
+\vspace{1mm}
+\setlength{\baselineskip}{21pt}
+
+\songti\zihao{-4}\par
+生产计划问题研究在生产过程中决策者如何制定合适的生产方案，使
+企业获得最大利润，它对企业的长期运营有着重要的指导意义。
+在实际的生产计划问题中，需求、运费、汇率等通常带有不确定性，
+本文采用处理模糊性的理论工具研究模糊环境下的生产计划问题。
+
+本文首先建立了一个固定可能性分布下的两阶段生产计划模型，
+以最大化生产收益为目标。当汇率为模糊变量时，本文提出了新的两阶段模糊优化方法采
+用可信性分布产生一个测度来定义模糊变量函数的L-S积分。然后分析模型特征采用区域分解方法讨论了模型解的性质并设计求解方法。
+考虑到在有些决策问题中的模糊参数是无法确定精确的可能性分布的，本文进一步讨论了可变
+可能性分布下的两阶段
+生产计划模型，通过风险值简约方法对2-型模糊变量进行简约，
+得到模糊变量的参数可能性分布，分析了参数变化对模型计算结果的影响。最后通过数值实验
+与固定可能性分布下的计算结果进行了比较，说明了参数对求解结果的影响。
+
+本文的主要工作可以概括为以下四个方面：
+(1)建立了固定可能性分布和可变可能性分布下的两阶段模糊生产计划模型；
+(2)讨论了一般连续分布下的模型的基本性质，给出理论结果；
+(3)设计了当汇率为模糊变量情况下求解模型的区域分解方法；
+(4)给出了求解模型的算法步骤，在两种情况下设计数值实验并根据计算结果进行比较，说明了参数对求解结果的影响，表明参数优化方法的优越性。
+ 
+\def\KEYWORDSSKIP{\vspace{5pt}}
+
+\vspace{15pt}
+\noindent {\heiti\zihao{-4} 关键词}{\songti\zihao{-4}\hspace{3mm}
+生产计划~~模糊规划~~L-S积分~~2-型模糊变量~~参数规划}
+\newpage
+\pagenumbering{Roman} \setcounter{page}{2}\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\footnotesize Abstract}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\footnotesize Abstract}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\makeatother \hspace{12mm}\\
+\centerline{\Large\bf Abstract} \vskip 6mm \songti\zihao{-4}
+%\vskip 0.5mm\centerline{\Large\bf Abstract}\vskip 0.5cm
+\label{pg:ii}
+\par
+
+
+
+Production planning problems study how to make appropriate production plans to get the maximum profit in the production process, 
+and this is of great strategic significance for the  long-term operation of enterprises. 
+In the actual production process, demand, freight and exchange rate are usually uncertain, 
+so this paper employ fuzzy theory to deal with the uncertainties in production planning problems.
+
+This thesis first establishes a fuzzy two-stage model with fixed possibility distributions, 
+the goal of which is to maximize the profit. When the exchange rates are fuzzy variables, 
+we propose a new  two-stage fuzzy optimization method, and generate a measure by credibility distribution, 
+which can define the L-S integral of the function of fuzzy variables. We analyze the characteristics of the model, 
+discuss the properties of model solutions, and finally solve the model by using domain decomposition method. 
+Considering the exact possibility distributions of the fuzzy variables in some decision-making problems are unable to determine, 
+we further discuss a two-stage production planning model with variable possibility distributions. 
+Using the value at risk reduction method of type-2 fuzzy theory, we obtain the parameters possibility distributions of fuzzy variables, 
+and analyze the influence of parameter variation on the solution results. In the end, 
+we provide some numerical experiments, and verify the influence of parameters on the solution results 
+by comparing the results with the case of fixed possibility distributions.
+
+The major results of this thesis contain the following four aspects:
+(i) Two classes of two-stage fuzzy production planning models with 
+fixed possibility distributions and variable possibility distributions are proposed;
+(ii) We discuss the basic properties of the models with general continuous possibility distributions, 
+and derive some theoretical results;
+(iii) When the exchange rates are fuzzy variables, we propose a domain decomposition method to solve the models;
+(iv) We design the algorithms to solve the models, and provide numerical experiments 
+under two cases to verify the influence of parameters on the solution results and demonstrate the superiority of parameter optimization method.
+
+ 
+\medskip
+
+\smallskip
+
+\KEYWORDSSKIP \noindent
+\parbox[b]{2.5cm} {\bf {\heiti Keywords}}
+\parbox[t]{11.5cm}{\baselineskip=20pt
+Production planning~~Fuzzy programming~~L-S integeral~~Domain decomposition~~Type 2 fuzzy variable~~Value at risk reduction~~Parametric programming}
+
+
+
+%---------------------------------目录--------目录----目录------------------------------------------------------------
+
+\newpage
+\pagenumbering{Roman} \setcounter{page}{4}\makeatletter
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\songti\footnotesize\zihao{5}Contents}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\footnotesize \songti\zihao{5}目\hspace{1.5mm}录}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{\centerline{\footnotesize\songti\zihao{-5}\thepage} }
+\def\@oddfoot{\centerline{\footnotesize\songti\zihao{-5}\thepage} }
+\makeatother
+\def\@evenfoot{
+\centerline{\footnotesize \songti\zihao{-5}\thepage} }
+\def\@oddfoot{
+\centerline{\footnotesize \songti\zihao{-5}\thepage} } \makeatother \hspace{2mm}
+\begin{center}
+{\heiti \zihao{3}\bf  目~~~~录}
+\end{center}
+\vspace{1mm}
+{\zihao{-4}\songti \heiti 第~1 章\hspace{0.15cm} 绪\hspace{3mm}论}\dotfill {\ \pageref{pg:1}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 1.1}\quad 问题的提出及研究现状}\dotfill {\ \pageref{pg:1.1}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 1.2}\quad 本文的结构安排}\dotfill {\ \pageref{pg:1.2}}\\ 
+{\zihao{-4}\songti \heiti 第~2 章\hspace{0.15cm} 预备知识}\dotfill {\ \pageref{pg:2}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 2.1}\quad 基本概念}\dotfill {\ \pageref{pg:2.1}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 2.2}\quad L-S积分}\dotfill {\ \pageref{pg:2.2}} \\
+{\zihao{-4} \songti\heiti 第~3 章\hspace{0.15cm}固定可能性分布下的两阶段生产计划模型}\dotfill {\ \pageref{pg:3}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 3.1}\quad 模型的建立}\dotfill {\ \pageref{pg:3.1}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 3.2}\quad 模型的分析}\dotfill {\ \pageref{pg:3.2}}
+
+{\zihao{-4}{\heiti 3.2.1}\quad 模型的理论结果}\dotfill {\ \pageref{pg:3.2.1}}
+
+{\zihao{-4}{\heiti 3.2.2}\quad 补偿的价值}\dotfill {\ \pageref{pg:3.2.2}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 3.3}\quad 模型的求解方法}\dotfill {\ \pageref{pg:3.3}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 3.4}\quad 数值实验和结果分析}\dotfill {\ \pageref{pg:3.4}}\\
+{\zihao{-4} \songti\heiti 第~4 章\hspace{0.15cm}可变可能性分布下的两阶段生产计划模型}\dotfill {\ \pageref{pg:4}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 4.1}\quad 模型的分析}\dotfill {\ \pageref{pg:4.1}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 4.2}\quad 模型的理论结果}\dotfill {\ \pageref{pg:4.2}}
+
+
+{\hspace{-4mm}\zihao{-4}{\heiti 4.3}\quad 数值实验和结果分析}\dotfill {\ \pageref{pg:4.3}}\\
+{\zihao{-4}  \heiti 第~5 章\hspace{0.15cm}结论与展望}\dotfill {\ \pageref{pg:5}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 5.1}\quad 论文的主要工作及创新点}\dotfill {\ \pageref{pg:5.1}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 5.2}\quad  对今后工作的展望}\dotfill {\ \pageref{pg:5.2}}\\
+{\zihao{-4}  \heiti 参考文献}\dotfill {\ \pageref{pg:ref}}\\
+{\zihao{-4}  \heiti 致\hspace{3mm}谢}\dotfill {\ \pageref{pg:thanks}}\\
+{\zihao{-4}  \heiti 攻读学位期间取得的科研成果}\dotfill {\ \pageref{pg:papers}}\\
+%{\zihao{-4}  \heiti 作者简介}\dotfill {\ \pageref{pg:me}}\\
+
+%---------------------------------目录--------目录----目录------------------------------------------------------------
+
+%----------------------------- 第一章-----第一章------第一章----------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\footnotesize \zihao{5}\songti 河北大学理学硕士学位论文}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0) {\footnotesize \zihao{5}\songti 第1章\ 绪\hspace{1.5mm}论}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{
+\centerline{\footnotesize \songti\zihao{-5} \thepage}
+}
+\def\@oddfoot{
+\centerline{ \footnotesize \songti\zihao{-5} \thepage}
+}
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}
+\def\oddhead{{\protect\WENXIANMEIZI\hfill 第1章\quad 绪~~~~论\hfill}}
+\def\evenhead{{\protect\WENXIANMEIZI\hfill 第1章\quad  绪~~~~论\hfill}}
+\hspace*{0.5cm}
+\begin{center}
+{\Large\heiti\zihao{3}\bf 第~1章\hspace{0.1cm}绪~~~论}
+\end{center}\label{pg:1}
+\setcounter{mychapter}{1}
+\setcounter{equation}{0}
+\section{\JIEZI\zihao{4}\!\!\!问题的提出及研究现状}\label{pg:1.1}
+\hskip 
+\parindent
+生产计划问题是指决策者在生产过程中通过制定合适的生产
+方案，使得企业获得最大利润或者花费最小。而这个生产决策是大多数企业需要思考的问题，在整个企业生产计划问题中起到了战略决策作用。
+传统的生产计划是一个简单的材料生产加工的过程，但是随着经济的全球化，
+需求的多样化以及市场的竞争激烈化，这种简单的生产加工已经无法满足企业的利益需求，
+因此无论是从生产方式上还是生产环节上的创新都变的越来越受关注，因而出现了各种各样的生产计划如   聚合生产计划问题、原材料获取生产计划问题、汇编订货生产计划问题等。
+
+
+随着生产计划在工程技术、管理科学、社会经济等诸多领域实用性的逐渐加强，人们对它的研究变得更加深入。考虑传统的生产计划问题时，我们把问题所处的环境看做是确定的，无论是
+模型的参数、目标函数还是约束等都是固定的，但是在现实的生产过程中，我们通常会遇到生产因素的不确定性，指随机性和模糊性。这种不确定因素包括生产环节的原材料价格、原材料来源、劳动者的生产能力等的不确定性，还包括供应环节的产品价格、市场需求、跨国汇率等
+不确定性。因此在含有诸多不确定因素的生产环境下，决策者就需要
+考虑不断变化的因素，合理制定生产计划来获得满意的生产利润。
+随着概率论知识的不断发展，人们开始利用概率知识解决生产计划问题中遇到的随机性。
+Bitran\cite{Bitran1984}考虑了需求为随机变量情况下带有服务性水平的生产计划问题，找出模型的等价形式
+将随机问题转化为确定的生产计划问题。
+Rosenfield\cite{Rosenfield 1996}研究的是在汇率不确定下的生产能力计划问题。
+Flaherty\cite{Flaherty1996}讨论了汇率是随机变量情况下的生产计划问题，提出了用参数期望值代替参数的方法求解模型。
+Ding\cite{Ding2007}研究的是汇率不确定和需求风险的生产计划模型，引入了一个均值方差风险厌恶效用函数。
+Yidrm\cite{Yidrm2005}研究了带有随机产品来源的生产计划问题，提出了一种滚动周期的方法来制定生产计划和确定产品来源。
+Liu\cite{Liu2014}研究了随机环境下两类新的最优化问题。文献\cite{Jean-Pierre2012,Masoumeh2012}是随机环境下生产计划问题在实际生活中的应用。
+
+自1965年Zadeh\cite{Zadeh1965}提出模糊集的概念，模糊环境下的生产计划问题受到越来越多的学着重视，
+Zadeh \cite{Zadeh1978} 提出了可能性理论，使模糊理论变得更加完善。文献\cite{Nahmias1978,Dabois1988}对可能性理论进行了深入的研究。
+同时，基于模糊可能性理论的2-型模糊性公理化体系\cite{Liu2010}也在逐渐发展，模糊可能性测度、模糊可能性空间、2-型模糊变量、2-型可能性分布等的完善进一步丰富和发展了模糊集理论。
+Liu \cite{Liu2002} 定义了具有自对偶性质的可信性测度，自对偶性质在实际的建模过程中都有着很重要的作用。近几年可信性理论也得到了迅速的发展和广泛的研究\cite{Liu2004,Liu2006}。
+Bellman\cite{Bellman1970} 首先提出模糊环境下的数学规划问题。
+在诸多学者的努力下，模糊规划理论得到了
+迅速的发展，它在生产计划问题中的应用也变得越来越受学者关注，得到了许多有意义的模糊生产计划模型以及求解模型的方法。
+Sahinidis\cite{Sahinidis2004}利用容差法讨论了模糊批量生产计划问题。
+文献\cite{Wang2001,Sakawa2001}建立了模糊环境下的批量生产计划模型采用参数规划方法求解模型。
+Halim\cite{Halim2011} 研究的是一个单机制生产系统，建立了两个生产计划模型，用分等级的集成表示方法来求解问题。
+Sun\cite{Sun2010,Sun2011}用新的模糊规划-两阶段方法研究了物料采购计划问题设计了近似启发式算法来解决该规划问题。
+Partha\cite{Partha2013} 用模糊微分方程和经典黎曼积分制定了一个生产库存模型
+%文献\cite{Qin2011a,Qin2011b,Wu2012}分别用三种方法
+基于可信性理论，Yuan 和 Liu\cite{Yuan2006,Yuan2007}研究了两类模糊生产计划模型，讨论了模型的性质设计了混合智能算法来求解模型。
+Aneirson\cite{Aneirson 2014}研究了模糊目标规划模型下的生产计划问题。
+文献\cite{Yuan2009,Liu2013}都是用可信性规划研究模糊环境下的生产计划问题。
+文献\cite{Yang2012,Yang2013,Yohanes2014,Mahdi2014,Nagajyothi2014}研究了实际生活中，两阶段模糊最优化方法的应用。
+
+本文的目的是针对全球生产计划问题提出一类新的两阶段模糊优化方法。首先，在汇率为模糊变量的情况下建立了用可信性分布产生一个测度，来定义模糊变量函数的
+L-S积分，确定可能性分布的两阶段模型，通过模型性质的分析。提出对可行域进行分解的区域分解方法对模型分段进行求解。
+考虑到在有些优化问题中，模糊变量的可能性分布无法确定，论文进一步讨论了汇率为2型模糊变量下的优化问题，通过用风险值简约方法对2-型模糊变量
+进行简约，建立了可变可能性分布下的两阶段生产计划模型，并设计数值实验验证参数的影响性，说明了模型和求解方法的有效性。
+
+\setcounter{mychapter}{1} \setcounter{equation}{0}
+\section{\JIEZI \zihao{4}\!\!\!本文的结构安排\label{pg:1.2}}
+\hskip\parindent
+本文基于汇率不确定下的全球生产计划问题，首先建立了模糊变量固定可能性分布下的两阶段生产计划模型。用可信性分布生成L-S积分测度，给出了一个新的两阶段模糊优化方法，从理论上
+分析了模型的性质，给出模糊解的价值，为了求解两阶段模型，本文根据模型特点提出了求解此模型的区域分解方法，最后通过数值实验进一步说明了建模思想和求解方法的有效性。
+基于有些模糊变量无法确定其可能性分布，本文进一步考虑了2-型模糊变量可变可能性分布下的两阶段模型，给出了带有参数的模型等价形式，分析比较了两种情况下的实验结果，说明了参数影响的有效性。
+
+本文主要内容及结构安排大致如下：
+
+第二章首先介绍了一些模糊的基本概念，以及L-S积分的相关知识，为求解模型奠定理论基础。
+
+第三章首先根据所考虑问题的经济过程，以需求和产品分配能力的关系建立了约束条件，考虑模糊变量具有确定可能性分布时建立了生产利润最大化的两阶段生产计划模型，分析了模型的性质。由于
+第二阶段函数的特点，我们能够应用图解法找到第二阶段函数的最优解，进而把目标函数转化为了一个分段函数。我们又对可行域进行分解提出了区域分解方法，在分段区域上给出了模型的理论结果，然后
+总结出了求解模型的方法步骤，为了从理论上说明求解补偿问题的意义，我们分别给出了求解第一和第二阶段补偿的价值。最后本文用一个国内电子产品的生产计划问题的数值例子加以说明模型的实际意义和
+求解方法的可行性。
+
+第四章基于模糊变量可能性分布的复杂性，考虑了模糊变量可变可能性分布下的两阶段生产计划模型，其中汇率为2-型模糊变量，采用风险值简约方法，得到参数的可能性分布，同时分析了模型性质给出了理论结果。
+最后给出当模糊变量汇率为2-型模糊变量时，验证了参数分布下和确定可能性分布对生产决策的影响，说明了参数影响的有效性。
+
+在论文的结论部分，给出了本文工作的总结，介绍了本文的一些创新点同时也指出了本文可以进一步考虑的问题。
+
+%----------------------------- 第一章-----第一章------第一章----------------------------------------------------
+
+
+
+%----------------------------- 第二章-----第二章------第二章----------------------------------------------------
+\newpage
+\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\footnotesize \zihao{5}河北大学理学硕士学位论文}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0) {\footnotesize \zihao{5}第2章\ 预备知识}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{
+\centerline{\footnotesize\songti\zihao{-5} \thepage}
+}
+\def\@oddfoot{
+\centerline{\footnotesize\songti\zihao{-5} \thepage}
+}
+\setcounter{section}{0}
+%\makeatother 
+%\hspace{12mm}\\
+\def\oddhead{{\protect\WENXIANMEIZI\hfill
+    第2章\ \ 预备知识\hfill}}
+\def\evenhead{{\protect\WENXIANMEIZI\hfill
+    第2章\ \ 预备知识\hfill}}
+\hspace*{0.5cm}
+\begin{center}
+{\Large\heiti\zihao{3}\bf 第2章\ \ 预备知识}\label{pg:2}
+\end{center}
+\vskip 0.5cm
+\setcounter{mychapter}{2}
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
+本章首先介绍可信性测度的基本概念、基本性质和与这一测度有关的积分
+理论，为建立模型和求解模型提供理论基础。
+\section{\JIEZI\zihao{4}\!\!\!基本概念}\label{pg:2.1}
+
+\begin{definition}\hspace{-2mm}\textsuperscript{\em{\cite{Klir1999}}}\em
+设$\Gamma$是一个非空论域， $\mathcal {A}$ 是一个备域，$\Pos$是定义在备域$\mathcal {A}$上的一个集函数，我们称$\Pos$ 是一个可能性测度，如果其满足下面
+下面的条件\\
+$(1)$ $\Pos(\emptyset)$=0， $\Pos(\Gamma)$=1；\\
+$(2)$ $\{A_i| i\in I\}$ 是$\mathcal {A}$ 的任意子集，对任意的$A_i$ 都有
+$$
+\Pos\left(\bigcup\limits_{i\in I}A_i\right)=\sup\limits_{i\in
+I}\Pos(A_i)
+$$
+称三元组$(\Gamma, \mathcal{A}, \Pos)$为一个可能性空间。
+\end{definition}
+
+2002年，Liu和Liu又基于可能性测度给出了可信性测度的定义，它是一个自对偶非可加的模糊测度，定义如下：
+\begin{definition}\hspace{-2mm}\textsuperscript{\em{\cite{Liu2002}}}\em 
+设$(\Gamma,\mathcal{A},\Pos)$为一个可能性空间，若集函数$\Cr$为
+\begin{equation}
+\Cr(A)=\frac{1}{2}(1+\Pos(A)+\Pos(A^{c}))
+\end{equation}
+那么称$\Cr$是一个可信性测度，对于任意的$A \in \mathcal {A}$，称三元组$(\Gamma,\mathcal{A},\Cr)$为可信性空间\cite{Liu2006}。
+
+\end{definition}
+
+下面介绍$\Cr$的一些性质。\\
+\Cr(1) $\Cr(\emptyset)={0}$，且$\Cr(\Gamma)={1}$；\\
+\Cr(2) 单调性：如果$A$，$B \in\mathcal {A}$，且 $A\subset B$，则有$\Cr(A)\leq \Cr(B)$；\\
+\Cr(3) 次可加性：对任意$A$，$B \in\mathcal {A}$，有$\Cr(A\cup B)\leq \Cr(B)+\Cr(B)$；\\
+\Cr(4) 自对偶性：如果$A\in\mathcal {A}$， 有$\Cr(A)+\Cr(A^{c})=1$；\\
+\Cr(5) 有界性：对任意$A \in \mathcal {A}$，有$0\leq\Cr(A)\leq 1$。
+
+通过可信性空间，下面给出一个重要的概念-模糊变量。模糊变量最早是由Kaumannn学者提出，Zadeh也 对此概念也进行了研究。
+其定义如下：
+\begin{definition}\hspace{-2mm}\textsuperscript{\em{\cite{Wang1982}}}\em
+设$(\Gamma,\mathcal{A},\Cr)$是一个可信性空间，如果$\xi$是一个从$\Gamma$到实数空间的集函数，则称
+$\xi$是定义在可信性空间上的模糊变量。也可以表示为：$\{\gamma|\xi(\gamma)\leq t\}\in\mathcal {A}$，对任意的$t\in\Re$。
+\end{definition}
+
+下面给出模糊变量的可能性分布定义：
+\begin{definition}\hspace{-2mm}\textsuperscript{\em{\cite{Nahmias1978}}}\em
+对于任意的$t\in\Re$，如果有
+\begin{equation}
+\mu_{\xi}(t)=\Pos\{\gamma\in \Gamma|\xi(\gamma)= t \}
+\end{equation}
+称$\mu_{\xi}(t)$为模糊变量$\xi$的可能性分布。
+
+ \end{definition}
+ 
+ 当$\xi$是连续型模糊变量时，一些事件的可能性和可信性可以由下面的式子给出：
+ \begin{equation}
+\Pos\{\xi\geq a \}=\sup\limits_{u\geq a}\mu_\xi(u)
+\end{equation}
+ \begin{equation}
+\Cr\{\xi\geq a \}=\frac{1}{2}(1-\sup\limits_{u< a}\mu_\xi(u)+\sup\limits_{u\geq a}\mu_\xi(u))
+\end{equation}
+
+下面介绍2型模糊的基本知识。
+\begin{definition}\hspace{-2mm}\textsuperscript{\em{\cite{Liu2010}}}\em
+假设$(\Gamma,\mathcal{A}, \widetilde{P}os)$ 是一个模糊可能性空间。如果对于任意的$x\in\Re^m$，集合$\{\gamma\in\Gamma|\xi(\gamma)\leq x   \}$
+是$ \mathcal{A}$中的一个元素，即
+ \begin{equation}
+\{ \gamma\in\Gamma|\xi(\gamma)\leq x \}=\{ \gamma\in\Gamma|\xi_1(\gamma)\leq x_1,...,\xi_m(\gamma)\leq x_m          \}\in \mathcal{A}
+\end{equation}
+\end{definition}
+\begin{definition}\hspace{-2mm}\textsuperscript{\em{\cite{Liu2010}}}\em
+设$\xi=(\xi_1,\xi_2,...,\xi_m)   $是定义在模糊可能性空间$(\Gamma,\mathcal{A}, \widetilde{P}os)$上的一个2型模糊向量。$\xi$的第二可能性分布函数，记为
+$   \widetilde{\mu}_\xi(x)$，是一个由$\Re^m $
+到集合$\mathcal{R}[0,1] $上的映射，且满足
+ \begin{equation} 
+\widetilde{\mu}_\xi(x)=\widetilde{P}os\{ \gamma\in \Gamma|\xi(\gamma) =x\},x\in\Re^m 
+ \end{equation}
+ 
+如果一个模糊变量$ \widetilde{\xi}$的可能性分布函数为$\mu(x)$，其第二可能性分布$   \widetilde{\mu}_\xi(x)$为
+$$ (\mu(x)-\theta_l\min\{1-\mu(x),\mu(x)\},\mu(x),\mu(x)+\theta_r\min\{1-\mu(x),\mu(x)\})$$
+那么$ \widetilde{\xi}$是一个2-型模糊变量。
+例如一个2-型模糊变量$\widetilde{\xi}$，当$x\in[r_1,r_2]$时，其第二可能性分布$   \widetilde{\mu}_\xi(x)$为
+$$( \frac{x-r_1}{r_2-r_1}-\theta_l\min\{\frac{x-r_1}{r_2-r_1},\frac{r_2-x}{r_2-r_1}\}, \frac{x-r_1}{r_2-r_1},\frac{x-r_1}{r_2-r_1}+\theta_r\min\{\frac{x-r_1}{r_2-r_1},\frac{r_2-x}{r_2-r_1} \}  ) $$
+当$x\in[r_2,r_3]$时，其第二可能性分布$   \widetilde{\mu}_\xi(x)$为
+$$( \frac{r_3-x}{r_3-r_2}-\theta_l\min\frac{r_3-x}{r_3-r_2},\frac{x-r_2}{r_3-r_2}\}, \frac{r_3-x}{r_3-r_2},\frac{r_3-x}{r_3-r_2}+\theta_r\min\{\frac{r_3-x}{r_3-r_2},\frac{x-r_2}{r_3-r_2} \}  ) $$
+则称$\widetilde{\xi}$是一个2-型三角模糊变量，并用$(\widetilde{r}_1,\widetilde{r}_2,\widetilde{r}_3;\theta_l,\theta_r)$表示，
+其中参数$\theta_l,\theta_r\in[0,1]$，用来刻画$ \widetilde{\xi}$取值为$x$时的不确定性程度。
+常用的2-型梯形模糊变量和2-型正态模糊变量都可以用上述方法表示。
+
+\end{definition}
+
+由于2-型模糊数具有模糊隶属函数，在实际策划应用中，通常需要对第二隶属函数进行简约，文献\cite{Karnik2001}给出了2-型模糊数简约的重心方法。
+文献\cite{Qin2011b}给出模糊变量的关键值简约方法，文献\cite{Qin2011a}提出了均值简约方法，
+文献\cite{Wu2012}提出等价值简约方法，本文采用风险值方法\cite{Bai2014}对2-型模糊变量进行简约，其定义如下
+\begin{definition}\hspace{-2mm}\textsuperscript{\em{\cite{Bai2014}}}\em
+对于任意的$x\in\Re$，$\alpha$是$[0,1]$区间上的置信水平，设$\xi$是一个正规模糊变量，
+那么$\xi$的下风险值定义为如下
+\begin{equation}
+\ VaR_\alpha^L(\xi)=\inf\{ x|\Pos\{\xi\leq x\}\geq \alpha\} 
+\end{equation}
+上风险值为
+\begin{equation}
+\ VaR_\alpha^U(\xi)=\sup\{ x|\Pos\{\xi\geq x\}\geq \alpha\}
+\end{equation}
+ \end{definition}
+
+
+%\begin{definition}
+%如果$(\Gamma,\mathcal{A},\widetilde{Pos})$ 是一个模糊可能性空间 \cite{Liu2010}，那么一个2型模糊变量是
+%一个从$\Gamma$到$[0,1]$的映射，则有对任意的$t\in\Re$
+%$$\{\gamma\in  \Gamma|\xi(\gamma)  \leq t \}\in \mathcal{A} $$
+%成立。
+
+%\end{definition}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \section{\JIEZI\zihao{4}\!\!\!L-S积分}\label{pg:2.2}
+\hskip 
+\parindent 
+L-S积分是经典积分的推广是由荷兰数学家斯蒂尔杰斯综合了勒贝格积分理论和R-S积分思想给出的，是一类强大且灵活的积分概念，在概率中有着
+十分重要的应用。下面介绍一些L-S积分的基本知识。
+
+首先介绍L-S测度。
+
+设$\tilde{\xi}$是一个模糊变量，它的实验值为$\xi$。令$\alpha(\xi)=\Cr\{\tilde{\xi}\leq\xi\}$ 是模糊变量$\tilde{\xi}$的可信性分布。可知$\alpha(\xi)$ 是
+单调增函数。定义区间$I$上的$\alpha$-测度如下：
+\begin{eqnarray}\label{equation 5}
+\mu_{\alpha(I)}=\left\{
+\begin{array}{llll}
+\alpha(b^+)-\alpha(a^-),&\mbox I=[a,b]\\
+ \alpha(b^+)-\alpha(a^+)  ,&\mbox I=(a,b] \\
+\alpha(b^-)-\alpha(a^-),&\mbox I=[a,b)
+\end{array}\right.
+\end{eqnarray}
+其中$a\le b$。
+如果 $a<b$，那么$\mu_\alpha((a,b))=\alpha(b^-)-\alpha(a^+)$；如果$a=b$，那么区间$I$是个空集，它的测度为$0$。
+
+对于多元模糊变量$\tilde{\xi}_i$，$i=1,2,\ldots,n$，令$\alpha_i(\xi)=\Cr\{\tilde{\xi}_i\leq\xi\}$ $(i=1,2,\ldots,n)$。
+对应实数空间$\Re^n$的区间记为$I=I_1\times I_2\times\cdots\times I_n$。
+因此，定义区间$I$上的$\alpha$-测度为
+\begin{equation}\label{eqution 6}
+\mu_{\alpha_1\times\cdots\times\alpha_n (I)}=\mu_{\alpha_1}(I_1)\times\cdots\times\mu_{\alpha_n}(I_n)
+\end{equation}
+
+下面给出模糊变量$\tilde{\xi}_i$， $i=1,2,\ldots,n$的L-S积分的定义。\\
+令 $g(\xi): \Re^n\rightarrow\Re^+$是一个非负Borel测度函数，模糊变量$g(\tilde{\xi}_1,\tilde{\xi}_2,\cdots,\tilde{\xi}_n)$关于
+ $\mu_{\alpha_1\times\cdots\times\alpha_n}$的L-S积分为
+\begin{equation}\label{eqution 7}
+\int_{\Re^n}g(\xi)d\mu_{\alpha_1\times\cdots\times\alpha_n}=\lim\limits_{n\rightarrow\infty}\sum_{k=0}^\infty\frac{k}{2^n}\mu_{\alpha_1\times\cdots\times\alpha_n}\left\{\xi\in\Re^n:\frac{k}{2^n}<g(\xi)\leq  \frac{k+1}{2^n}\right\}
+\end{equation}
+
+对于一般的Borel测度函数$g(\xi)$，定义$g^+(\xi)=\max\{g(\xi),0\}$和$g^-(\xi)=\min\{g(\xi),0\}$。那么模糊变量 $g(\tilde{\xi}_1,\tilde{\xi}_2,\cdots,\tilde{\xi}_n)$
+的L-S积分为
+\begin{equation}\label{eqution 8}
+\int_{\Re^n}g(\xi)d\mu_{\alpha_1\times\cdots\times\alpha_n}=\int_{\Re^n}g^+(\xi)d\mu_{\alpha_1\times\cdots\times\alpha_n}-\int_{\Re^n}g^-(\xi)d\mu_{\alpha_1\times\cdots\times\alpha_n}
+\end{equation}
+%以上的概念和定义对于之后模型的建立和求解有着非常重要的作用。
+%----------------------------- 第二章-----第二章------第二章--------------------------------
+
+%----------------------------- 第三章-----第三章------第三章----------------------------------------------------
+\newpage
+\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\zihao{5}河北大学理学硕士学位论文}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0) {\footnotesize \zihao{5}第3章\ 固定可能性分布下的两阶段生产计划模型}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{
+\centerline{\footnotesize \thepage}
+}
+\def\@oddfoot{
+\centerline{\footnotesize \thepage}
+}
+
+\setcounter{section}{0}
+%\makeatother 
+%\hspace{12mm}\\
+\def\oddhead{{\protect\WENXIANMEIZI\hfill
+    第3章\ \ 固定可能性分布下的两阶段生产计划模型\hfill}}
+\def\evenhead{{\protect\WENXIANMEIZI\hfill
+    第3章\ \ 固定可能性分布下的两阶段生产计划模型\hfill}}
+\hspace*{0.5cm}
+\begin{center}
+{\Large\heiti\zihao{3}\bf 第3章\ \ 固定可能性分布下的两阶段生产计划模型}\label{pg:3}
+\end{center}
+\vskip 0.5cm
+\setcounter{mychapter}{3}
+%\setcounter{equation}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+本章首先提出了一个新的两阶段模糊模型的优化方法，建立了一类新的模糊两阶段类均值模型，用可信性分布产生一个测度定义模糊变量的L-S积分，
+对产品的生产和分配数量做出最优决策，使得当汇率为模糊变量时的总利润达到最大。其次分析了模型特点给出了模型的基本性质，并用区域求解方法对模型进行
+了求解。再次分析了考虑补偿问题的价值。最后通过数值试验验证了求解方法的可行性，并与非补偿问题做了比较，验证模型的有效性。
+\section{\JIEZI\zihao{4}\!\!\!模型的建立
+\label{pg:3.1}}\hskip\parindent
+在本节中，我们将给出两阶段模糊生产计划问题的模型的数学模型。为了方便问题的描述，我们将采用以下记号：
+
+\begin{description}
+\item{$i$}:第$i$种产品的指标， $i=1,2,...,n$；
+\item{$x_i$}:产品$i$的生产数量；
+\item{$j$}:销往国家的指标 $j$,  $j=1,2$；
+\item{$r_{ij}$}: 产品$i$来自市场 $j$的单位收益；
+\item{$t_{ij}$}: 生产商运输产品$i$到市场$j$的单位运费；
+\item{$d_{ij}$}:市场$j$对产品$i$的需求；
+\item{$y_{ij}$}: 运往市场$j$的产品$i$的数量；
+\item{$\tilde{\xi}_j$}: 国外市场$j$的货币转化成本国货币的汇率，是模糊变量；
+\item{$c_i$}: 产品$i$ 的单位成本（本国货币）。
+\end{description}
+
+
+我们使用以上记号，采用一种新的方法来建立模型。下面给出模型的建模过程。\\
+在本文的生产计划过程中，由于外界的影响因素有很多，生产商不会等到所有不确定的影响都知道之后才去决策生产产品的数量，
+所以我们把这个战略性的决策作为第一阶段决策变量。
+本文中记为$x_i$， $i=1,2,\ldots,n$，也就是说它们需要在知道模糊变量的实验值之前给出。当我们知道了模糊参数的实验值之后，然后需要决策产品的分配数量，
+这时我们把它们作为第二阶段决策
+变量，记为$y_{ij}$，  $i=1,2,\ldots,n$； $j=1,2$。
+
+
+分配过程中，由于库存的影响那么分配到每个市场的产品$i$的数量要小于等于每个市场的需求，我们用约束(\ref{equation 9})来表示
+\begin{equation}\label{equation 9}
+y_{ij}\leq d_{ij} ~~~~\forall~i=1,2,\ldots,n, j=1,2.
+\end{equation}
+生产过程中，虽然已知每个市场对每个产品的需求量，但是由于模糊汇率、生产成本和运费的影响，厂商有可能不会对市场完全供应，
+会出现即使有存货也不供应这种情况。我们用下面的约束表示
+\begin{equation}\label{equation 10}
+y_{i1}+y_{i2}\leq x_i, i=1,2,\ldots,n.
+\end{equation}
+
+当第一阶段决策变量$x_i$， $i=1,2,\ldots,n$给定，且模糊变量的实现值${\xi}_j$, $j=1,2$已知后，我们得到了第二阶段规划$Q\left(x_i|(\xi_1,\xi_2)\right)$
+\begin{eqnarray}\label{equation 11}
+\begin{array}{lll}
+Q\left(x_i|(\xi_1,\xi_2)\right)&=max (r_{i1}\xi_1-t_{i1})y_{i1}+(r_{i2}\xi_2-t_{i2})y_{i2}\\
+\mbox{s.t.}
+& y_{ij}\leq d_{ij}, ~~~~j=1,2\\
+& y_{i1}+y_{i2}\leq x_i,\\
+& y_{i1},y_{i2}\geq 0,~~~~i=1,2,...,n.
+\end{array}
+\end{eqnarray}
+
+在模型(\ref{equation 11})中$Q\left(x_i|(\xi_1,\xi_2)\right)$表示最优目标值，是指在给定第一阶段决策变量和模糊变量的情况下生产计划
+最大收益。本文我们的目标是最大化生产
+利润，因此使用上面的符号，建立了一个两阶段模型如下
+\begin{eqnarray}\label{equation 12}
+\begin{array}{ll}
+\max z(x_i)=&\sum\limits_{i=1}^{n}(-c_ix_i+\iint\limits_{R^2}Q\left(x_i|(\xi_1,\xi_2)\right)) d\alpha_1 \times \alpha_2 (\xi_1,\xi_2)\\
+\mbox{s.t.}
+&x_i\geq 0,
+\end{array}
+\end{eqnarray}
+其中 $\alpha_1(\xi_1)=\Cr\{\tilde{\xi}_1\leq \xi_1\}$， $\alpha_2(\xi_2)=\Cr\{\tilde{\xi}_2\leq \xi_2\}$，\\
+$Q\left(x_i|(\xi_1,\xi_2)\right)$是下面规划的最优值
+\begin{eqnarray}\nonumber
+\begin{array}{lll}
+Q\left(x_i|(\xi_1,\xi_2)\right)&=max (r_{i1}\xi_1-t_{i1})y_{i1}+(r_{i2}\xi_2-t_{i2})y_{i2}\\
+\mbox{s.t.}
+& y_{ij}\leq d_{ij}, ~~~~j=1,2\\
+& y_{i1}+y_{i2}\leq x_i,\\
+& y_{i1},y_{i2}\geq 0,~~~~i=1,2,...,n.
+\end{array}
+\end{eqnarray}
+
+对于模型(\ref{equation 12})其目标函数是最大化生产利润，是指总的生产收益和生产成本的利润差值。下一节我们会分析模型的性质给出理论结果，结
+合模型的特点给出求解方法。
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{\JIEZI\zihao{4}\!\!\!模型的分析
+\label{pg:3.2}}\hskip\parindent 
+本节我们分析第二阶段模型的性质，首先我们把汇率$(\xi_1,\xi_2)$的取值区域分为五个部分分别记为A:$\{\frac{t_{i1}}{r_{i1}}<\xi_1<\infty, 0\leq \xi_2\leq\frac{t_{i2}}{r_{i2}}\}$； 
+B: \{$\frac{t_{i1}}{r_{i1}}<\xi_1<\infty$,  $\frac{t_{i2}}{r_{i2}}<\xi_2<\frac{r_{i1}\xi_{1}-t_{i1}+t_{i2}}{r_{i2}}$\}；
+  C:  \{$\frac{t_{i1}}{r_{i1}}<\xi_1<\infty$,  $\frac{r_{i1}\xi_{1}-t_{i1}+t_{i2}}{r_{i2}}<\xi_2<\infty$\}；
+D: \{$0\leq\xi_1\leq\frac{t_{i1}}{r_{i1}}$,  $\frac{t_{i2}}{r_{i2}}<\xi_2<\infty$\}；
+E:  \{$0\leq\xi_1\leq\frac{t_{i1}}{r_{i1}}$,  $0\leq\xi_2\leq\frac{t_{i2}}{r_{i2}}$\}。
+由第二阶段目标函数表达式可知$Q\left(x_i|(\xi_1,\xi_2)\right)$是一个带有断点$\min(d_{i1}, d_{i2})$，
+$\max(d_{i1}, d_{i2})$和$(d_{i1}+d_{i2})$的线性函数。因此可以采用可行域分解方法求解模型(\ref{equation 11})。
+当需求$d_{i1}$ 和 $d_{i2}$是确定的时候，实数轴可以分解成下面四个子区间：$[0,\min(d_{i1},d_{i2})]$，$[\min(d_{i1},d_{i2}),\max(d_{i1},d_{i2})]$， 
+$[\max(d_{i1},d_{i2}),d_{i1}+d_{i2}]$和$[d_{i1}+d_{i2},\infty)$。可行域分解之后，我们可以在每个子区间上找到局部最优解。
+\subsection{\XIAOJIEZI\zihao{-4}\!\!\!模型理论结果}
+\label{pg:3.2.1}\hskip\parindent
+基于上一节模型性质的分析，以产品$i$为例，本节给出一些理论结果。在下面的结论中，假设模糊变量 $\xi_1$，$\xi_2$具有一般的可能性分布。
+\begin{proposition}\label{proposition 1}
+ 当 $0\leq x_i\le \min(d_{i1},d_{i2})$和 $E_{i1}=\int_{(\frac{t_{i1}}{r_{i1}},\infty)} \int_{[0,\frac{r_{i1}\xi_1-t_{i1}+t_{i2}}{r_{i2}})}(r_{i1}\xi_{1}-r_{i1}) d\alpha_1\times \alpha_2(\xi_1,\xi_2)+
+ \int_{[0,\frac{r_{i2}e_2-t_{i2}+r_{i1}}{r_{i1}})}\int_{(\frac{t_{i2}}{r_{i2}},\infty) }(r_{i2}\xi_{2}-t_{i2}) d  \alpha_1\times \alpha_2(\xi_1,\xi_2)$。
+ 如果$E_{i1}\leq c_i$，那么局部最优生产数量$x_i=0$。如果 $E_{i1}>c_i$，那么局部最优生产数量$x_i=\min(d_{i1},d_{i2})$。
+\end{proposition}
+\begin{pf}
+当$0\leq x_i\le \min(d_{i1},d_{i2}) $，同时定义下面两个集合
+$$
+A_1=I_1\times I_2 :(\frac{t_{i1}}{r_{i1}},\infty) \times [0,\frac{r_{i1}\xi_{1}-t_{i1}+t_{i2}}{r_{i2}}),\\
+ A_2=I_3\times I_4 :[0,\frac {r_{i2}\xi_{2}-t_{i2}+t_{i1}}{r_{i1}}) \times (\frac{t_{i2}}{r_{i2}},\infty).
+$$
+计算目标函数$z(x_i)$为
+\begin{align}
+z(x_i)=&-c_ix_i+\iint\limits_{R^2} Q\left(x_i|(\xi_1,\xi_2)\right)d\alpha_1 \times \alpha_2 (\xi_1,\xi_2)\nonumber\\
+=&-c_ix_i+x_i (\iint\limits_{A_1}(r_{i1}\xi_{1}-t_{i1})d\alpha_1\times \alpha_2(\xi_1,\xi_2)\nonumber\\
++&\iint\limits_{A_2}(r_{i2}\xi_{2}-t_{i2}) d  \alpha_1\times \alpha_2(\xi_1,\xi_2)) \nonumber\\
+=& (-c_i+E_{i1})x_i  \nonumber
+\end{align}
+很明显$z(x_i)$是关于$x_i$的线性函数。如果$E_{i1}\leq c_i $，那么$z(x_i)$ 是单调减的，所以局部最优解$x_i$在$0$点取到。另一方面，如果
+$E_{i1}>c_i $，那么局部最优解 $x_i=\min(d_{i1},d_{i2})$。
+\end{pf}
+\begin{proposition}\label{proposition 2}
+当$\min(d_{i1},d_{i2})\leq x\le \max(d_{i1}, d_{i2})$，假设 $d_{i1}<d_{i2}$，即$d_{i1}\leq x_i\le d_{i2} $， 同时
+$E_{i2}=\iint\limits_{B}( r_{i2}\xi_{2}-t_{i2})d \alpha_1\times \alpha_2(\xi_1,\xi_2)+\iint\limits_{C} ( r_{i2}\xi_{2}-t_{i2}  )d \alpha_1\times \alpha_2(\xi_1,\xi_2)+
+\iint\limits_{D}( r_{i2}\xi_{2}-t_{i2}   )d \alpha_1\times \alpha_2(\xi_1,\xi_2)$。 
+如果 $E_{i2}>c_i$，那么局部最佳生产数量 $x_i=d_{i2}$。如果$E_{i2}\leq c_i$，那么局部最佳生产数量$x_i=d_{i1}$。
+\end{proposition}
+\begin{pf}
+当 $d_{i1}\leq x_i\le d_{i2} $时，目标函数  
+\begin{align}
+z(x_i)=&-c_ix_i+\iint\limits_{R^2}  Q\left(x_i|(\xi_1,\xi_2)\right)d\alpha_1 \times \alpha_2 (\xi_1,\xi_2)\nonumber\\
+=&-c_ix_i+\iint\limits_{A}  (r_{i1}\xi_1-t_{i1})d_{i1}  d\alpha_1\times \alpha_2(\xi_1,\xi_2)\nonumber\\
++&\iint\limits_{B}(r_{i1}\xi_1-t_{i1})d_{i1}  +(r_{i2}\xi_2-t_{i2})(x_i-d_{i1}) d \alpha_1\times \alpha_2(\xi_1,\xi_2)\nonumber \\
++&\iint\limits_{C} (r_{i2}\xi_2-t_{i2})x_i  d  \alpha_1\times \alpha_2(\xi_1,\xi_2)+\iint\limits_{D}(r_{i2}\xi_2-t_{i2})x_i  d \alpha_1\times \alpha_2(\xi_1,\xi_2) \nonumber
+\end{align}
+目标函数$z(x_i)$ 的一阶导函数为
+\begin{align}
+\frac{dz(x_i)}{d x_i}=&-c_i+\iint\limits_{B} ( r_{i2}\xi_{2}-t_{i2}   )d \alpha_1\times \alpha_2(\xi_1,\xi_2)\nonumber\\
++&\iint\limits_{C} (r_{i2}\xi_{2}-t_{i2}  ) d  \alpha_1\times \alpha_2(\xi_1,\xi_2)\nonumber\\
++&\iint\limits_{D} (r_{i2}\xi_{2}-t_{i2} ) d  \alpha_1\times \alpha_2(\xi_1,\xi_2)\nonumber\\
+=&-c_i+E_{i2} \nonumber
+\end{align}
+令一阶导函数为$0$，即$\frac{dz(x_i)}{d x_i}=0$得到$ E_{i2}=c_i$。当 $E_{i2}>c_i$时，$x_i$在$d_{i2}$处取到最大值，同理当
+ $E_{i2}\leq c_i$时，最优值$x_i$在$d_{i1}$处取到。
+\end{pf}
+\begin{proposition}\label{proposition 3}
+当 $\max(d_{i1},d_{i2})\leq x_i\le d_{i1}+d_{i2}$，
+$E_{i3}=\iint\limits_{B}(r_{i2}\xi_{2}-t_{i2}  ) d  \alpha_1\times \alpha_2(\xi_1,\xi_2)+\iint\limits_{C} (r_{i1}\xi_{1}-t_{i1}  ) d \alpha_1\times \alpha_2(\xi_1,\xi_2)$。   
+如果$E_{i3}>c_i$，那么局部最优生产数量是 $d_{i1}+d_{i2}$。
+如果 $E_{i3}\leq c_i$, 最优生产数量是 $\max(d_{i1},d_{i2})$。
+\end{proposition}
+\begin{pf}
+由命题的假设，目标函数为
+\begin{align}
+z(x_i)=&-c_ix_i+\iint\limits_{R^2}Q\left(x_i|(\xi_1,\xi_2)\right)d\alpha_1 \times \alpha_2 (\xi_1,\xi_2)\nonumber\\
+=&-c_ix_i+\iint\limits_{A}(r_{i1}\xi_1-t_{i1} )d_{i1}  d  \alpha_1\times \alpha_2(\xi_1,\xi_2)\nonumber\\
++&\iint\limits_{B}(r_{i1}\xi_1-t_{i1} )d_{i1}+(r_{i2}\xi_2-t_{i2} )(x_i-d_{i1})    d  \alpha_1\times \alpha_2(\xi_1,\xi_2)\nonumber \\
++&\iint\limits_{C}(r_{i1}\xi_1-t_{i1} )(x_i-d_{i2})+(r_{i2}\xi_2-t_{i2} )d_{i2} d  \alpha_1\times \alpha_2(\xi_1,\xi_2)\nonumber\\
++&\iint\limits_{D}(r_{i2}\xi_2-t_{i2} )d_{i2}  d  \alpha_1\times \alpha_2(\xi_1,\xi_2) \nonumber
+\end{align}
+$z(x_i)$ 的一阶导数为
+\begin{align}
+\frac{dz(x_i)}{d x_i}=&-c_i+\iint\limits_{B}(r_{i2}\xi_{2}-t_{i2 } ) d  \alpha_1\times \alpha_2(\xi_1,\xi_2)\nonumber
++&\iint\limits_{C} (r_{i1}\xi_{1}-t_{i1}  ) d   \alpha_1\times \alpha_2(\xi_1,\xi_2)\nonumber\\
+=&-c_i+E_{i3} \nonumber
+\end{align}
+求解等式$\frac{dz(x_i)}{d x_i}=0$，我们得到 $E_{i3}=c_i$。
+所以，当 $E_{i3}\leq c_i $，有 $x_i=\max (d_{i1},d_{i2})$；
+当 $ E_{i3}>c_i$，有 $x_i=d_{i1}+d_{i2}$。
+\end{pf}
+\begin{proposition}\label{proposition 4}
+如果 $d_{i1}+d_{i2}\leq x_i< \infty$，
+局部最优生产数量 $x_i=d_{i1}+d_{i2}$。
+\end{proposition}
+ \begin{pf}
+由于需求是已知的，生产数量不可能超过两个市场的需求总和，不然就会有存货产生继而产生
+不必要的库存损失，又因目标是最大化利润，因此存货是不允许的，即有 $x_i\leq d_{i1}+d_{i2}$。
+因此，我们可以简化此区间上的求解过程进而得到局部最优生产数量为 $x_i=d_{i1}+d_{i2}$。
+\end{pf}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\XIAOJIEZI\zihao{-4}\!\!\!补偿问题的价值}
+\label{pg:3.2.2}\hskip\parindent
+由上面的分析和命题我们知道，模型(\ref{equation 12})的最优解$x_i$只有四种可能取值，即$x_i=0$，$x_i=d_{i1}$，$x_i=d_{i2}$，$x_i=d_{i1}+d_{i2}$。如果不考虑
+汇率的不确定性有可能带来的利益损失，那么当我们做出生产决策后会全部运输进行出售。
+但是由于汇率的影响，在国外产品的单位收益有可能比单位运费低，那么这时候就应该不运输，
+这样就能避免不必要的损失。这就是考虑第二阶段补偿问题的好处。下面就来分析一下如果不考虑第二阶段补偿问题那么会带来
+多大损失。
+
+$(1)$ 当$x_i=0$时，生产决策产品数量为0，明显没有补偿行为，因此补偿带来的好处为0。
+
+$(2)$ 当$x_i=d_{i1}$时，汇率$\xi_{1}$, $\xi_{2}$在区域E时，国外两个市场都不景气，最好的补偿措施是两个市场都不销售。
+如果不考虑补偿那么带来的损失为\\
+$\int_{[0,\frac{t_{i1}}{r_{i1}}]} \int_{[0,\frac{t_{i2}}{r_{i2}}]}(t_{i1}-r_{i1}\xi_{1})d_{i1} d\alpha_1\times \alpha_2(\xi_1,\xi_2)+
+\int_{[0,\frac{t_{i1}}{r_{i1}}]} \int_{[0,\frac{t_{i2}}{r_{i2}}]}(t_{i2}-r_{i2}\xi_{2})d_{i1} d\alpha_1\times \alpha_2(\xi_1,\xi_2)$。
+
+$(3)$ 当$x_i=d_{i2}$时，且$(\xi_{1},\xi_{2})\in A$和$(\xi_{1},\xi_{2})\in E$时会有补偿决策，其带来的影响是\\
+\vspace{2mm}$\int_{(\frac{t_{i1}}{r_{i1}},\infty)} \int_{[0,\frac{t_{i2}}{r_{i2}}]}(t_{i2}-r_{i2}\xi_{2})(d_{i2}-d_{i1}) d\alpha_1\times \alpha_2(\xi_1,\xi_2)
++\int_{[max(0,\frac{t_{i1}-t_{i2}}{r_{i1}}),\frac{t_{i1}}{r_{i1}}]}\\
+\vspace{2mm}\int_{[max(0,\frac{t_{i2}-t_{i1}}{r_{i2}}),\frac{r_{i1}\xi_{1}-t_{i1}+t_{i2}}{r_{i2}}]}
+(t_{i1}-r_{i1}\xi_{1})d_{i1}+(t_{i2}-r_{i2}\xi_{2})(d_{i2}-d_{i1}) d\alpha_1\times \alpha_2(\xi_1,\xi_2)
++\int_{(max(0,\frac{t_{i2}-t_{i1}}{r_{i2}}),\frac{t_{i2}}{r_{i2}}]}\int_{(max(0,\frac{t_{i1}-t_{i2}}{r_{i1}}),\frac{r_{i2}\xi_{2}-t_{i2}+t_{i1}}{r_{i1}}]}
+\vspace{2mm}(t_{i2}-r_{i2}\xi_{2})d_{i2} d\alpha_1\times \alpha_2(\xi_1,\xi_2)$。
+
+$(4)$ 当$x_i=d_{i1}+d_{i2}$ 时，明显此时出现补偿决策的机会更多，分别是$(\xi_{1},\xi_{2})\in A$，$(\xi_{1},\xi_{2})\in D$和$(\xi_{1},\xi_{2})\in E$。
+那么此时不考虑补偿问题带来的损失为\\
+$\int_{[0,\frac{t_{i1}}{r_{i1}}]} \int_{[0,\infty)}(t_{i1}-r_{i1}\xi_{1})d_{i1} d\alpha_1\times \alpha_2(\xi_1,\xi_2)
++\int_{[0,\infty)} \int_{[0,\frac{t_{i2}}{r_{i2}}]}(t_{i2}-r_{i2}\xi_{2})d_{i2} d\alpha_1\times \alpha_2(\xi_1,\xi_2)$。
+
+由此可知，当最佳生产数量为$x=0$时，第二阶段补偿影响为0，当$x=d_{i1}+d_{i2}$时，第二阶段补偿影响最大，其他情况处于这两种情况中间。我们定义V为第二阶段补偿值因此有\\
+$V(x_i=0)\leq V(x_i=min(d_{i1},d_{i2}))\leq V(x_i=max(d_{i1},d_{i2}))\leq V(x_i=d_{i1}+d_{i2})$.
+
+本问题，如果完全不考虑补偿，包括第一阶段和第二阶段，那么意思就是由于需求确定分别是$d_{i1}$和$d_{i2}$，那么生产$x_i=d_{i1}+d_{i2}$，分配也是$d_{i1}+d_{i2}$。
+我们用传统的无补偿问题作为本文问题的衡量标准即用模糊变量的期望值代替模糊变量，记期望收益为$E(x_i)$，表达式为$E(x_i)=(r_{i1}\xi_{1}-t_{i1}-c)d_{i1}+(r_{i2}\xi_{2}-t_{i2}-c)d_{i2}$.\\
+那么模糊解的价值即补偿的影响为：$z(x^{*}_{i})-E(x_i)$。
+
+%当然这个补偿的影响既包括上面求的第二阶段补偿的价值还包括第一阶段补偿价值和混合补偿影响。若记第一阶段生产补偿的价值为$P$，相互影响价值为$I$，那么有
+%$z(x^{*}_{i})-E(x_i=d_{i1}+d_{i2}=P(x^{*}_{i})+V(x^{*}_{i})+I(x^{*}_{i}))$。\\
+%进而可以得到如上面给出的第二阶段补偿价值的第一阶段补偿值的界限如下\\
+%$P(x^{*}_{i})=Z(x^{*}_{i})-E(x_i=d_{i1}+d_{i2})-V(x^{*}_{i})-I(x^{*}_{i})\leq Z(x^{*}_{i})-E(x_i=d_{i1}+d_{i2})-V(x^{*}_{i})$ 
+%这是第一阶段补偿值的上界。
+%当$x_i=d_{i1}+d_{i2}$时，明显没有第一阶段补偿的影响，所以其相互影响值为0。所以有
+%$P(x^{*}_{i})\geq Z(x^{*}_{i})-E(x_i=d_{i1}+d_{i2})-V(x_i=d_{i1}+d_{i2})$。\\
+%这是第一阶段补偿影响的下界。  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\JIEZI\zihao{4}\!\!\!模型的求解方法
+\label{pg:3.3}}\hskip\parindent 
+基于上一节给出的理论结果，我们可以找到每个子区域上的局部最优解。下面给出
+求解全局最优解和最优值的一般求解步骤。以产品$i$为例，假设$d_{i1}<d_{i2}$，$d_{i1}\geq d_{i2}$的情况是类似的。
+首先把可行区域分为若干子区域；其次，在每个子区域上找最优解并计算相应的目标值，最后，比较目标值得到全局最优解。
+步骤总结如下：\\
+\begin{tabularx}{15cm}[t]{lX}
+\heiti\bf{步骤1}:&将可行域$[0,\infty)$划分成四个子区域：$[0,\min(d_{i1},d_{i2})]$，$[\min(d_{i1},d_{i2}),\max(d_{i1},d_{i2})]$，
+$[\max(d_{i1},d_{i2}),d_{i1}+d_{i2}]$，$[d_{i1}+d_{i2}, \infty)$。\\
+\heiti\bf{步骤2}:&在每个子区域上寻找局部最优解计算相应的目标值。
+根据命题(\ref{proposition 1})，在区间$[0,\min(d_{i1},d_{i2})]$上，
+当$E_{i1}\leq c_i$时，在$0$点得到最大的目标值$0$；当$E_{i1}>c_i$时，在$x_i=d_{i1}$点得到最大目标值$(-c_i+E_{i1})d_{i1}$。
+根据命题(\ref{proposition 2})，在区间 $[\min(d_{i1},d_{i2}),\max(d_{i1},d_{i2})]$上，当$E_{i2}\leq c_i$时，局部最优生产数量$x_i=d_{i1}$，
+相应的目标值为$(-c_i+E_{i1})d_{i1}$；当$E_{i2}>c_i$时，在$x_i=d_{i2}$点达到最大，最大目标值为
+$-c_id_{i2}+\iint\limits_{A}(r_{i1}\xi_{1}-t_1 )d_{i1} d  \alpha_1\times \alpha_2(\xi_1,\xi_2)+
+\iint\limits_{B}(r_{i1}\xi_{1}-t_1 )d_{i1}+(r_{i2}\xi_{2}-t_2)(d_{i2}-d_{i1}) d  \alpha_1\times \alpha_2(\xi_1,\xi_2)+\iint\limits_{C}(r_{i2}\xi_{2}-t_2 )d_{i2} d  \alpha_1\times
+\alpha_2(\xi_1,\xi_2)+\iint\limits_{D}(r_{i2}\xi_{2}-t_2 )d_{i2} d  \alpha_1\times \alpha_2(\xi_1,\xi_2)$。($\ast$)
+根据命题(\ref{proposition 3})，在区间$[\max(d_{i1},d_{i2}),d_{i1}+d_{i2}]$上，当 $E_{i3}>c_i$时，在点$x_i=d_{i1}+d_{i2}$处达到最大，最大值为
+$(-c_i+E_{i1})(d_{i1}+d_{i2})$；当$E_{i3}\leq c_i$时，目标值和($\ast$)相同。
+根据命题(\ref{proposition 4})，在区间$[d_{i1}+d_{i2}, \infty)$上，可知在点$x_i=d_{i1}+d_{i2}$达到最大值$(-c_i+E_{i1})(d_{i1}+d_{i2})$。\\
+\heiti\bf{步骤3}:&在每个子区域上比较目标值，得到全局最优解和最优目标值。
+\end{tabularx}
+
+在下一节中，我们将给出一个数值试验来说明建模思想的有效性和求解方法的可行性。
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{\JIEZI\zihao{4}\!\!\!数值实验和结果分析
+\label{pg:3.4}}\hskip\parindent
+为了说明上面给出的两阶段优化方法的可行性，下面我们提出了一个数值实验，用上一节的求解方法进行求解。
+在本试验中，考虑这样一个电子产品生产计划问题，它包含三个市场，一个是国内市场只生产产品，另外两个是国外需求市场。国内生产商生产三种产品分别是
+U盘、MP5和移动电源。另外单位运费$t_{ij}$，单位收益$r_{ij}$和每个市场的需求 $d_{ij}$在表(\ref{table 2})给出。汇率$\xi_{1}$,  $\xi_{2}$分别是三角模糊变量
+(8,9,10) 和 (4,5,6)，它们的可信性分布分别由下面给出
+ \begin{equation}\label{eqution 13}
+\alpha_1(\xi_1)=\Cr\{\tilde{\xi}_1\leq \xi_1\}=\left\{
+\begin{array}{llll}
+0,~~~&\mbox{$\xi_1\leq 8$}\\
+\frac{\xi_1-8}{2},~~~&\mbox{$8\leq\xi_1\leq9$}\\
+\frac{\xi_1-8}{2},~~&\mbox{$9\leq\xi_1\leq10$}\\
+1,~~&\mbox{$\xi_1\geq10$,}
+\end{array}\right.
+\end{equation}
+和
+ \begin{equation}\label{eqution 14}
+\alpha_2(\xi_2)=\Cr\{\tilde{\xi}_2\leq \xi_2\}=\left\{
+\begin{array}{llll}
+0,~~~&\mbox{$\xi_2\leq 4$}\\
+\frac{\xi_2-4}{2},~~~&\mbox{$4\leq\xi_2\leq5$}\\
+\frac{\xi_2-4}{2},~~&\mbox{$5\leq\xi_2\leq6$}\\
+1,~~&\mbox{$\xi_2\geq 6$.}
+\end{array}\right.
+\end{equation}
+
+利用上面的符号，用下面的数学规划模型表示产品$1$的生产计划
+\begin{equation}\label{equation 15}
+\begin{array}{ll}
+\max\, z(x_1)=&-30x_1+\int_{(4,\infty)} \int_{[0,\frac{2\xi_1+2}{3})}(10\xi_{1}-40)x d\alpha_1\times \alpha_2(\xi_1,\xi_2)\\&+
+\int_{(0,\frac{3\xi_2-2}{2})} \int_{[\frac{10}{3},\infty)}(10\xi_{1}-40)x d\alpha_1\times \alpha_2(\xi_1,\xi_2)\\
+\mbox{s.t.}
+&0 \leq x_1\leq 200,\\
+&y_{11}+y_{12}\le x_1,\\
+& 0\le y_{11}\leq 200,\\
+& 0\le y_{12}\leq 300.
+\end{array}
+\end{equation}
+
+当$200 \leq x_1\leq 300$时，目标函数变为
+\begin{eqnarray}\label{equation 16}
+\begin{array}{ll}
+\max z(x_1)=&-30x_1+\int_{(4,\infty)} \int_{[0,\frac{10}{3})}200(10\xi_{1}-40) d\alpha_1\times \alpha_2(\xi_1,\xi_2)\\
+&+\int_{(4,\infty)} \int_{[\frac{10}{3},\frac{2\xi_1+2}{3})}200(10\xi_{1}-40)\\
+&+(x_1-200)(15\xi_{2}-50) d\alpha_1\times \alpha_2(\xi_1,\xi_2)\\
+&+\int_{(4,\infty)} \int_{[\frac{2\xi_1+2}{3},\infty)}(15\xi_{2}-50)x_1 d\alpha_1\times \alpha_2(\xi_1,\xi_2)\\
+&+\int_{[0,4]} \int_{[\frac{10}{3},\infty)}(15\xi_{2}-50)x_1 d\alpha_1\times \alpha_2(\xi_1,\xi_2),\\
+\end{array}
+\end{eqnarray}
+其他约束条件和模型(\ref{equation 15})是相同的。
+
+当$300\leq x_1 \leq 500$时，目标函数为
+\begin{eqnarray}\label{equation 17}
+\begin{array}{ll}
+\max z(x_1)=&-30x_1+\int_{(4,\infty)} \int_{[0,\frac{10}{3})}200(10\xi_{1}-40) d\alpha_1\times \alpha_2(\xi_1,\xi_2)\\
+&+\int_{(4,\infty)} \int_{[\frac{10}{3},\frac{2\xi_1+2}{3})}200(10\xi_{1}-40)\\
+&+(x_1-200)(15\xi_{2}-50) d\alpha_1\times \alpha_2(\xi_1,\xi_2)\\
+&+\int_{(4,\infty)} \int_{[\frac{2\xi_1+2}{3},\infty)}(10\xi_{1}-40)(x_1-300)\\
+&+300(15\xi_{2}-50) d\alpha_1\times \alpha_2(\xi_1,\xi_2)\\
+&+\int_{[0,4]} \int_{[\frac{10}{3},\infty)}300(15\xi_{2}-50) d\alpha_1\times \alpha_2(\xi_1,\xi_2),\\
+\end{array}
+\end{eqnarray}
+其他约束条件和模型(\ref{equation 15})是相同的。
+\begin{table}[ht]
+ \caption{ 问题数据（单位成本，单位运费，单价，需求） }\label{table 2}
+ \begin{center}
+\begin{tabular}{c|cccc}\hline
+产品&{$c_{i}(RMB)$}~~&{$t_{ij}(RMB)$}~~&{$r_{ij}(GBP,AUD)$}~~&{$d_{ij}$}\\\hline
+{$1$} &{30}&{40,50}&{10,15}&{200,300}\\
+{$2$} &{110}&{50,60}&{30,70}&{150,200}\\
+{$3$} &{280}&{70,80}&{65,110}&{50,100}\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+我们利用前一节提出的区域分解方法求解模型(\ref{equation 15})，(\ref{equation 16})，(\ref{equation 17})得到下面的结果，如表(\ref{table 3})所示
+\begin{table}[ht]
+ \caption{求解结果}\label{table 3}
+ \begin{center}
+\begin{tabular}{c|ccccc}\hline
+产品&{区域}~~&{局部最优解}~~&{局部最优值}~~&{全局最优解}~~&{全局最优值}\\\hline
+{$$} &{$[0,200]$}&{200}&{4000}&{}&{}\\
+{$1$} &{$[200,300]$}&{200}&{4000}&{200}&{4000}\\
+{$$} &{$[300,500]$}&{300}&{3500}&{}&{}\\
+\hline
+{$$} &{$[0,150]$}&{150}&{27080}&{}&{}\\
+{$2$} &{$[150,200]$}&{200}&{36080}&{350}&{37125}\\
+{$$} &{$[200,350]$}&{350}&{37125}&{}&{}\\
+\hline
+{$$} &{$[0,50]$}&{50}&{6950}&{}&{}\\
+{$3$} &{$[50,100]$}&{100}&{7350}&{100}&{7350}\\
+{$$} &{$[100,150]$}&{100}&{7350}&{}&{}\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+在区间$[0,200]$，局部最优生产数量是200，目标值为4000。在区间$[200,300]$，局部最优解为200，目标值为4000。在区间
+$[300,500]$，最优生产300，最优值为3500。比较每个子区间上的目标值，我们得到全局最优生产数量为200，最优目标函数值为4000。
+用相同的方法，我们得到产品2和3的全局最优生产数量和最优目标值，如表(\ref{table 3})所示。
+
+从表(\ref{table 3})我们得到产品1,2和3的最优生产计划分别是200,350和100，最大整体收益为48475。
+
+%以上研究了只有汇率为模糊变量时的生产计划问题，当不确定因素有多个，模型及求解方法又是怎样的呢，下面以考虑汇率和需求同时不确定时，
+%简单给出求解模型和方法。
+
+%当需求为不确定变量时，也就是说首先给出一个生产决策$x$，当需求和汇率确定后，然后做出分配决策，此时的补偿问题仍然是一个确定的规划和
+%3.1节第二阶段问题相同，主要区别在于利润函数变为对第二阶段规划函数的四重L-S积分，求解时要在考虑汇率分段的基础上同时考虑需求对$x$的分段划分
+%，最后仍然可以转化为$x$的分段线性函数，求出区间最值，最终通过区间比较求得全区域上的最大值。
+%两阶段模型如下
+%\begin{equation*}
+%\begin{array}{ll}
+%\max z(x_i)=&\sum\limits_{i=1}^{n}(-c_ix_i+\iiiint\limits_{R^4}Q\left(x_i|(\xi_1,\xi_2,d_1,d_2)\right)) d\alpha_1 \times \alpha_2\times \alpha_3\times \alpha_4 (\xi_1,\xi_2,d_1,d_2)\\
+%\mbox{s.t.:}
+%&x_i\geq 0,
+%\end{array}
+%\end{equation*}
+%以产品$i$为例，简单给出部分解题步骤如下，
+%\begin{eqnarray}
+%Z(x)&=&-cx+\int_{(\frac{t_1}{r_1},\infty)} \int_{[0,\frac{t_2}{r_2}]} \int_{[0,\infty)} \int_{[x,\infty)}x(r_{1}\xi_{1}-t_1)d\alpha_1 \times \alpha_2\times \alpha_3\times \alpha_4 (\xi_1,\xi_2,d_1,d_2) \nonumber\\
+%&+&\int_{(\frac{t_1}{r_1},\infty)} \int_{[0,\frac{t_2}{r_2}]} \int_{[0,\infty)} \int_{[0,x)}d_1(r_{1}\xi_{1}-t_1)d\alpha_1 \times \alpha_2\times \alpha_3\times \alpha_4(\xi_1,\xi_2,d_1,d_2)\nonumber\\
+%&+&\int_{(\frac{t_1}{r_1},\infty)} \int_{(\frac{t_2}{r_2},\frac{r_{1}\xi_{1}-t_1+t_2}{r_2})}\int_{[0,\infty)}\int_{[x,\infty)}(r_{1}\xi_{1}-t_1)xd\alpha_1 \times \alpha_2\times \alpha_3\times \alpha_4 (\xi_1,\xi_2,d_1,d_2)\nonumber\\
+%&+&\int_{(\frac{t_1}{r_1},\infty)} \int_{(\frac{t_2}{r_2},\frac{r_{1}\xi_{1}-t_1+t_2}{r_2})}\int_{[x-d_1,\infty)}\int_{[0,x)}(r_{1}\xi_{1}-t_1)d_1\nonumber\\
+%&+&(r_{2}\xi_{2}-t_2) (x-d_1)d\alpha_1 \times \alpha_2\times \alpha_3\times \alpha_4 (\xi_1,\xi_2,d_1,d_2)\nonumber\\
+%&+&\int_{(\frac{t_1}{r_1},\infty)} \int_{(\frac{t_2}{r_2},\frac{r_{1}\xi_{1}-t_1+t_2}{r_2})}\int_{(0,[x-d_1)}\int_{[0,x)}(r_{1}\xi_{1}-t_1)d_1\nonumber\\
+%&+&(r_{2}\xi_{2}-t_2)d_2d\alpha_1 \times \alpha_2\times \alpha_3\times \alpha_4 (\xi_1,\xi_2,d_1,d_2)\nonumber
+%\end{eqnarray}
+
+
+
+%由此可知，模型(\ref{equation 12})是核心模型，当汇率不确定时和需求、汇率同时不确定时，利用模型(\ref{equation 12})都能得到很好的求解。
+
+
+
+%----------------------------- 第三章-----第三章------第三章---------------------------------------------------- 
+
+ %----------------------------- 第四章-----第四章------第四章----------------------------------------------------
+\newpage
+\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\zihao{5}河北大学理学硕士学位论文}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0) {\footnotesize \zihao{5}第4章\ 可变可能性分布下的两阶段生产计划模型}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{
+\centerline{\footnotesize\thepage}
+}
+\def\@oddfoot{
+\centerline{\footnotesize \thepage}
+}
+
+\setcounter{section}{0}
+%\setcounter{figure}{0}
+%\setcounter{table}{0}
+%\makeatother 
+%\hspace{12mm}\\
+\def\oddhead{{\protect\WENXIANMEIZI\hfill
+    第4章\ \  可变可能性分布下的两阶段生产计划模型\hfill}}
+\def\evenhead{{\protect\WENXIANMEIZI\hfill
+    第4章\ \  可变可能性分布下的两阶段生产计划模型\hfill}}
+\hspace*{0.5cm}
+\begin{center}
+{\Large\heiti\zihao{3}\bf 第4章\ \  可变可能性分布下的两阶段生产计划模型}\label{pg:4}
+\end{center}
+\vskip 0.5cm
+\setcounter{mychapter}{4}
+%\setcounter{equation}{0}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+在上一章中，我们考虑了变量固定可能性分布下的两阶段模型，分析了模型性质，给出了模型理论结果和求解方法。
+然而在有些模糊决策问题中，我们是无法确定变量可能性分布的。基于这种考虑论文进一步讨论了2-型模糊变量可变可能性分布
+下的两阶段模型。2-型模糊变量是指当模糊变量取一个数时它的可能性仍是一个模糊变量，因此2-型模糊变量能更加贴切的描述变量的不确定性，
+使问题研究变得更加有意义。
+本章首先采用前面介绍的风险值简约方法简化2-型模糊变量第二可能性分布的不确定性，然后将模型转化为参数规划问题，其次分析模型的性质给出
+理论结果，最后通过数值试验验证模型的有效性和可行性。
+\section{\JIEZI\zihao{4}\!\!\!模型分析
+\label{pg:4.1}}\hskip\parindent
+在这一节，模型仍然采用3.1节所介绍的符号，其中两个市场的单位收益分别记为$p_1$、$p_2$，假设变量考虑为2-型梯形模糊变量$\widetilde{\xi}_1=(\widetilde{r}_1^1,\widetilde{r}_1^2,\widetilde{r}_1^3,\widetilde{r}_1^4)$，
+ $\widetilde{\xi}_2=(\widetilde{r}_2^1,\widetilde{r}_2^2,\widetilde{r}_2^3,\widetilde{r}_2^4)$，
+其第二可能性分布分别为$\widetilde{\mu}_{\widetilde{\xi}_1}(x)$和$\widetilde{\mu}_{\widetilde{\xi}_2}(x)$。
+为了减少第二可能性分布的不确定性信息，我们用下风险值$\xi_1^L(\theta,\alpha)$和上风险值$\xi_2^U(\theta,\alpha)$，记$\theta=(\theta_l,\theta_r)$，分别作为模糊变量的代表值，把它们称为VaR简约模糊变量，其实验值记为$ \widehat{\xi_1}$和$ \widehat{\xi_2}$，可能性分布是下面的参数分布形式如
+\begin{align}\label{equation 22}
+\mu_{\xi_1^L}(x;\theta,\alpha)=&\Pos\{\xi_1^L=x\}\nonumber\\
+=&
+\begin{cases}
+(1-\theta_l+\alpha\theta_l)\frac{x-r_1}{r_2-r_1}, & x\in[r_1,\frac{r_1+r_2}{2}]\\
+\frac{(1+\theta_l-\alpha\theta_l)x-(1-\alpha)\theta_lr_2-r_1}{r_2-r_1}, & x\in(\frac{r_1+r_2}{2},r_2]\\
+1, & x\in(r_2,r_3]\\
+\frac{ -(1+\theta_l-\alpha\theta_l)x+(1-\alpha)\theta_lr_3+r_4}{r_4-r_3},                     & x\in(r_3,\frac{r_3+r_4}{2}]\\
+(1-\theta_l+\alpha\theta_l)\frac{r_4-x}{r_4-r_3},       &x\in(\frac{r_3+r_4}{2},r_4].
+\end{cases}
+\end{align}
+\begin{align}\label{equation 23}
+\mu_{\xi_2^U}(x;\theta,\alpha)=&\Pos\{\xi_2^U=x\}\nonumber\\
+=&
+\begin{cases}
+(1+\theta_r-\alpha\theta_r)\frac{x-r_1}{r_2-r_1}, & x\in[r_1,\frac{r_1+r_2}{2}]\\
+\frac{(1-\theta_r+\alpha\theta_r)x+(1-\alpha)\theta_rr_2-r_1}{r_2-r_1}, & x\in(\frac{r_1+r_2}{2},r_2]\\
+1, & x\in(r_2,r_3]\\
+\frac{ -(1-\theta_r+\alpha\theta_r)x-(1-\alpha)\theta_rr_3+r_4}{r_4-r_3},                     & x\in(r_3,\frac{r_3+r_4}{2}]\\
+(1+\theta_r-\alpha\theta_r)\frac{r_4-x}{r_4-r_3},       &x\in(\frac{r_3+r_4}{2},r_4].
+\end{cases}
+\end{align}
+它们的可信性分布为
+\begin{align} \label{equation 24}    
+\Cr\{\xi_1^L(\theta,\alpha)\leq \widehat{\xi}_1\}
+=&
+\begin{cases}
+0, & \widehat{\xi}_1\leq r_1\\
+\frac{(1-\theta_l+\alpha\theta_l)(\widehat{\xi}_1-r_1)}{2(r_2-r_1)},  &\widehat{\xi}_1\in(r_1,\frac{r_1+r_2}{2}]\\
+\frac{(1+\theta_l-\alpha\theta_l)\widehat{\xi}_1-(1-\alpha)\theta_lr_2-r_1}{2(r_2-r_1)}, & \widehat{\xi}_1\in(\frac{r_1+r_2}{2},r_2]\\
+\frac{1}{2}, & \widehat{\xi}_1 \in(r_2,r_3]\\
+ 1-\frac{-(1+\theta_l-\alpha\theta_l)\widehat{\xi}_1+(1-\alpha)\theta_lr_3+r_4}{2(r_4-r_3)},                     & \widehat{\xi}_1\in(r_3,\frac{r_3+r_4}{2}]\\
+1-\frac{(1-\theta_l+\alpha\theta_l)(r_4-\widehat{\xi}_1)}{2(r_4-r_3)},       &\widehat{\xi}_1\in(\frac{r_3+r_4}{2},r_4]\\
+1,& \widehat{\xi}_1>r_4.
+\end{cases}
+\end{align}
+和
+\begin{align} \label{equation 25}    
+\Cr\{\xi_2^U(\theta,\alpha)\leq \widehat{\xi}_2\}
+=&
+\begin{cases}
+0, & \widehat{\xi}_2\leq r_1\\
+\frac{(1+\theta_r-\alpha\theta_r)(\widehat{\xi}_2-r_1)}{2(r_2-r_1)},  &\widehat{\xi}_2\in(r_1,\frac{r_1+r_2}{2}]\\
+\frac{(1-\theta_r+\alpha\theta_r)\widehat{\xi}_2+(1-\alpha)\theta_rr_2-r_1}{2(r_2-r_1)}, & \widehat{\xi}_2\in(\frac{r_1+r_2}{2},r_2]\\
+\frac{1}{2}, & \widehat{\xi}_2 \in(r_2,r_3]\\
+ 1-\frac{-(1-\theta_r+\alpha\theta_r)\widehat{\xi}_2-(1-\alpha)\theta_rr_3+r_4}{2(r_4-r_3)},                     & \widehat{\xi}_2\in(r_3,\frac{r_3+r_4}{2}]\\
+1-\frac{(1+\theta_r-\alpha\theta_r)(r_4-\widehat{\xi}_2)}{2(r_4-r_3)},       &\widehat{\xi}_2\in(\frac{r_3+r_4}{2},r_4]\\
+1,& \widehat{\xi}_2>r_4.
+\end{cases}
+\end{align}
+
+假设只考虑一种产品，生产计划模型变为
+\begin{eqnarray}\label{equation 18}
+\begin{array}{ll}
+\max z(x)=&-cx+\iint\limits_{R^2}(p_1\widehat{\xi}_1-t_1)y_1+ (p_2\widehat{\xi}_2-t_2)y_2d\alpha_1 \times \alpha_2 (\widehat{\xi_1},\widehat{\xi_2})\\
+\mbox{s.t.}
+& y_j\leq d_j, ~~~~j=1,2\\
+& y_1+y_2\leq x,\\
+& x,y_1,y_2\geq 0.
+\end{array}
+\end{eqnarray}
+其中积分测度$\alpha_1(\widehat{\xi}_1)$和$\alpha_2(\widehat{\xi}_2)$是上述参数可信性分布函数，为\\
+$\alpha_1(\widehat{\xi}_1)=\Cr\{\xi_1^L(\theta,\alpha)\leq \widehat{\xi}_1\}$，$\alpha_2(\widehat{\xi}_2)=\Cr\{\xi_2^U(\theta,\alpha)\leq \widehat{\xi}_2\}$。
+
+通过分析约束条件我们知道，对于给定的$x$和模糊变量$(\widehat{\xi_1},\widehat{\xi_2})$上述规划都有可行解，并且关于两个
+变量可以用图解法找到第二阶段的解。通过对系数正负的分析和比较我们有\\
+$(a)$当$p_1\widehat{\xi}_1-t_1\leq 0$且$p_2\widehat{\xi}_2-t_2\leq0$时，即$\widehat{\xi}_1\in [0,\frac{t_1}{p_1}]$， $\widehat{\xi}_2\in [0,\frac{t_2}{p_2}]$时，$y_1=y_2=0$。\\
+$(b)$当$p_1\widehat{\xi}_1-t_1>0$且$p_2\widehat{\xi}_2-t_2\leq0$时，即$\widehat{\xi}_1\in (\frac{t_1}{p_1},\infty)$， $\widehat{\xi}_2\in [0,\frac{t_2}{p_2}]$时，$y_1=min(x,d_1)$，$y_2=0$。\\
+$(c)$当$p_1\widehat{\xi}_1-t_1\leq0$且$p_2\widehat{\xi}_2-t_2>0$，即$\widehat{\xi}_1\in [0,\frac{t_1}{p_1}]$， $\widehat{\xi}_2\in (\frac{t_2}{p_2},\infty)$时，$y_1=0$，$y_2=min(x,d_2)$。\\
+$(d)$当$p_1\widehat{\xi}_1-t_1>0$，$p_2\widehat{\xi}_2-t_2>0$且$p_1\widehat{\xi}_1-t_1>p_2\widehat{\xi}_2-t_2$，即$\widehat{\xi}_1\in (\frac{t_1}{p_1},\infty)$,  
+$\widehat{\xi}_2\in (\frac{t_2}{p_2},\frac{p_1\widehat{\xi}_1-t_1+t_2}{p_2}]$，$y_1=min(x,d_1)$， $y_2=min(x-y_1,d_2)$。\\
+$(e)$当$p_1\widehat{\xi}_1-t_1<p_2\widehat{\xi}_2-t_2$，即$\widehat{\xi}_1\in (\frac{t_1}{p_1},\infty)$， $\widehat{\xi}_2\in (\frac{p_1\widehat{\xi}_1-t_1+t_2}{p_2},\infty)$，
+$y_1=min(x-y_2,d_1)$，  $y_2=min(x,d_2)$。
+
+由此可知，当汇率$(\widehat{\xi}_1,\widehat{\xi}_2)$属于上面5种情况时，我们能够得到第二阶段目标函数的解析表达式如下
+%为了叙述方便，我们根据上面的分析将汇率区域划分成类似3.2节的五部分，分别用$\bar{A},\bar{B}$,$\bar{C}$,$\bar{D}$,$\bar{E}$表示即$\bar{A}$:
+%$\{\frac{t_1}{p_1}<\widehat{\xi_1}<\infty, 0\leq \widehat{\xi_2}\leq\frac{t_2}{r_2}\}$； 
+%$\bar{B}$: \{$\frac{t_1}{p_1}<\widehat{\xi_1}<\infty$,  $\frac{t_2}{p_2}<\widehat{\xi_2}\leq\frac{r_1\widehat{\xi_1}-t_1+t_2}{r_2}$\}；
+ %$\bar{C}$:  \{$\frac{t_1}{p_1}<\widehat{\xi_1}<\infty$,  $\frac{r_1\widehat{\xi_1}-t_1+t_2}{p_2}<\widehat{\xi_2}<\infty$\}；
+%$\bar{D}$: \{$0\leq\widehat{\xi_1}\leq\frac{t_1}{p_1}$,  $\frac{t_2}{r_2}<\widehat{\xi_2}<\infty$\}；
+%$\bar{E}$:  \{$0\leq\widehat{\xi_1}\leq\frac{t_1}{p_1}$,  $0\leq\widehat{\xi_2}\leq\frac{t_2}{r_2}$\}。
+\begin{eqnarray}\nonumber
+Q=\left\{
+\begin{array}{lllll}
+(p_1\widehat{\xi_1}-t_1)min(x,d_1), \\
+(p_1\widehat{\xi_1}-t_1)min(x,d_1)+(p_2\widehat{\xi_2}-t_2)min(x-min(x,d_1),d_2),\\
+(p_1\widehat{\xi_1}-t_1)min(x-min(x,d_2),d_1)+(p_2\widehat{\xi_2}-t_2)min(x,d_2),  \\
+(p_2\widehat{\xi_2}-t_2)min(x,d_2), \\
+0.
+\end{array}\right.
+\end{eqnarray}
+%本节将建立生产计划问题的模糊两阶段罚值-偏差模型。假设模型仍然采用3.1节所介绍的
+%符号，假设只考虑一种产品，模糊变量考虑为2型模糊变量$\widetilde{\xi_1}$,$\widetilde{\xi_2}$，第二可能性分布分别为$\widetilde{\mu}_{\widetilde{\xi_1}}(x)$和$\widetilde{\mu}_{\widetilde{\xi_2}}(x)$
+%，为了简约第二可能性分布我们用上风险值$\xi_1^L$和$\xi_2^L$作为模糊变量的代表值，其实验值记为$\xi_1$和$\xi_2$。同时我们
+%假设库存罚值为$k$。那么生产利润函数为
+%$$-cx+\iint\limits_{R^2}Q\left(x|(\xi_1,\xi_2)\right)) d\alpha_1 \times \alpha_2 (\xi_1,\xi_2)$$
+%表示生产成本和第二阶段销售利润两部分的和。
+%以偏差作为风险指标用下面形式表示
+%$$\iint\limits_{R^2}(Q-E)d\alpha_1 \times \alpha_2 (\xi_1,\xi_2)  $$
+%在生产过程中我们通常都是在追求利润最大化的同时希望风险最小，因此建立如下两阶段生产计划最大化模型
+
+%\begin{eqnarray}\label{equation 18}
+%\begin{array}{ll}
+%\max z(x)=&-cx+E(x)-\iint\limits_{R^2}(Q-E) d\alpha_1 \times \alpha_2 (\xi_1,\xi_2)\\
+%\mbox{s.t.:}
+%&x\geq 0,
+%\end{array}
+%\end{eqnarray}
+%其中 $\alpha_1(\xi_1)=\Cr\{\xi_1^L\leq \xi_1\}$，$\alpha_2(\xi_2)=\Cr\{\xi_2^L\leq \xi_2\}$。\\
+%$Q\left(x|(\xi_1,\xi_2)\right)$是下面规划的最优值
+%\begin{eqnarray}\label{equation 19}
+%\begin{array}{lll}
+%Q\left(x|(\xi_1,\xi_2)\right)&=max (r_1\xi_1-t_1)y_1+(r_2\xi_2-t_2)y_2-k[x-(y_1+y_2)]\\
+%\mbox{s.t.:}
+%& y_j\leq d_j, ~~~~j=1,2\\
+%& y_1+y_2\leq x,\\
+%& y_1,y_2\geq 0.
+%\end{array}
+%\end{eqnarray}
+%$E(x )=\iint\limits_{R^2}Q\left(x|(\xi_1,\xi_2)\right)) d\alpha_1 \times \alpha_2 (\xi_1,\xi_2)$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\JIEZI\zihao{4}\!\!\!模型理论结果
+\label{pg:4.2}}\hskip\parindent
+本节将给出模型(\ref{equation 18})的一些理论结果。
+根据第二阶段函数$Q$解析表达式的特点我们用$\min(d_1,d_2)$，$\max(d_1,d_2)$和$(d_1+d_2)$三点把$x$的定义域分成三部分：$[0,\min(d_1,d_2)]$，$[\min(d_1,d_2),\max(d_1,d_2)]$，
+$[\max(d_1,d_2),d_1+d_2]$。本文考虑$d_1<d_2$的情况，当$d_1>d_2$时类似。\\
+当$0\leq x\leq d_1$时，
+%\begin{eqnarray}\nonumber
+%Q=\left\{
+%\begin{array}{lll}
+%(r_1\widehat{\xi_1}-t_1)x,~~~~(\widehat{\xi_1},\widehat{\xi_2})\in(\bar{A}\bigcup\bar{B} ) \\
+%(r_2\widehat{\xi_2}-t_2)x, ~~~~(\widehat{\xi_1},\widehat{\xi_2})\in(\bar{C}\bigcup\bar{D} )\\
+%0,~~~~~~~~~~~~~~~~~~(\widehat{\xi_1},\widehat{\xi_2})\in\bar{E}.
+%\end{array}\right.
+%\end{eqnarray}
+模型(\ref{equation 18})的目标函数为
+\begin{align}\nonumber
+z(x)=&-cx+\int_{(\frac{t_1}{p_1},\infty)}\int_{[0,\frac{p_1\widehat{\xi}_1-t_1+t_2}{p_2}]}(p_1\widehat{\xi}_1-t_1)x d\alpha_1 \times \alpha_2 (\widehat{\xi}_1,\widehat{\xi}_2)\nonumber\\
++&\int_{(\frac{t_2}{p_2},\infty)}\int_{[0,\frac{p_2\widehat{\xi}_2-t_2+t_1}{p_1}]}(p_2\widehat{\xi}_2-t_2)xd\alpha_1\times \alpha_2(\widehat{\xi}_1,\widehat{\xi}_2). \nonumber
+\end{align}
+其中$\alpha_1(\widehat{\xi}_1)$, $\alpha_2(\widehat{\xi}_2)$是带有参数的的模糊变量可信性分布函数。由于参数分布函数是分段右连续的，因此在具体计算时目标函数的积分区域会因参数分布
+函数的分段区域发生变化，此时模型目标函数就会含有参数$(\theta_l, \theta_r, \alpha)$。
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+同理，当$d_1< x\leq d_2$时，
+\begin{align}\nonumber
+z(x)=&-cx+\int_{(\frac{t_1}{p_1},\infty)}\int_{[0,\frac{t_2}{p_2}]}(p_1\widehat{\xi}_1-t_1)d_1 d\alpha_1 \times \alpha_2 (\widehat{\xi}_1,\widehat{\xi}_2)\nonumber\\
++&\int_{(\frac{t_1}{p_1},\infty)}\int_{(\frac{t_2}{p_2},\frac{p_1\widehat{\xi}_1-t_1+t_2}{p_2}]}(p_1\widehat{\xi}_1-t_1)d_1+(p_2\widehat{\xi}_2-t_2)(x-d_1)d\alpha_1\times \alpha_2(\widehat{\xi}_1,\widehat{\xi}_2) \nonumber\\
++&\int_{(\frac{t_2}{p_2},\infty)}\int_{[0,\frac{p_2\widehat{\xi}_2-t_2+t_1}{p_1})}(p_2\widehat{\xi}_2-t_2)x d\alpha_1\times \alpha_2(\widehat{\xi}_1,\widehat{\xi}_2) \nonumber
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+当$d_2< x\leq d_1+d_2$时，
+%\begin{eqnarray}\nonumber
+%Q=\left\{
+%\begin{array}{lll}
+%(r_1\widehat{\xi_1}-t_1)d_1, ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(\widehat{\xi_1},\widehat{\xi_2})\in\bar{A}\\
+%(r_1\widehat{\xi_1}-t_1)d_1+(r_2\widehat{\xi_2}-t_2)(x-d_1),~~~~(\widehat{\xi_1},\widehat{\xi_2})\in\bar{B}\\
+%(r_1\widehat{\xi_1}-t_1)(x-d_2)+(r_2\widehat{\xi_2}-t_2)d_2, ~~~~(\widehat{\xi_1},\widehat{\xi_2})\in \bar{C} \\
+%(r_2\widehat{\xi_2}-t_2)d_2, ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(\widehat{\xi_1},\widehat{\xi_2})\in\bar{D}\\
+%0,~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(\widehat{\xi_1},\widehat{\xi_2})\in\bar{E}.
+%\end{array}\right.
+%\end{eqnarray}
+模型(\ref{equation 18})目标函数为
+\begin{align}\nonumber
+z(x)=&-cx+\int_{(\frac{t_1}{p_1},\infty)}\int_{[0,\frac{t_2}{p_2}]}(p_1\widehat{\xi}_1-t_1)d_1 d\alpha_1 \times \alpha_2 (\widehat{\xi}_1,\widehat{\xi}_2)\nonumber\\
++&\int_{(\frac{t_1}{p_1},\infty)}\int_{(\frac{t_2}{p_2},\frac{p_1\widehat{\xi}_1-t_1+t_2}{p_2}]}(p_1\widehat{\xi}_1-t_1)d_1+(p_2\widehat{\xi}_2-t_2)(x-d_1)d\alpha_1\times \alpha_2(\widehat{\xi}_1,\widehat{\xi}_2) \nonumber\\
++&\int_{(\frac{t_1}{p_1},\infty)}\int_{(\frac{p_1\widehat{\xi}_1-t_1+t_2}{p_2},\infty)}(p_1\widehat{\xi}_1-t_1)(x-d_2)+(p_2\widehat{\xi}_2-t_2)d_2d\alpha_1\times \alpha_2(\widehat{\xi}_1,\widehat{\xi}_2) \nonumber\\
++&\int_{[0,\frac{t_1}{p_1}]}\int_{(\frac{t_2}{p_2},\infty)}(p_2\widehat{\xi}_2-t_2)d_2d\alpha_1\times \alpha_2(\widehat{\xi}_1,\widehat{\xi}_2) \nonumber
+\end{align}
+
+此时目标函数的积分区域也会根据参数分布的分段点发生变化，最终转化为带有参数的目标函数。
+
+根据观察上面函数表达式，可知目标函数是关于$x$的分段线性函数，我们可以根据分段函数的增减性找到第一阶段最优解，因此给出下面结论
+\begin{theorem}\label{theorem 1} 
+当$0\leq x\leq d_1$时，第一阶段最佳生产数量$x=d_1$当且仅当
+$\int_{(\frac{t_1}{p_1},\infty)}\\
+\int_{[0,\frac{p_1\widehat{\xi}_1-t_1+t_2}{p_2}]}(r_1\widehat{\xi}_1-t_1) d\alpha_1 \times \alpha_2 (\widehat{\xi}_1,\widehat{\xi}_2)
++\int_{(\frac{t_2}{p_2},\infty)}\int_{[0,\frac{p_2\widehat{\xi}_2-t_2+t_1}{p_1}]}(p_2\widehat{\xi}_2-t_2)d\alpha_1\times \alpha_2(\widehat{\xi}_1,\widehat{\xi}_2)\\
+\geq c$，否则$x=0$；
+当$d_1\leq x\leq d_2$时，$x=d_2$当且仅当$ \int_{(0,\infty)}\int_{(\frac{t_2}{p_2},\infty)}(r_2\widehat{\xi}_2-t_2) d\alpha_1 \times \alpha_2 (\widehat{\xi}_1,\widehat{\xi}_2
+\geq c$，否则$x=d_1$；
+当$d_2\leq x\leq d_1+d_2$时，$x=d_1+d_2$当且仅当
+$\int_{(\frac{t_1}{p_1},\infty)}\int_{(\frac{t_2}{p_2},\frac{p_1\widehat{\xi}_1-t_1+t_2}{p_2}]} (p_2\widehat{\xi}_2-t_2)d_2d\alpha_1\times \alpha_2(\widehat{\xi}_1,\widehat{\xi}_2)
++ \int_{(\frac{t_1}{p_1},\infty)}\int_{(\frac{p_1\widehat{\xi}_1-t_1+t_2}{p_2},\infty)}(p_1\widehat{\xi}_1-t_1)d\alpha_1\times \alpha_2(\widehat{\xi}_1,\widehat{\xi}_2) \geq c$。
+当代入参数可信性分布分段区域后，上述积分区域会受参数$(\theta_l, \theta_r, \alpha)  $的影响而发生变化。
+\pfd \end{theorem} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\JIEZI\zihao{4}\!\!\!数值实验和结果分析
+\label{pg:4.3}}\hskip\parindent
+为了同模糊变量固定分布下的计算结果比较，本节仍然考虑第3章的电子产品生产计划问题，与前面不同的是本节实验将汇率考虑为2-型三角模糊变量分别为
+$\widetilde{{\xi}_1}=(\widetilde{8},\widetilde{9},\widetilde{10};\theta_l,\theta_r,\alpha)$， 
+$\widetilde{{\xi}_2}=(\widetilde{4},\widetilde{5},\widetilde{6};\theta_l,\theta_r,\alpha)$。
+假设只考虑产品3，模型所用到的数据见表(\ref{table 2})。由于2-型三角模糊变量是2-型梯形模糊变量的特殊形式，可知
+$\widetilde{{\xi}_1}$的第二可能性分布$\widetilde{\mu}_{\widetilde{\xi}_1(x)}$为：\\
+当$x \in [8,9]$时，$(x-8-\theta_l\min\{x-8,9-x\},x-8,x-8+\theta_r\min\{x-8,9-x\})$；\\
+当$x \in [9,10]$时，$(10-x-\theta_l\min\{10-x,x-9\},10-x,10-x+\theta_r\min\{10-x,x-9\})$。\\
+$\widetilde{{\xi}_2}$的第二可能性分布$\widetilde{\mu}_{\widetilde{\xi}_2(x)}$：\\
+当$x \in [4,5]$时，$(x-4-\theta_l\min\{x-4,5-x\},x-4,x-4+\theta_r\min\{x-4,5-x\})$；\\
+当$x \in [5,6]$时，$(6-x-\theta_l\min\{6-x,x-5\},6-x,6-x+\theta_r\min\{6-x,x-5\})$。\\
+由表达式(\ref{equation 22})和(\ref{equation 23})可知
+%本节我们考虑一个国内箱包及类似容器的生产计划问题，通过对它的求解来说明模型及方法的可行性。在我们的箱包及类似容器生产计划问题中包括一个国内生产商
+%即箱包的生产商和两个国外的需求市场以法国和美国为例。其中，单位运费$t_j$,  $j=1,2$，单价$r_j$,  $j=1,2$和两个国外市场的需求$d_1$,  $d_2$在表中给出。汇率
+%考虑2型模糊变量$\widetilde{{\xi_1}}=(\widetilde{5},\widetilde{6},\widetilde{7},\widetilde{8};\theta_l,\theta_r,\alpha)$,    
+\begin{align}\label{equation 27}
+\mu_{\xi_1^L}(x;\theta,\alpha)
+=&
+\begin{cases}
+(1-\theta_l+\alpha\theta_l)(x-8), & x\in[8,\frac{17}{2}]\\
+(1+\theta_l-\alpha\theta_l)x-9(1-\alpha)\theta_l-8, & x\in(\frac{17}{2},9]\\
+ -(1+\theta_l-\alpha\theta_l)x+9(1-\alpha)\theta_l+10,                     & x\in(9,\frac{19}{2}]\\
+(1-\theta_l+\alpha\theta_l)(10-x),       &x\in(\frac{19}{2},10].
+\end{cases}
+\end{align}
+和
+\begin{align}\label{equation 28}
+\mu_{\xi_2^U}(x;\theta,\alpha)
+=&
+\begin{cases}
+(1+\theta_r-\alpha\theta_r)(x-4), & x\in[4,\frac{9}{2}]\\
+(1-\theta_r+\alpha\theta_r)x+5(1-\alpha)\theta_r-4, & x\in(\frac{9}{2},5]\\
+ -(1-\theta_r+\alpha\theta_r)x-5(1-\alpha)\theta_r+6,                     & x\in(5,\frac{11}{2}]\\
+(1+\theta_r-\alpha\theta_r)(6-x),       &x\in(\frac{11}{2},6].
+\end{cases}
+\end{align}
+我们用单调增的可信性分布函数生成L-S测度，分别用$\alpha_1(\widehat{\xi}_1)$和$\alpha_2(\widehat{\xi}_2)$表示，其表达式如下
+\begin{align}\label{equation 29}
+\alpha_1(\widehat{\xi}_1)=&\Cr\{\xi_1^L\leq \widehat{\xi}_1\}\nonumber\\
+=&
+\begin{cases}
+0, & \widehat{\xi_1}\leq 8\\
+\frac{(1-\theta_l+\alpha\theta_l)(\widehat{\xi}_1-8)}{2},  &\widehat{\xi_1}\in(8,\frac{17}{2}]\\
+\frac{(1+\theta_l-\alpha\theta_l)\widehat{\xi}_1-9(1-\alpha)\theta_l-8}{2}, & \widehat{\xi}_1\in(\frac{17}{2},9]\\
+ 1-\frac{-(1+\theta_l-\alpha\theta_l)\widehat{\xi}_1+9(1-\alpha)\theta_l+10}{2},                     & \widehat{\xi}_1\in(9,\frac{19}{2}]\\
+1-\frac{(1-\theta_l+\alpha\theta_l)(10-\widehat{\xi}_1)}{2},       &\widehat{\xi}_1\in(\frac{19}{2},10]\\
+1,& \widehat{\xi}_1>10.
+\end{cases}
+\end{align}
+\begin{align}\label{equation 30}
+\alpha_2(\widehat{\xi}_2)=&\Cr\{\xi_2^U\leq \widehat{\xi}_2\}\nonumber\\
+=&
+\begin{cases}
+0, & \widehat{\xi}_2\leq 4\\
+\frac{(1+\theta_r-\alpha\theta_r)(\widehat{\xi}_2-4)}{2},  &\widehat{\xi}_2\in(4,\frac{9}{2}]\\
+\frac{(1-\theta_r+\alpha\theta_r)\widehat{\xi}_2+5(1-\alpha)\theta_r-4}{2}, & \widehat{\xi}_2\in(\frac{9}{2},5]\\
+ 1-\frac{-(1-\theta_r+\alpha\theta_r)\widehat{\xi}_2-5(1-\alpha)\theta_r+6}{2},                     & \widehat{\xi}_2\in(5,\frac{11}{2}]\\
+1-\frac{(1+\theta_r-\alpha\theta_r)(6-\widehat{\xi}_2)}{2},       &\widehat{\xi}_2\in(\frac{11}{2},6]\\
+1,& \widehat{\xi_2}>6.
+\end{cases}
+\end{align}
+
+利用上面的符号，当$0\leq x\leq 50$时，生产计划模型变为下面的数学规划问题
+\begin{eqnarray}
+\begin{array}{lll}
+\max z(x)&=-280x+\int_{(\frac{14}{13},\infty)}\int_{(\frac{8}{11},\frac{13\widehat{\xi}_1+2}{22}]}(65\widehat{\xi}_1-70)x d\alpha_1 \times \alpha_2 (\widehat{\xi}_1,\widehat{\xi}_2)\\
+&+\int_{(\frac{14}{13},\infty)}\int_{(\frac{13\widehat{\xi}_1+2}{22},\infty]}(110\widehat{\xi}_2-80)x d\alpha_1 \times \alpha_2 (\widehat{\xi}_1,\widehat{\xi}_2)\\
+&=-280x+131.341(1-\theta_l+\alpha\theta_l)(1+\theta_r-\alpha\theta_r)x\\
+&+130.759(1-\theta_l+\alpha\theta_l)(1-\theta_r+\alpha\theta_r)x\\
+&+133.504(1+\theta_l-\alpha\theta_l)(1+\theta_r-\alpha\theta_r)x\\
+&+129.197(1+\theta_l-\alpha\theta_l)(1-\theta_r+\alpha\theta_r)x\\
+\mbox{s.t.}
+& y_1+y_2\leq x,\\
+& 0\leq x \leq 50,\\
+& 0\leq y_1 \leq 50,\\
+& 0\leq y_2 \leq 100.\\
+\end{array}
+\end{eqnarray}
+%\begin{equation}
+%\max z(x)=-120x+(B_1+C_1)x[1-(\theta_l-\alpha\theta_l)^2]+(B_2+C_2)x(1+\theta_l-\alpha\theta_l)^2+(B_3+C_3)x(1-\theta_l+\alpha\theta_l)^2
+%\end{equation}
+
+当$50\leq x\leq 100$时
+\begin{eqnarray}
+\begin{array}{lll}
+\max z(x)&=-280x+(69.062x+3263.95)(1-\theta_l+\alpha\theta_l)(1+\theta_r-\alpha\theta_r)\\
+&+(83.095x+2383.2)(1-\theta_l+\alpha\theta_l)(1-\theta_r+\alpha\theta_r)\\
+&+(69.063x+3222.05)(1+\theta_l-\alpha\theta_l)(1+\theta_r-\alpha\theta_r)\\
+&+(63.877x+3266)(1+\theta_l-\alpha\theta_l)(1-\theta_r+\alpha\theta_r)\\
+\mbox{s.t.}
+& y_1+y_2\leq x,\\
+& 50\leq x \leq 100,\\
+& 0\leq y_1 \leq 50,\\
+& 0\leq y_2 \leq 100.\\
+\end{array}
+\end{eqnarray}
+
+
+当$100\leq x\leq 150$时
+\begin{eqnarray}
+\begin{array}{lll}
+\max z(x)&=-280x+(63.471x+3823.05)(1-\theta_l+\alpha\theta_l)(1+\theta_r-\alpha\theta_r)\\
+&+(81.083x+2584.4)(1-\theta_l+\alpha\theta_l)(1-\theta_r+\alpha\theta_r)\\
+&+(64.308x+3697.55)(1+\theta_l-\alpha\theta_l)(1+\theta_r-\alpha\theta_r)\\
+&+(63.43x+3310.7)(1+\theta_l-\alpha\theta_l)(1-\theta_r+\alpha\theta_r)\\
+\mbox{s.t.}
+& y_1+y_2\leq x,\\
+& 100\leq x \leq 550,\\
+& 0\leq y_1 \leq 50,\\
+& 0\leq y_2 \leq 100.\\
+\end{array}
+\end{eqnarray}
+由此可见，模型(\ref{equation 18})变为上述带有参数$(\theta,\alpha)$的线性规划问题。当确定一个参数，其他参数变化时我们给出以下实验结果。
+\begin{table}[ht]
+ \caption{固定$\alpha, (\theta_l, \theta_r)$变化时的求解结果}\label{table 4}
+ \begin{center}
+\begin{tabular}{c|ccc|cc|cc|cc}\hline
+$\alpha$&{$(\theta_l,\theta_r)$}~~&{局解}~~&{局值}~~&{局解}~~&{局值}~~&{局解}~~&{局值}~~&{全解}&{全值}\\\hline
+{$0.1$} &{$(0.01,0.99)$}&{50}&{12741}&{50}&{12741}&{100}&{12600}&{50}&{12741}\\
+
+ {$$}&{$(0.03,0.97)$}&{50}&{12732}&{50}&{12732}&{100}&{12597}&{50}&{12732}\\
+{$$} &{$(0.05,0.95)$}&{50}&{12723}&{50}&{12723}&{100}&{12594}&{50}&{12723}\\
+{$$}&{$(0.2,0.8)$}&{50}&{12657}&{50}&{12657}&{100}&{12545}&{50}&{12657}\\
+{$$}&{$(0.4,0.6)$}&{50}&{12567}&{50}&{12567}&{100}&{12424}&{50}&{12567}\\
+{$$}&{$(0.6,0.4)$}&{50}&{12474}&{50}&{12474}&{100}&{12238}&{50}&{12474}\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{table}[ht]
+ %\caption{固定$\alpha, (\theta_l, \theta_r)$变化时的求解结果}\label{table 4}
+ \begin{center}
+\begin{tabular}{c|ccc|cc|cc|cc}\hline
+$\alpha$&{$(\theta_l,\theta_r)$}~~&{局解}~~&{局值}~~&{局解}~~&{局值}~~&{局解}~~&{局值}~~&{全解}&{全值}\\\hline
+{$0.5$} &{$(0.01,0.99)$}&{50}&{12585}&{100}&{12618}&{100}&{12618}&{100}&{12618}\\
+ {$$}&{$(0.03,0.97)$}&{50}&{12580}&{100}&{12613}&{100}&{12613}&{100}&{12613}\\
+{$$} &{$(0.05,0.95)$}&{50}&{12575}&{100}&{12607}&{100}&{12607}&{100}&{12607}\\
+{$$}&{$(0.2,0.8)$}&{50}&{12537}&{100}&{12558}&{100}&{12558}&{100}&{12558}\\
+{$$}&{$(0.4,0.6)$}&{50}&{12487}&{50}&{12487}&{100}&{12474}&{50}&{12487}\\
+{$$}&{$(0.6,0.4)$}&{50}&{12435}&{50}&{12435}&{100}&{12371}&{50}&{12435}\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\begin{table}[ht]
+ %\caption{固定$\alpha, (\theta_l, \theta_r)$变化时的求解结果}\label{table 4}
+ \begin{center}
+\begin{tabular}{c|ccc|cc|cc|cc}\hline
+$\alpha$&{$(\theta_l,\theta_r)$}~~&{局解}~~&{局值}~~&{局解}~~&{局值}~~&{局解}~~&{局值}~~&{全解}&{全值}\\\hline
+{$0.9$} &{$(0.01,0.99)$}&{50}&{12760}&{100}&{12639}&{100}&{12639}&{100}&{12639}\\
+ {$$}&{$(0.03,0.97)$}&{50}&{12751}&{100}&{12637}&{100}&{12637}&{100}&{12637}\\
+{$$} &{$(0.05,0.95)$}&{50}&{12742}&{100}&{12635}&{100}&{12635}&{100}&{12635}\\
+{$$}&{$(0.2,0.8)$}&{50}&{12672}&{100}&{12621}&{100}&{12621}&{100}&{12621}\\
+{$$}&{$(0.4,0.6)$}&{50}&{12577}&{100}&{12601}&{100}&{12601}&{100}&{12601}\\
+{$$}&{$(0.6,0.4)$}&{50}&{12479}&{100}&{12581}&{100}&{12581}&{100}&{12581}\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+\begin{table}[!ht]
+ \caption{$\theta_l=0.5, \theta_r=0.5,\alpha$变化时的求解结果}\label{table 5}
+ \begin{center}
+\begin{tabular}{c|cccccccc}\hline
+$\alpha$&{0.15}~~&{0.25}~~&{0.35}~~&{0.45}~~&{0.55}~~&{0.65}~~&{0.75}~~&{0.85}\\\hline
+{$[0,50]$} &{50}&{50}&{50}&{50}&{50}&{50}&{50}&{50}\\
+{}&{12513}&{12498}&{12483}&{12468}&{12454}&{12439}&{12425}&{12411}\\
+{$[50,100]$} &{50}&{50}&{50}&{50}&{50}&{100}&{100}&{100}\\
+{}&{12513}&{12498}&{12483}&{12468}&{12454}&{12478}&{12519}&{12566}\\
+{$[100,150]$} &{100}&{100}&{100}&{100}&{100}&{100}&{100}&{100}\\
+{}&{12345}&{12362}&{12383}&{12410}&{12441}&{12478}&{12519}&{12566}\\
+{全局最优解}&{50}&{50}&{50}&{50}&{50}&{100}&{100}&{100}\\
+{全局最优值}&{12513}&{12498}&{12483}&{12468}&{12454}&{12478}&{12519}&{12566}\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+从上述实验结果可以看出当固定$\alpha$，$\theta_l,\theta_r$变化时，
+实验结果是不同的，也就是说参数变化对生产决策和生产利润是有影响的。
+当参数$\alpha$取0.1，$(\theta_l,\theta_r)$取表(\ref{table 4})中的六组数据时，
+由表(\ref{table 4})的实验结果可知最终的生产决策$x$取需求的较小值50，而当汇率不是2-型模糊变量，即变量的可能性
+分布是确定时，由表(\ref{table 3})可知最终的生产决策为$x=100$。因此，考虑参数可以影响生产决策。
+
+同时本文以$\alpha$取0.5和0.9时作为
+比较，从表(\ref{table 4})的实验结果可以得出：当$\alpha=0.5$时，生产决策
+$x=50$和$x=100$，同一取值情况下最优生产计划发生了变化，同时观察到最低利润值也是不断变化。
+当$\alpha=0.9$时，$x=100$，和第三章数值实验的生产决策$x$取值保持一致，但是生产利润也发生了变化。
+因此可知随着参数$(\alpha,\theta_l,\theta_r)$的变化生产决策和生产利润都是发生变化的。也就是说即使决策者在第一阶段做的
+决策生产数量相同，但是由于参数的变化，最终的利润也是不同的，因为考虑参数变化更能使帮助决策者制定最佳的生产决策。
+
+同时本文又考虑了另外一种情况：当$(\theta_l,\theta_r)$固定本文取值都为0.5，
+$\alpha$变化，由表(\ref{table 5})可以看出，随着参数$\alpha$的变化，生产决策由$x=50$变化到$x=100$，最大利润也是不相同，进一步说明了参数的有效影响。
+
+
+由表(\ref{table 4})和表(\ref{table 5})可以看出，参数的取值是比较均匀的，兼顾大部分区间数值，
+但是实验结果不相同，说明参数的变化无论是$\alpha$还是$(\theta_l,\theta_r)$的变化都可以影响生产决策，因此生产者考虑参数的变化更能
+制定出合理的生产计划。
+
+
+
+
+%----------------------------- 第四章-----第四章------第四章----------------------------------------------------
+
+ %----------------------------- 第五章-----第五章------第五章----------------------------------------------------
+
+\newpage
+\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\footnotesize \zihao{5}河北大学理学硕士学位论文}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0) {\footnotesize \zihao{5}第5章\ 结论与展望}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{
+\centerline{\footnotesize\songti\zihao{-5} \thepage}
+}
+\def\@oddfoot{
+\centerline{\footnotesize\songti\zihao{-5} \thepage}
+}
+\setcounter{section}{0}
+%\makeatother 
+%\hspace{12mm}\\
+\def\oddhead{{\protect\WENXIANMEIZI\hfill
+    第5章\ \ 结论与展望\hfill}}
+\def\evenhead{{\protect\WENXIANMEIZI\hfill
+    第5章\ \ 结论与展望\hfill}}
+\hspace*{0.5cm}
+\begin{center}
+{\Large\heiti\zihao{3}\bf 第5章\ \ 结论与展望}\label{pg:5}
+\end{center}
+\vskip 0.5cm
+\setcounter{mychapter}{5}
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\vskip 0.5cm
+\section{\JIEZI\zihao{4}\!\!\!论文的主要工作及创新点}\label{pg:5.1}
+\hskip\parindent
+
+生产计划问题研究在生产过程中决策者如何制定合适的生产方案，使企业获得最大利润或者花费最小。它对企业的长期运营有着重大的战略决策意义。
+在实际的生产计划问题中，需求、运费、汇率等通常带有不确定性，因此我们采用处理模糊性的理论工具进行研究模糊环境下的生产计划问题。
+
+本文首先建立了一个确定分布下的两阶段模糊模型，以最大化生产收益为目标，当汇率为模糊变量时，提出了一个新的两阶段模糊优化方法，用可信性分布产生一个测度
+来定义模糊变量函数的L-S积分，分析模型特点采用区域分解方法讨论了解的性质并进行求解。考虑到在有些决策问题中模型中的参数是无法确定可能性分布的，论文进一步讨论了参数可能性分布下的
+生产计划模型，通过风险值简约方法对2-型模糊变量进行简约，得到模糊变量的参数可能性分布，分析了参数变化对模型计算结果的影响，同时和确定情况下做了比较说明了参数影响的有效性。
+
+本文的主要工作及创新点可以总结如下：
+(1)建立了固定可能性分布和可变可能性分布下的两阶段模糊生产计划模型；
+(2)讨论了一般连续分布下的模型的基本性质，给出理论结果；
+(3)设计了当汇率为模糊变量情况下求解模型的区域分解方法；
+(4)给出了求解模型的算法步骤，在两种情况下进行数值试验并根据计算结果进行比较，说明了参数对求解结果的影响，表明参数优化方法的优越性。
+
+\section{\JIEZI\zihao{4}\!\!\!对今后工作的展望
+\label{pg:5.2}}\hskip\parindent
+我们研究的是模糊环境下的生产计划问题，论文进一步的工作可以把模糊环境推广到双重不确定环境，还可以
+把风险考虑进去如以绝对偏差，半偏差，方差等作为风险指标，进一步研究模型的性质，同时由于只考虑了一种不确定变量汇率，论文还可以考虑多种不确定变量如需求，运费等。
+在此给出一点想法，考虑一下当汇率和需求同时不确定的情况。
+当需求为不确定变量时，也就是说首先给出一个生产决策$x$，当需求和汇率确定后，然后做出分配决策，此时的补偿问题仍然是一个确定的规划和
+3.1节第二阶段问题相同，主要区别在于利润函数变为对第二阶段规划函数的四重L-S积分，求解时要在考虑汇率分段的基础上同时考虑需求对$x$的分段划分
+，最后仍然可以转化为$x$的分段线性函数，求出区间最值，最终通过区间比较求得全区域上的最大值。
+两阶段模型如下
+\begin{equation*}
+\begin{array}{ll}
+\max z(x_i)=&\sum\limits_{i=1}^{n}(-c_ix_i+\iiiint\limits_{R^4}Q d\alpha_1 \times \alpha_2\times \alpha_3\times \alpha_4 (\xi_1,\xi_2,d_1,d_2)\\
+\mbox{s.t.}
+&x_i\geq 0,
+\end{array}
+\end{equation*}
+
+以产品$i$为例，简单给出部分解题步骤如下，
+\begin{eqnarray}
+Z(x)&=&-cx+\int_{(\frac{t_1}{r_1},\infty)} \int_{[0,\frac{t_2}{r_2}]} \int_{[0,\infty)} \int_{[x,\infty)}x(r_{1}\xi_{1}-t_1)d\alpha_1 \times ...\times\alpha_4 (\xi_1,\xi_2,d_1,d_2) \nonumber\\
+&+&\int_{(\frac{t_1}{r_1},\infty)} \int_{[0,\frac{t_2}{r_2}]} \int_{[0,\infty)} \int_{[0,x)}d_1(r_{1}\xi_{1}-t_1)d\alpha_1 \times ...\times\alpha_4(\xi_1,\xi_2,d_1,d_2)\nonumber\\
+&+&\int_{(\frac{t_1}{r_1},\infty)} \int_{(\frac{t_2}{r_2},\frac{r_{1}\xi_{1}-t_1+t_2}{r_2})}\int_{[0,\infty)}\int_{[x,\infty)}(r_{1}\xi_{1}-t_1)xd\alpha_1 \times ...\times\alpha_4  (\xi_1,\xi_2,d_1,d_2)\nonumber\\
+&+&\int_{(\frac{t_1}{r_1},\infty)} \int_{(\frac{t_2}{r_2},\frac{r_{1}\xi_{1}-t_1+t_2}{r_2})}\int_{[x-d_1,\infty)}\int_{[0,x)}(r_{1}\xi_{1}-t_1)d_1\nonumber\\
+&+&(r_{2}\xi_{2}-t_2) (x-d_1)\alpha_1 \times \alpha_2\times \alpha_3\times \alpha_4 (\xi_1,\xi_2,d_1,d_2)\nonumber\\
+&+&\int_{(\frac{t_1}{r_1},\infty)} \int_{(\frac{t_2}{r_2},\frac{r_{1}\xi_{1}-t_1+t_2}{r_2})}\int_{(0,[x-d_1)}\int_{[0,x)}(r_{1}\xi_{1}-t_1)d_1\nonumber\\
+&+&(r_{2}\xi_{2}-t_2)d_2\alpha_1 \times \alpha_2\times \alpha_3\times \alpha_4 (\xi_1,\xi_2,d_1,d_2)\nonumber
+\end{eqnarray}
+
+
+
+
+%\begin{eqnarray}
+%Z(x)&=&-cx+\int\int_{R^4}\int\int Q\left(x|(\xi_1,\xi_2,d_1,d_2)\right)d\alpha_1 \times \alpha_2\times \alpha_3\times \alpha_4 (\xi_1,\xi_2,d_1,d_2)\nonumber\\
+%&=&-cx+\int\int_{R^4}\int\int (r_{1}\xi_{1}-t_1)min(x,d_1)d\alpha_1 \times \alpha_2\times \alpha_3\times \alpha_4 (\xi_1,\xi_2,d_1,d_2)\nonumber\\&+&\int\int_{R^4}\int\int (r_{1}\xi_{1}-t_1)min(x,d_1)+(r_{1}\xi_{1}-t_1)min(x-min(x,d_1),d_2)d\alpha_1 \times \alpha_2\times \alpha_3\times \alpha_4 (\xi_1,\xi_2,d_1,d_2)\nonumber\\&+&\int\int_{R^4}\int\int (r_{2}\xi_{2}-t_2)min(x,d_2)+(r_{1}\xi_{1}-t_1)min(x-min(x,d_2),d_1)d\alpha_1 \times \alpha_2\times \alpha_3\times \alpha_4 (\xi_1,\xi_2,d_1,d_2)\nonumber\\&+&\int\int_{R^4}\int\int (r_{2}\xi_{2}-t_2)min(x,d_2)d\alpha_1 \times \alpha_2\times \alpha_3\times \alpha_4 (\xi_1,\xi_2,d_1,d_2)\nonumber\\
+%&=&-cx+\int_{(\frac{t_1}{r_1},\infty)} \int_{[0,\frac{t_2}{r_2}]} \int_{[0,\infty)} \int_{[x,\infty)}x(r_{1}\xi_{1}-t_1)d\alpha_1 \times \alpha_2\times \alpha_3\times \alpha_4 (\xi_1,\xi_2,d_1,d_2) \nonumber\\&+&\int_{(\frac{t_1}{r_1},\infty)} \int_{[0,\frac{t_2}{r_2}]} \int_{[0,\infty)} \int_{[0,x)}d_1(r_{1}\xi_{1}-t_1)d\alpha_1 \times \alpha_2\times \alpha_3\times \alpha_4(\xi_1,\xi_2,d_1,d_2)\nonumber\\&+&\int_{(\frac{t_1}{r_1},\infty)} \int_{(\frac{t_2}{r_2},\frac{r_{1}\xi_{1}-t_1+t_2}{r_2})}\int_{[0,\infty)}\int_{[x,\infty)}(r_{1}\xi_{1}-t_1)xd\alpha_1 \times \alpha_2\times \alpha_3\times \alpha_4 (\xi_1,\xi_2,d_1,d_2)\nonumber\\&+&\int_{(\frac{t_1}{r_1},\infty)} \int_{(\frac{t_2}{r_2},\frac{r_{1}\xi_{1}-t_1+t_2}{r_2})}\int_{[x-d_1,\infty)}\int_{[0,x)}(r_{1}\xi_{1}-t_1)d_1+(r_{2}\xi_{2}-t_2) (x-d_1)d\alpha_1 \times \alpha_2\times \alpha_3\times \alpha_4 (\xi_1,\xi_2,d_1,d_2)\nonumber\\&+&   \int_{(\frac{t_1}{r_1},\infty)} \int_{(\frac{t_2}{r_2},\frac{r_{1}\xi_{1}-t_1+t_2}{r_2})}\int_{(0,[x-d_1)}\int_{[0,x)}(r_{1}\xi_{1}-t_1)d_1+(r_{2}\xi_{2}-t_2)d_2d\alpha_1 \times \alpha_2\times \alpha_3\times \alpha_4 (\xi_1,\xi_2,d_1,d_2)\nonumber
+%\end{eqnarray}
+
+由此可知，基于模型(\ref{equation 12})，当需求、汇率同时不确定时，可以进一步分析模型性质。
+
+
+
+
+
+%----------------------------- 参考文献-----参考文献------参考文献----------------------------------------------------
+\newpage
+\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\footnotesize\hfill
+{\songti\zihao{5}  河北大学理学硕士学位论文}\hfill }}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0) {\footnotesize \hfill
+{\songti\zihao{5} 参考文献}\hfill}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{
+\centerline{\songti\zihao{-5} \thepage} }
+\def\@oddfoot{
+\centerline{\songti\zihao{-5} \thepage} } 
+\makeatother \hspace{12mm}\\
+\centerline{\Large\heiti\zihao{3}\bf 参考文献}\label{pg:ref}
+\newcounter{fig} 
+%\setcounter{mychapter}{6} \setcounter{equation}{0}
+
+\begin{list}{\upshape[\arabic{fig}]}
+{\usecounter{fig}
+\setlength{\labelsep}{0.5cm}\setlength{\labelwidth}{1cm}\setlength{\leftmargin
+}{1.1cm}}\small
+
+
+
+\vspace{-3mm}\bibitem{Bitran1984}  G. R, Bitran and H.  Yanasse.   Deterministic approximations to stochastic production problems. Operations Research,  1984,  32(5):999-1018.
+
+\vspace{-3mm}\bibitem{Rosenfield 1996}  B. D.  Rosenfield.  Global and variable cost manufacturing systems. European Journal of Operational Research, 1996, 95(2): 325-343.
+
+\vspace{-3mm}\bibitem{Flaherty1996} T. Flaherty.  Global operations management. McGraw Hill, New York, 1996.  
+
+\vspace{-3mm}\bibitem{Ding2007}   Q. Ding, L. Dong and P. Kouvelis. On the integration of production and financial hedging decisions in global markets. Operations Research, 2007, 55(3): 470-489.
+
+\vspace{-3mm}\bibitem{Yidrm2005}  Yldrm, B. Tan and K.Fikri.     A multiperiod stochastic production planning and sourcing problem with service level constraints. OR Spectrum,  2005,  27(2-3):471-489.
+
+\vspace{-3mm}\bibitem{Liu2014}    Y. Liu and X. Bai. Studying interconnections between two classes of two-stage fuzzy optimization problems. Soft Computing, 2013, 17(4): 569-578.
+
+\vspace{-3mm}\bibitem{Jean-Pierre2012} J. Kenné, P.Dejaxb and A.Gharbi. Production planning of a hybrid manufacturing remanufacturing system under uncertainty within a closed-loop supply chain.
+International Journal of Production Economics, 2012, 135(1): 81-93.
+
+\vspace{-3mm}\bibitem{Masoumeh2012}  M.K.Zanjani, D. Ait-Kadi and M. N. Masoumeh. Robust production planning in a manufacturing environment with random yield: A case in sawmill production planning. European Journal of Operational Research, 2012, 3:882-891.
+
+\vspace{-3mm}\bibitem{Zadeh1965}  L. A.Zadeh.  Fuzzy sets.  Information and control,  1965,  8(3):338-353.
+
+\vspace{-3mm}\bibitem{Zadeh1978}  L. A. Zadeh. Fuzzy sets as a basis for a theory of possibility. Fuzzy Sets and Systems, 1978, 1: 3-28.
+
+\vspace{-3mm}\bibitem{Nahmias1978}  S. Nahmias. Fuzzy variables. Fuzzy Sets Syst, 1978, 1: 97-101.
+
+\vspace{-3mm}\bibitem{Dabois1988} D. Dabois and H. Prade. Possibility Theory. Plenum Press, New York, 1988.
+
+
+\vspace{-3mm}\bibitem{Liu2010}  Z. Q. Liu and Y. Liu. Type-2 fuzzy variables and their arithmetic. Soft Computing,  2010,  14(7):729-747.
+
+\vspace{-3mm}\bibitem{Liu2002}   B. Liu and  Y. Liu.  Expected value of fuzzy variable and fuzzy expected value models  . IEEE Transactions on Fuzzy Systems, 2002, 10(4) : 445-450.
+
+\vspace{-3mm}\bibitem{Liu2004}  B. Liu. Uncertain theory: an introduction to its axiomatic foundations. Springer-Verlag, 2004.
+\vspace{-3mm}\bibitem{Liu2006}  B. Liu. A survey of credibility theory. Fuzzy Optimization and Decision, 2006, 5: 387-408.
+
+\vspace{-3mm}\bibitem{Bellman1970}   R. E. Bellman and L. A. Zadeh. Decision-making in a fuzzy environment.
+Management Science, 1970, 17: 141-164.
+
+\vspace{-3mm}\bibitem{Sahinidis2004}  Sahinidis and   V. Nikolaos.  Optimization under uncertainty: state-of-the-art and opportunities.  Computers and Chemical Engineering,  2004,  28(6-7):971-983.
+
+\vspace{-3mm}\bibitem{Wang2001}  R. C. Wand and H. H.Fang.  Aggregate production planning with multiple objectives in a fuzzy environment.  European
+Journal of Operational Research,  2001,  133(3):521-536.
+
+\vspace{-3mm}\bibitem{Sakawa2001}  M. Sakawa, I. Nishizakia and Y. Uemurab.  Fuzzy programming and profit and cost allocation for a production and transportation
+Problem.  European Journal of Operational Research,  2001,  131(1):1-15.
+
+\vspace{-3mm}\bibitem{Halim2011}   K. A .Halim,  B. C. Giri and K. S. Chaudhuri. Fuzzy production planning models for an unreliable
+production system with fuzzy production rate and stochastic/fuzzy demand rate. International Journal of Industrial Engineering Computations, 2011, 2(1):179-192.
+
+\vspace{-3mm}\bibitem{Sun2010}  G. Sun, Y. Liu  and Y. Lan. Optimizing material procurement planning problem by two-stage fuzzy
+programming. Computers and Industrial Engineering, 2010, 58(1):97-107. 
+
+\vspace{-3mm}\bibitem{Sun2011} G. Sun, Y. Liu  and Y. Lan.  Fuzzy two-stage material procurement planning problem. Journal of Intelligent Manufacturing, 2011, 22(2):319-331.
+
+\vspace{-3mm}\bibitem{Partha2013} G. Partha,  K. M. Manas and M. Manoranjan.  A production inventory model with fuzzy production
+and demand using fuzzy differential equation: An interval compared genetic algorithm approach.
+Engineering Applications of Artificial Intelligence, 2013, 26(2):766-778.
+
+\vspace{-3mm}\bibitem{Yuan2006}  G. Q. Yuan and Y. Liu. Two-stage fuzzy optimaization of an MPMP production planning model. Proceeding of 2006 International Conference on Machine Learing and Cybernetics Dalian, China, 2006, 3: 1685-1690.
+
+\vspace{-3mm}\bibitem{Yuan2007}  G. Q. Yuan and Y. Liu.  Fuzzy MPMP production planning problem with minimum risk criterial. Proceeding of the 6th International Conference on Management, 2007, 1: 29-36.
+
+\vspace{-3mm}\bibitem{Aneirson 2014} Aneirson. A fuzzy goal programming model for solving aggregate production-planning problems under uncertainty: A case study in a Brazilian sugar mill.
+Energy Economics, 2014, 45:196-204.   
+
+\vspace{-3mm}\bibitem{Yuan2009}  袁国强,  两阶段模糊生产计划期望值模型． 应用数学学报, 2009, 32(4): 648-663．
+
+\vspace{-3mm}\bibitem{Liu2013} 刘彦奎, 陈艳菊, 刘颖, 等.模糊优化方法与应用. 北京：科学出版社, 2013.
+
+\vspace{-3mm}\bibitem{Yang2012}  	G. Q. Yang, Y. K. Liu and K. Yang. Modeling supply chain network design problem with joint service level constraint. 
+Advances in Intelligent and Soft Computing, 2012, 123: 311-318.
+
+\vspace{-3mm}\bibitem{Yang2013}	K. Yang, Y. K Liu and G. Q. Yang. An improved hybrid particle swarm optimization algorithm for fuzzy p-hub center problem. 
+Computer and Industrial Engineering, 2013, 64(1): 133-142.
+
+\vspace{-3mm}\bibitem{Yohanes2014} Y.  Kristianto, A. Gunasekaran, et al. A model of resilient supply chain network design: A two-stage programming with fuzzy shortest path.
+ Expert Systems with Applications, 2014, 41(1): 39-49.
+
+
+\vspace{-3mm}\bibitem{Mahdi2014} M. Naderi-Beni, E. Ghobadian, et al. Fuzzy bi-objective formulation for a      parallel machine scheduling problem with machine eligibility restrictions and sequence-dependent setup times.  
+International Journal of Production Research, 2014, 52(19): 5799-5822.
+
+\vspace{-3mm}\bibitem{Nagajyothi2014} N. Virivinti, K. Mitra. Fuzzy expected value analysis of an industrial grinding process. 
+Powder Technology, 2014, 268: 9-18.
+
+\vspace{-3mm}\bibitem{Klir1999} G. J. Klir. On fuzzy-set interpretation of possibility theory. Fuzzy Sets and Systems, 1999, 108(3): 263-273.
+
+
+\vspace{-3mm}\bibitem{Wang1982}   P. Wang. Fuzzy contactability and fuzzy variables. Fuzzy Sets and Systems,  1982,  8(1): 81-92.
+
+
+
+\vspace{-3mm}\bibitem{Karnik2001}  N. Karnik and  J. Mendel.   Centroid of a type-2 fuzzy set. Information Sciences,  2001,  132(1):195-220.
+
+\vspace{-3mm}\bibitem{Qin2011b}  R. Qin,  Y. Liu and Z. Q. Liu.    Modeling fuzzy data envelopment analysis by parametric programming method. Expert Systems with Applications,  2011,  38(7):8648-8663.
+
+\vspace{-3mm}\bibitem{Qin2011a}  R. Qin,  Y. Liu and Z. Q. Liu.    Methods of critical value reduction for type-2 fuzzy variables and their applications. Journal of Computational and Applied Mathematics,  2011,  235(5):1454-1481.
+
+\vspace{-3mm}\bibitem{Wu2012}  X. Wu,  Y. Liu and W. Chen.    Reducing uncertain information in type-2 fuzzy variables by Lebesgue-Stieltjes integral with applications. Information,  2012,  15(4):1409-1426.
+
+\vspace{-3mm}\bibitem{Bai2014}  X. J, Bai and Y. Liu.    Semideviations of reduced fuzzy variables: a possibility approach. Fuzzy Optimization and Decision Making,  2014,  13(2):173-196.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\vspace{-3mm}\bibitem{Bai2007} 白进达, 张东凯,赵建华． 模糊批量生产计划问题的可信性规划模型与算法． 模糊系统与数学, 2007, 21(2): 116-120．
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{list}
+
+
+%----------------------------- 参考文献-----参考文献------参考文献----------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%----------------------------- 致谢-----致谢------致谢----------------------------------------------------
+\newpage
+\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\zihao{5}河北大学理学硕士学位论文}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0) {\footnotesize \zihao{5}\ 致\quad谢}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\hspace{12mm}\\
+\centerline {\Large\heiti\zihao{3}\bf 致\quad谢}\label{pg:thanks}\\
+\par 在学位论文完成之际， 衷心感谢我的导师刘彦奎教授在我的研究生学习期间给予的悉心指导和帮助。 
+     
+感谢母校河北大学对我多年的培养， 是她为我提供了宁静的学习与研究环境， 
+使我可以静下心来做自己喜欢做的事情， 而不受到外面纷繁喧闹的世界的干扰。
+
+此外， 我还要感谢和我一起学习生活的师兄、师姐、师弟、师妹和同学， 他
+们在学习和生活上都给予了我很大的帮助， 在此表示诚挚的谢意。
+     
+最后， 感谢我的家人， 正是他们的关心、支持、理解和鼓励， 
+才使我得以全身心地投入到学习和研究中。
+     
+本文的研究工作得到了“国家自然科学基金项目”，项目名称：不确定性平衡优化理论及其应用
+\!\!（\!\!\!\!\!批准号：\!\!61374184\!\!\!）的资助， 特此致谢。
+
+
+%----------------------------- 致谢-----致谢------致谢----------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-----------------------------攻读学位期间取得的科研成果----------------------------------------------------
+\newpage
+\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\zihao{5}攻读学位期间取得的科研成果}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0) {\footnotesize \zihao{5}\ 攻读学位期间取得的科研成果}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{
+\centerline{\songti\zihao{-5} \thepage} }
+\def\@oddfoot{
+\centerline{\songti\zihao{-5} \thepage} }
+ \makeatother\hspace{12mm}\\
+\centerline{\Large\heiti\zihao{3}\bf 攻读学位期间取得的科研成果}\label{pg:papers}\\
+
+\begin{itemize}\small
+
+\vspace{-3mm}\item[{[1]}] \textbf{ J. Sun}. Global  production planning with fuzzy exchange rates. Journal of Uncertain Systems, 2014, 8(1): 58--65. 
+
+\end{itemize} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\end{document}
+%----------------------------- 个人简历-----个人简历------个人简历----------------------------------------------------
+
+\newpage
+\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\zihao{5}个人简历}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0) {\footnotesize \zihao{5}\ 作者简介}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{
+\centerline{\footnotesize \thepage} }
+\def\@oddfoot{
+\centerline{\footnotesize \thepage} } \setcounter{section}{0}
+\setcounter{section}{0}
+
+\def\oddhead{{\protect\WENXIANMEIZI\hfill
+    作者简介\hfill}}
+\def\evenhead{{\protect\WENXIANMEIZI\hfill
+     作者简介\hfill}}
+\centerline {\Large\heiti\zihao{3}\bf 作\ \ 者\ \ 简\ \ 介}\label{pg:me}
+\VSPACEA \setcounter{mychapter}{2} \setcounter{equation}{0}
+
+臧文娟, 女, 汉族, 1986年6月出生于山东省济宁市.
+
+2006年10月考入山东大学信息与计算科学专业, 2010年6月本科毕业并获得理学学士学位.
+
+2010年9月于河北大学数学与计算机学院攻读运筹学与控制论专业硕士学位.
+
+导师是刘彦奎教授, 研究方向为最优化理论与方法. 在读期间发表国际期刊论文1篇.
+

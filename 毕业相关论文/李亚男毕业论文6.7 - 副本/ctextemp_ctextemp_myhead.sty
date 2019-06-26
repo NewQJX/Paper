@@ -1,0 +1,27 @@
+\def\CTeXPreproc{Created by ctex v0.2.13, don't edit!}\def\CCTpreproc{CCT V5.17}\def\CTeXPreproc{Created by ctex v0.2.14, don't edit!}% headrule.sty
+% Copyright (C) 1992 by GE XIANG YANG
+% Version date 6/11/92
+\catcode`@=11
+\def\evenhead{}
+\def\oddhead{}
+\def\evenfoot{}
+\def\oddfoot{}
+\headheight=8truemm
+%\footheight=8truemm
+\def\@evenhead{\pushziti
+  \vbox{\hbox to\textwidth{\hspace{1truemm}{\evenhead}} %lin {\hfil{\evenhead}\llap{}}
+    \protect\vspace{2truemm}\relax
+    \hrule depth0pt height0.15truemm width\textwidth
+    \protect\vspace{0.5truemm}\relax
+    \hrule depth0pt height0.15truemm width\textwidth
+  }\popziti}
+\def\@oddhead{\pushziti
+  \vbox{\hbox to\textwidth{\hspace{1truemm}{\oddhead}} %lin {\rlap{}{\oddhead}\hfil}
+    \protect\vspace{2truemm}\relax
+    \hrule depth0pt height0.15truemm width\textwidth
+    \protect\vspace{0.5truemm}\relax
+    \hrule depth0pt height0.15truemm width\textwidth
+  }\popziti}
+%\def\@evenfoot{}
+%\def\@oddfoot{}
+\catcode`@=12

@@ -1,0 +1,3169 @@
+\documentclass[12pt,a4paper,twoside]{wthesis}
+\usepackage[top=3.4cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry} %页边距
+\usepackage{}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{caption2}
+\usepackage{amscd}
+\pagestyle{plain}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{rotating}
+\usepackage{graphicx}
+\input myhead.sty
+
+
+%\makeatletter
+%\@addtoreset{equation}{section}
+%\@addtoreset{table}{section}
+%\@addtoreset{figure}{section}
+%\makeatother
+
+
+
+\baselineskip=12pt  \parindent=22pt \oddsidemargin=1.055 truecm
+\textwidth=15truecm \evensidemargin=0.5 truecm
+\textheight=23truecm  
+\setlength{\parindent}{2em}
+\topmargin=0.25cm 
+\headsep=10truemm 
+\headheight=5truemm
+\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\captionlabeldelim}{~}
+
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoer}{\fontsize{120bp}{21bp}\selectfont}
+
+\songti\zihao{-4}\normalsize \baselineskip=20pt
+\parskip=0pt
+\renewcommand{\baselinestretch}{1.18}
+\renewcommand{\arraystretch}{0.8}
+\renewcommand{\baselinestretch}{1.5}
+\thispagestyle{empty}
+\newcounter{mychapter}
+\title{}
+\author{}
+\date{}
+
+\def\ZHANGZI{\heiti\zihao{3}\bf\Large }
+%\def\JIEZI{\heiti\zihao{-3}\bf\large }
+\def\JIEZI{\heiti\zihao{4}\bf\large }
+\def\XIAOJIEZI{\heiti\zihao{-4}\bf} %\normalsize 
+\def\XIAOXIAOJIEZI{\heiti\zihao{-4}\bf}%\normalsize
+\def\ZHENGWENZI{\songti\zihao{-4}}%\normalsize
+\def\BIAOTUZI{\songti\zihao{5}}%\small
+\def\WENXIANMEIZI{\songti\zihao{5} }%\small
+
+
+\def\WS{{\rm WS}}
+\def\x{{\mbox{\boldmath $x$}}}
+\def\y{{\mbox{\boldmath $y$}}}
+\def\z{{\mbox{\boldmath $z$}}}
+\def\boldxi{{\mbox{\boldmath $\xi$}}}
+\def\E{{\rm E}}
+\def\R{{\rm R}}
+\def\V{{\rm V}}
+\def\Pr{{\rm Pr}}
+\def \Pos{{\rm Pos}}
+\def \Nec{{\rm Nec}}
+\def \Cr{{\rm Cr}}
+\def \CV{{\rm CV}}
+\def \dr{{\rm dr}}
+\def \dx{{\rm dx}}
+%\def \Ch{{\rm Ch}}
+%\def \opt{{\rm opt}}
+\def \lxi{{\mbox{\footnotesize $\xi$}}}
+\def \lhxi{{\mbox{\boldmath {\footnotesize $\hxi$}}}}
+\def \hxi{{\mbox{\boldmath $\xi$}}}
+\def \x{{\mbox{\boldmath $x$}}}
+\def \Fit{{\mbox{\boldmath $Fit$}}}
+\def \a{{\mbox{\boldmath $a$}}}
+\def \hzeta{{\mbox{\boldmath $\zeta$}}}
+\def \bxi{{\mbox{\boldmath {\footnotesize $\xi$}}}}
+\def \heta{{\mbox{\boldmath $\eta$}}}
+\def \htau{{\mbox{\boldmath $\tau$}}}
+\def \homega{{\mbox{\boldmath $\omega$}}}
+\def \fa{{\mbox{\boldmath $\tilde a$}}}
+\def \d{{\rm d}}
+\def \dr{{\rm dr}}
+\def \dt{{\rm dt}}
+\def \ln{{\rm ln}}
+\def \PPos{{\rm \tilde{P}os}}
+\def \CCr{{\rm \tilde{C}r}}
+\def \mmu{{\mbox{$\tilde{\mu}$}}}
+\def \xxi{\tilde{\xi}}
+\def \eeta{\tilde{\eta}}
+\def \zzeta{\tilde{\zeta}}
+\def \EE{{\rm \tilde{E}}}
+\def \st{{\rm ~such~that~}}
+\def\intd{{\rm d}}
+\def\1){{\rm 1)}}
+\def\2){{\rm 2)}}
+\def\3){{\rm 3)}}
+\def\1{{\rm 1}}
+\def\2{{\rm 2}}
+\def\3{{\rm 3}}
+\def\P{{\rm \mathcal{P}}}
+\def\ye{{\rm P}}
+\def\(14){{\rm (14)}}
+\def\VSPACEA{\vspace{30pt}}
+\def\VSPACEB{\vspace{18pt}}
+\def\VSPACEC{\vspace{12pt}}
+\newcommand{\bm}[1]{\mbox{\boldmath{$#1$}}}
+
+\usepackage{makecell}
+
+\begin{document}
+\allowdisplaybreaks
+\newtheorem{theorem}{\heiti \hspace{1.5em}定理}[mychapter]
+\newtheorem{definition}{\heiti \hspace{1.5em}定义}[mychapter]
+\newtheorem{lemma}{\heiti \hspace{1.5em}引理}[mychapter]
+\newtheorem{proposition}{\heiti \hspace{1.5em}命题}[mychapter]
+\newtheorem{rem}{\heiti \hspace{1.5em} 注}[mychapter]
+\newtheorem{example}{\heiti \hspace{1.5em}例}[mychapter]
+\newtheorem{corollary}{\heiti \hspace{1.5em}推论}[mychapter]
+\newtheorem{algorithm}{\heiti 算法}[mychapter]
+\newcommand{\pf}[1]{{\heiti \hspace{1.5em}证明 } }
+\def\pf{{\heiti \hspace{2em}证明\ }}
+\def\pfd{\hfill □}
+
+
+
+\newcommand{\dps}{\displaystyle}
+
+\newcommand{\kp}{\kappa}
+\newcommand{\Gm}{\Gamma}
+\newcommand{\Og}{\Omega}
+\newcommand{\nb}{\nabla}
+\newcommand{\bt}{\beta}
+\newcommand{\f}[2]{\frac{#1}{#2}}
+\newcommand{\pp}[2]{\f{\partial #1}{\partial #2}}
+\newcommand{\tht}{\theta}
+\newcommand{\thtp}{{\theta}^{\prime}}
+\newcommand{\supp}[1]{{\rm supp}(#1)}
+\newcommand{\bb}[1]{\left(#1\right)}
+\newcommand{\n}[1]{\vert#1\vert}
+\newcommand{\nn}[1]{\Vert#1\Vert}
+\newcommand{\pn}[3]{\frac{\partial^{#1}#2}{\partial{#3}^{#1}}}
+\newcommand{\s}[2]{\sum_{#1}^{#2}}
+\newcommand{\ipi}{\int_{0}^{2\pi}}
+
+\newcommand{\ab}{\left(a_n\cos n\theta+b_n\sin n\theta\right)}
+\newcommand{\cd}{\left(c_n\cos n\theta+d_n\sin n\theta\right)}
+\newcommand{\ef}{\left(e_n\cos n\theta+f_n\sin n\theta\right)}
+
+\renewcommand{\thesection}{\arabic{mychapter}.\arabic{section}}
+
+%\numberwithin{equation}{mychapter}
+%\numberwithin{table}{mychapter}
+%\numberwithin{figure}{mychapter}
+%\renewcommand{\thetable}{\arabic{table}}
+%\renewcommand{\thefigure}{\arabic{figure}} 
+%\renewcommand{\theequation}{\arabic{equation}}
+
+\makeatletter
+\def\@cite#1#2{\textsuperscript{[{#1\if@tempswa , #2\fi}]}}
+\makeatother
+
+
+\vspace{1truecm}
+
+%-------------------------------------------中文封皮---------------------------------------------------
+\newpage
+\begin{titlepage}
+\thispagestyle{empty}
+
+%\begin{center}
+%\begin{figure}\vskip -3em\hspace{-4pt}\includegraphics[width=1in,height=1.27in]{dd2.eps}
+%\end{figure}
+%\end{center}
+
+\vskip -3.3em 
+\noindent{\zihao{-4}\songti 密\hspace{2.3mm}级:\hspace{102mm}学校代码:10075\\
+\noindent\zihao{-4} 分类号:\hspace{103.3mm}学 \hspace{6.27mm}号:20140836\\}
+\vskip 1.8truecm
+
+
+\begin{center}
+{\zihao{2}\songti 理\ 学\ 硕\ 士\ 学\ 位\ 论\ 文 \\ }
+\vspace*{1.6truecm} {\biaosong\zihao{1}\bf{不确定需求下多产品单周期\\库存问题的研究}}
+\end{center}
+\vspace*{7truecm} \indent\hspace*{50truemm}
+\begin{minipage}{36truemm}
+\zihao{4}\heiti
+学\hfill 位\hfill 申\hfill 请\hfill 人: \\
+指\hfill 导\hfill 教\hfill 师 : \\
+学\hfill 位\hfill 类\hfill 别 : \\
+学\hfill 科\hfill 专\hfill 业 : \\
+授\hfill 予\hfill 单\hfill 位 : \\
+答\hfill 辩\hfill 日\hfill 期 : \\
+\end{minipage}
+\hspace*{-14pt}
+\begin{minipage}{40truemm}
+%\zihao{4}\heiti
+%~\\[5mm]
+%李~亚~男\\
+%~\\
+%刘~彦~奎~~教~授\\
+%理~学~硕~士\\
+%数~学\\
+%河~北~大~学\\
+%二\hspace{-1.5mm}{\zihao{3}\bf○\hspace{-3mm}}一\hspace{-1.5mm}{\zihao{3}七\hspace{-1.5mm}{\zihao{3}}}~年~六~月\\
+%\end{minipage}
+%\end{titlepage}
+\zihao{4}\heiti
+李~亚~男\\
+刘~彦~奎~~教~授\\
+理~学~硕~士\\
+数~学\\
+河~北~大~学\\
+二\hspace{-1.5mm}{\zihao{3}\bf○\hspace{-3mm}}一\hspace{-1.5mm}{\zihao{3}七\hspace{-1.5mm}{\zihao{3}}}~年~六~月\\
+\end{minipage}
+\end{titlepage}
+
+%---------------------------------------------------------------------------------------------------英文封皮
+
+\newpage
+\begin{titlepage}
+\thispagestyle{empty}%%%%%%%%%%%%%%%%%%
+\noindent{\bf Classified\ Index:\hspace{87mm}CODE:\ 10075}\\
+\noindent{\bf U.D.C :\hspace{104.8mm} NO:\ 20140836 }\\
+\vspace*{1.2truecm}
+\begin{center}
+{\Large\rm\bf A Dissertation for the Degree of M. Science \\}
+ \vspace*{1.3truecm} {\Huge\bf  The Study on Fuzzy Multi-Item Single-Period Inventory Problem Under Uncertain Demands \\}
+\end{center}
+\vspace*{5.6truecm} 
+
+\begin{center}
+\begin{minipage}{15.6truecm}
+\large
+$\begin{array}{rl}
+\rm \bf Candidate:&\rm\bf Li\ Yanan\vspace{2mm}\\
+\rm \bf Supervisor:&\rm\bf  Prof.\ Liu\ Yankui\vspace{2mm}\\
+\rm\bf  Academic\ Degree\ Applied\ for:&\rm\bf Master\ of\ Science\vspace{2mm}\\
+\rm \bf Speciality:&\rm\bf Mathematics\vspace{2mm}\\
+\rm \bf University:&\rm\bf Hebei\ University\vspace{2mm}\\
+\rm \bf Date\ of\ Oral\ Examination:&\rm\bf  June,\  2017\vspace{2mm}\\
+\end{array}$
+\end{minipage}
+\end{center}
+\end{titlepage}
+
+%---------------------------------摘要--------摘要----摘要------------------------------------------------------------
+\newpage
+\pagenumbering{Roman} \makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\footnotesize Abstract}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\footnotesize\zihao{5}摘\hspace{1.5mm}要}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{
+\centerline{\footnotesize\songti\zihao{-5}\thepage}}
+\def\@oddfoot{\centerline{\footnotesize\songti\zihao{-5}\thepage}} 
+
+%\makeatother \hspace{1mm}
+\hspace*{0.5cm}
+\begin{center}
+{\heiti \zihao{3}  摘~~~~~要}
+\end{center}
+\vspace{1mm}
+\setlength{\baselineskip}{21pt}
+
+\songti\zihao{-4}\par
+
+库存问题在运筹学研究中是一个经典且有意义的问题.在处理新产品、时尚产品等季节性产品的需求时,库存问题中决策的制定往往伴随着不确定性因素.
+通常,这些不确定性因素会带来损失风险.因此,正确处理好损失风险对制定合理的库存策略具有重大意义.
+在经典的建模方法中,最优库存策略在考虑到决策者风险偏好的情况下需要权衡风险和总的期望收益.
+决策过程中,风险中立的决策者更加关心产品的收益.而风险规避的决策者往往更关心损失风险.
+因此,本论文从风险中立和风险规避两个角度来研究多产品单周期库存问题中的收益和风险.
+
+本论文主要在模糊环境下通过可信性优化方法研究风险中立和风险规避的多产品单周期库存问题.
+首先,以最大期望值收益为目标,建立了一个风险中立的多产品单周期库存模型.
+当不确定需求为相互独立的模糊变量时,分析了模型的性质并讨论了模型的求解方法.
+进一步,本论文同时考虑收益和风险两个目标,应用多目标的方法建立了风险规避的绝对半偏差库存模型.
+然后给出了该库存模型的单目标等价模型并通过最大-最小化建模思想进行了模型分析.
+接着在几种常见可能性分布下,给出了关于库存需求倒数的绝对半偏差等价形式.最后,通过数值实验说明了建模思想与求解方法的可行性.
+
+本论文的主要工作包括以下几个方面：
+(1)建立了风险中立和风险规避的模糊多产品单周期库存模型;
+(2)对模糊环境中的库存问题分别分析期望值和绝对半偏差的等价模型;
+(3)讨论了常见固定可能性分布和可变参数可能性分布下不确定需求的性质并给出理论结果;
+(4)对三类模型分别设计数值实验,并通过软件对模型进行求解,对结果进行分析说明了求解方法的可行性.
+ 
+\def\KEYWORDSSKIP{\vspace{5pt}}
+
+\vspace{15pt}
+\noindent {\heiti\zihao{-4} 关键词}{\songti\zihao{-4}\hspace{3mm}
+库存问题~~不确定需求~~风险中立~~风险规避~~可信性优化}
+\newpage
+\pagenumbering{Roman} \setcounter{page}{2}\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\footnotesize Abstract}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\footnotesize Abstract}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\makeatother \hspace{12mm}\\
+\centerline{\Large\bf Abstract} \vskip 6mm \songti\zihao{-4}
+%\vskip 0.5mm\centerline{\Large\bf Abstract}\vskip 0.5cm
+\label{pg:ii}
+\par
+
+Nowadays, the inventory problem is a classical and significant issue in the Operations Research literature. 
+Decision making in inventory problem is always accompanied by uncertainty especially when dealing with demands of new products, fashion goods and other seasonal products. 
+The uncertainty usually brings the risk of losses. Therefore, if we know how to deal with the risk of losses correctly, we can make rational policies for the inventory problem.
+In the classical modeling approach, an optimal inventory policy has to trade off the risk and the total expected profit 
+with further consideration on the decision makers' declared risk preference. In the decision-making process, 
+the risk neutral decision makers concern more about the profit of the products. 
+However, risk averse decision makers in the inventory problem tend to be more concerned about the risk of losses compared with profit. 
+Therefore, in this dissertation, we study the profit and risk of the multi-item single-period inventory problem from two aspects: risk neutral and risk aversion.
+
+This dissertation mainly studies the risk-neutral and risk-averse multi-item single-period inventory problem by credibility optimization method in fuzzy environment. 
+Firstly, the risk-neutral multi-item inventory model is established, the goal of proposed model is to maximize the profit. 
+Secondly, when the uncertain demands are mutually independent fuzzy variables, we analyze the properties of the proposed model and discuss the solution method.  
+Furthermore, this dissertation considers profit and risk simultaneously, and establishes the risk-averse absolute semi-deviation inventory models by using the multi-objective method. 
+Then we transform the bi-objective model into its equivalent single-onjective forms and give the model analysis by the min-max modeling idea.
+Subsequently, we give the calculating formulas of the absolute semi-deviation for the reciprocal of the demand undercommon possibility distributions.
+Finally, the numerical experiment for the equivalent models is given, and the results demonstrate the effectiveness of the modeling idea and the solution method.
+
+The major contribution of this dissertation includes the following four aspects:
+(i) Risk-neutral and risk-averse multi-item inventory models are built;
+(ii) The equivalent models of the expected value and the absolute semi-deviation inventory problem are analyzed respectively in fuzzy environment;
+(iii) This dissertation discusses the properties of the uncertain demand under common fixed possibility distributions and variable possibility distributions 
+and presents the theoretical results;
+(iv) The numerical experiments are designed for the three classes of inventory models and the results are obtained by softwares, 
+which illustrate the modeling ideas and demonstrate the effectiveness of the proposed optimization methods.
+ 
+\medskip
+
+\smallskip
+
+\KEYWORDSSKIP \noindent
+\parbox[b]{2.5cm} {\bf {\heiti Keywords}}
+\parbox[t]{11.5cm}{\baselineskip=20pt
+Inventory problem~~Uncertain demand~~Risk-neutral~~Risk-averse~~Credibilistic optimization}
+
+
+
+%---------------------------------目录--------目录----目录------------------------------------------------------------
+\newpage
+\pagenumbering{Roman} \setcounter{page}{4}\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\songti\footnotesize{\zihao{5}目\hspace{1.5mm}录}}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\songti\zihao{5}目\hspace{1.5mm}录}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{\centerline{\footnotesize\songti\zihao{-5}\thepage} }
+\def\@oddfoot{\centerline{\footnotesize\songti\zihao{-5}\thepage} }
+\makeatother
+\def\@evenfoot{
+\centerline{\footnotesize\thepage} }
+\def\@oddfoot{
+\centerline{\footnotesize\thepage} } \makeatother \hspace{2mm}
+\begin{center}
+{\heiti \zihao{3}  目~~~~~录}
+\end{center}
+\vspace{6mm}
+{\zihao{-4}\songti \heiti 第~1 章\hspace{0.15cm} 绪\hspace{3mm}论}\dotfill {\ \pageref{pg:1}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 1.1}\quad 问题的提出及研究现状}\dotfill {\ \pageref{pg:1.1}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 1.2}\quad 本文的结构安排}\dotfill {\ \pageref{pg:1.2}} \\
+{\zihao{-4} \songti\heiti 第~2 章\hspace{0.15cm}固定分布下风险中立的多产品单周期库存问题}\dotfill {\ \pageref{pg:2}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 2.1}\quad 期望值库存模型}\dotfill {\ \pageref{pg:2.1}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 2.2}\quad 常见需求分布下的期望值}\dotfill {\ \pageref{pg:2.2}}
+
+{\zihao{-4}{\heiti 2.2.1}\quad 离散模糊需求分布下的期望值}\dotfill {\ \pageref{pg:2.2.1}}
+
+{\zihao{-4}{\heiti 2.2.2}\quad 常见连续模糊需求分布下的期望值}\dotfill {\ \pageref{pg:2.2.2}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 2.3}\quad 数值实验与结果分析}\dotfill {\ \pageref{pg:2.3}}
+
+{\zihao{-4}{\heiti 2.3.1}\quad 需求服从离散的模糊分布时的计算结果及与随机结果的比较}\dotfill {\ \pageref{pg:2.3.1}}
+
+{\zihao{-4}{\heiti 2.3.2}\quad 需求服从三角模糊分布时的计算结果及与随机结果的比较}\dotfill {\ \pageref{pg:2.3.2}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 2.4}\quad 本章小结}\dotfill {\ \pageref{pg:2.4}} \\
+{\zihao{-4} \songti\heiti 第~3 章\hspace{0.15cm}固定分布下风险规避的多产品单周期库存问题}\dotfill {\ \pageref{pg:3}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 3.1}\quad 绝对半偏差准则下的最大最小化库存模型}\dotfill {\ \pageref{pg:3.1}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 3.2}\quad 模型分析}\dotfill {\ \pageref{pg:3.2}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 3.3}\quad 绝对半偏差准则下库存模型的等价形式}\dotfill {\ \pageref{pg:3.3}}
+
+{\zihao{-4}{\heiti 3.3.1}\quad 绝对半偏差的性质}\dotfill {\ \pageref{pg:3.3.1}}
+
+{\zihao{-4}{\heiti 3.3.2}\quad 原问题的等价问题}\dotfill {\ \pageref{pg:3.3.2}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 3.4}\quad 常见需求分布下绝对半偏差的计算}\dotfill {\ \pageref{pg:3.4}}
+
+{\zihao{-4}{\heiti 3.4.1}\quad 三角模糊需求分布下的绝对半偏差}\dotfill {\ \pageref{pg:3.4.1}}
+
+{\zihao{-4}{\heiti 3.4.2}\quad 梯形模糊需求分布下的绝对半偏差}\dotfill {\ \pageref{pg:3.4.2}}
+
+{\zihao{-4}{\heiti 3.4.3}\quad厄兰模糊需求分布下的绝对半偏差}\dotfill {\ \pageref{pg:3.4.3}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 3.5}\quad 数值实验与结果分析}\dotfill {\ \pageref{pg:3.5}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 3.6}\quad 本章小结}\dotfill {\ \pageref{pg:3.6}}\\
+{\zihao{-4} \songti\heiti 第~4 章\hspace{0.15cm}可变分布下风险规避的多产品单周期库存问题}\dotfill {\ \pageref{pg:4}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 4.1}\quad 绝对半偏差准则下的库存模型}\dotfill {\ \pageref{pg:4.1}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 4.2}\quad 等价模型}\dotfill {\ \pageref{pg:4.2}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 4.3}\quad 选择变量的性质}\dotfill {\ \pageref{pg:4.3}}
+
+{\zihao{-4}{\heiti 4.3.1}\quad 常见参数可能性分布下的期望值}\dotfill {\ \pageref{pg:4.3.1}}
+
+{\zihao{-4}{\heiti 4.3.2}\quad 常见参数可能性分布下的绝对半偏差}\dotfill {\ \pageref{pg:4.3.2}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 4.4}\quad 数值实验与结果分析}\dotfill {\ \pageref{pg:4.4}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 4.5}\quad 本章小结}\dotfill {\ \pageref{pg:4.5}}\\
+{\zihao{-4} \songti\heiti 第~5 章\hspace{0.15cm}结论与展望}\dotfill {\ \pageref{pg:5}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 5.1}\quad 本文的主要工作及创新点}\dotfill {\ \pageref{pg:5.1}}
+
+{\hspace{-4mm}\zihao{-4}{\heiti 5.2}\quad  对今后工作的展望}\dotfill {\ \pageref{pg:5.2}}\\
+{\zihao{-4}  \heiti 参考文献}\dotfill {\ \pageref{pg:ref}}\\
+{\zihao{-4}  \heiti 致\hspace{3mm}谢}\dotfill {\ \pageref{pg:thanks}}\\
+{\zihao{-4}  \heiti 攻读学位期间取得的科研成果}\dotfill {\ \pageref{pg:papers}}
+%---------------------------------目录--------目录----目录------------------------------------------------------------
+
+%----------------------------- 第一章-----第一章------第一章----------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%题目:不确定需求下多产品单周期库存问题的研究 \ 专业名称:数学
+\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\footnotesize \zihao{5}\songti 河北大学理学硕士学位论文}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0) {\footnotesize \zihao{5}\songti 第1章\ 绪\hspace{1.5mm}论}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{
+\centerline{\footnotesize \songti\zihao{-5} \thepage}
+}
+\def\@oddfoot{
+\centerline{ \footnotesize \songti\zihao{-5} \thepage}
+}
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}
+\def\oddhead{{\protect\WENXIANMEIZI\hfill 第1章\quad 绪~~~~论\hfill}}
+\def\evenhead{{\protect\WENXIANMEIZI\hfill 第1章\quad  绪~~~~论\hfill}}
+\hspace*{0.5cm}
+\begin{center}
+{\Large\heiti\zihao{3}\bf 第~1章\hspace{0.1cm}绪~~~论}
+\end{center}\label{pg:1}
+\setcounter{mychapter}{1}
+\setcounter{equation}{0}
+\section{\JIEZI\zihao{4}\!\!\!问题的提出及研究现状}\label{pg:1.1}
+\hskip 
+\parindent
+库存是为了满足顾客的需求,一个库存系统在运行过程中由于顾客需求对货物的消耗就要经常进行补货,由此会产生一系列的成本,满足顾客需求后会获得收益.
+20世纪90年代以来,随着全球经济一体化,科学技术和信息技术的迅猛发展,企业面临的周边环境和经营方式都发生了重大改变.
+全球范围内的市场竞争,使得企业产品不断推陈出新,产品生产周期和寿命越来越短.顾客需求的个性化、多样化增加了市场需求的不确定性.
+因此,如何做好库存管理对于企业而言相当重要.同时库存管理系统是生产、计划和控制的基础.通过库存分析,可以为管理及决策人员提供库存资金占用情况、
+物资积压情况、短缺/超储情况等不同的统计分析信息.因而,有效地应用各种库存策略,进行库存管理技术的优化,对于减少库存成本,提高产品生产效率和客户服务水平,
+从而使企业的收益最大化,具有十分重要的研究意义.由此可见库存问题在运筹研究文献中是一个比较经典的研究主题,并且对于许多企业来说也是一个非常重要的决策制定问题.
+
+许多学者从产品和周期的角度对库存问题进行了一系列研究\cite{LiYongJian2008, Halman, Tsao, Akbalik}.
+单产品单周期或单产品多周期库存问题是一些学者研究的重点.
+Rossi等人 \cite{Rossi}在随机需求的条件下研究了单产品单周期的库存控制问题.
+Sayin等人 \cite{Sayin}基于效用的方法研究了单周期单产品的报童问题.Absi等人 \cite{Absi}研究了带有周期碳排放约束的单产品生产批量问题.
+
+虽然很多对库存问题的研究分析集中在单产品上.然而,在实际生活中,多产品库存问题相对于单产品库存问题更加普遍一些.
+Borgonovo和Peccati这两位学者 \cite{Borgonovo}考虑了由损失函数刻画的多产品库存系统,其中需求具有随机性.Shi等人 \cite{Shi2011}用随机系数的的方法处理了一类多目标规划问题并将其应用到了多产品库存问题中.
+Sancak和Salman \cite{Sancak}考虑了由单一供应商提供多产品来源的制造商的订购和入站运输决策.Tempelmeier \cite{Tempelmeier}在随机周期需求下,研究了动态多产品带有能力约束限制的生产批量问题.
+Serel \cite{Serel}对于依赖需求分布和给定整体采购预算的多产品库存问题建立了单周期模型.Li等人 \cite{Li2012}求解了多产品能力受限的动态生产批量问题,其中每种产品面对一系列动态需求,
+并且在每个周期内这些产品共享有限的生产资源.孟丽君和黄祖庆这两位学者 \cite{MengLiJun2013}建立了基于退货且考虑产品替代的两产品联合库存控制模型,研究了销售商的最优订货量及其性质.
+在多产品多周期的库存控制系统中,Mousavi等人 \cite{Mousavi}研究并建立了关于订购产品的混合整数数学规划模型.
+陈杰和陈志祥 \cite{ChenJie2015}研究了一类新的多产品库存控制策略,该策略考虑市场需求在不同产品之间具有多元马氏转移特征,并考虑缺货因素设置安全库存.
+
+上述相关文献都是在随机环境下对单产品或多产品库存问题进行了研究分析.而实际上,在一些库存问题中,需求和供应的观察值通常是不精确的.
+这种不精确估计可能来自于信息的难以计算、难以获得和不完备性.基于这种情况,一些学者就开始处理研究库存管理的模糊不确定性.
+在模糊环境下,Taleizadeh等人 \cite{Taleizadeh}探讨了单周期的问题,在该问题中每种产品的需求由模糊变量来刻画.
+Baykasoglu和Gocken这两位学者 \cite{Baykasoglu}考虑了完全模糊约束的多产品经济订购批量问题并建立了相应的模型.
+Chen和Ho \cite{Chen2011}对带有模糊需求和累计数量折扣的单周期库存问题提出了一种分析方法.Bjork \cite{Bjork}对模糊多产品的经济生产量问题进行了研究分析.
+Dutta和Kumar \cite{Dutta}对没有缺货损失的多产品库存问题建立了模糊环境下的多目标模型并给出了求解方法.Nia等人 \cite{Nia}研究了单一供应商单一购买者供应链中的供应商管理库存策略,
+在这种策略下建立了带有缺货的多产品经济订购批量模型,其中该模型是一个模糊非线性整数规划问题.Jana等人 \cite{Jana}对于易变质产品建立了多产品多仓库库存模型.
+Sadeghi等人 \cite{Sadeghi}在模糊需求下建立了多产品经济生产批量模型.
+
+除了在随机和模糊环境下对分布信息已知的单产品或多产品库存问题的讨论,还有一些学者在分布信息不完全可知的情况下,用鲁棒优化方法对上述库存问题进行了研究.
+2011年,Ben-Tal等人 \cite{Ben-Tal}集中研究了带有不确定区域的鲁棒线性优化问题.对于单产品多周期的定期检查随机批量问题,
+Klabjan \cite{Klabjan}提出了最大最小化鲁棒模型,使得数据拟合与库存优化结合起来.
+在报童仅获知不确定需求的均值与方差的假设下,孙彩虹 \cite{SunCaiHong2014}建立了Worst-case型的鲁棒联合定价、订货模型,并在适当的条件下给出了联合决策的闭环最优解.
+Olivares-Nadal等人 \cite{Olivares-Nadal}在结合时间相依性和可处理鲁棒优化方法的情况下研究了单产品报童问题.
+
+许多学者意识到风险对库存的影响,从不同风险视角下对库存问题展开了研究.比如学者Herweg \cite{Herweg}通过假定报童问题是在损失规避的预期基础上修改了经典的单周期库存管理问题.
+Katariya等人 \cite{Katariya}在期望效用最大化、均值方差分析、条件风险最小化三种不同决策标准下比较了风险中立和风险规避报童问题之间的关系.
+Choi和Park这两位学者 \cite{Choi}通过运用可加效用函数研究了几种动态风险规避库存模型.
+
+基于目前的单产品或多产品库存文献,从风险中立和风险规避的角度来研究模糊环境下的多产品单周期库存问题的相关文献相对较少.
+在可信性理论和模糊优化方法 \cite{Liu and Wang, Liu2013, Liu2014}的基础上,本论文从风险中立和风险规避两个角度出发,
+在模糊需求环境下分别分析讨论需求分布固定和需求分布可变的多产品单周期的库存问题.
+我们考虑并建立了一类风险中立的模糊期望值模型.然后又加入了对不确定风险的考虑,
+利用可信性理论和相关文献定义了两个新的风险测度,分别建立了固定分布和可变分布下风险规避的模糊半偏差模型.
+同时从理论上分析了三类模型的性质,并应用可信性理论分别得到三类模型的等价模型,然后设计了求解方法予以求解.
+最后通过数值实验进一步说明了建模思想和求解方法的有效性.
+
+
+\setcounter{mychapter}{1} \setcounter{equation}{0}
+\section{\JIEZI \zihao{4}\!\!\!本文的结构安排\label{pg:1.2}}
+\hskip\parindent
+本论文基于可信理论和L-S积分方法,研究了模糊环境下的单周期多产品的库存管理问题.我们建立了一类风险中立的模糊期望值模型.
+然后我们又加入了对不确定风险的考虑,利用可信性理论定义了两个新的风险测度,建立了固定分布和可变分布下风险规避的模糊绝对半偏差模型.我们从理论上分析了三类模型的性质,
+并应用可信性理论分别得到三类模型的等价模型,然后我们设计了求解方法予以求解.
+最后通过数值实验进一步说明了建模思想和求解方法的有效性.
+
+本文的主要内容和结构安排如下:
+
+第二章在需求的不确定性为模糊性的情况下,我们考虑了风险中立的多产品单周期库存问题,首先给出单产品单周期的库存利润函数并建立期望值库存模型,
+然后将单产品库存问题推广到多产品库存问题得到多产品利润函数,并在风险中立的准则下建立多产品单周期的期望值模型.
+在假定不确定需求相互独立的条件下推导出期望值模型的等价模型,并对其进行模型分析得到了其解析解的公示表达.
+根据可信性理论的相关知识,分析了不确定需求在常见的离散和连续模糊分布情况下的一些性质.最后进行数值实验分析了本章的建模思想和求解方法的有效性,
+并且比较了随机环境和模糊环境下库存问题中的最优订购策略与期望收益.
+
+第三章仍在模糊环境下继续研究这种多产品单周期库存问题,在这一章中我们用风险规避的方法建立了绝对半偏差模型,
+由于所建立的模型为最大最小化模型,便于计算,通过引入附加变量将模型转化为可求解的线性目标形式.
+在需求相互独立的条件下给出了绝对半偏差的一些性质,并得到了具体的等价模型.由于求解模型的关键在于需求倒数期望值和绝对半偏差值的计算,
+因此我们讨论了在常见模糊需求分布下绝对半偏差的计算公式.最后进行数值实验分析了本章的建模思想和求解方法的有效性.
+
+第四章采用整体绝对半偏差风险度量方法研究了可变需求分布下风险规避的多产品单周期库存问题,
+建立了绝对半偏差模型并分析了参数可能性分布下需求倒数的期望值和绝对半偏差值的计算问题.
+在需求相互独立的条件下给出了绝对半偏差的一些性质,
+并得到了具体的等价模型.同时讨论了在常见参数可能性分布下需求倒数期望值和绝对半偏差的计算公式.
+最后,数值算例演示所提建模思想,并且分析比较了可变可能性分布和固定可能性分布下的数值结果,实验结果说明了所建模型的有效性.
+
+在本论文的结论与展望部分,总结了本论文的主要工作及创新点,并针对本论文的研究局限,对今后进一步研究多产品的库存管理问题作出了展望.
+
+%----------------------------- 第一章-----第一章------第一章----------------------------------------------------
+
+
+%----------------------------- 第二章-----第二章------第二章----------------------------------------------------
+\renewcommand{\theequation}{\arabic{mychapter}.\arabic{equation}}
+\renewcommand{\thefigure}{\arabic{mychapter}-\arabic{figure}}
+\renewcommand{\thetable}{\arabic{mychapter}-\arabic{table}}
+\newpage
+\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\zihao{5}河北大学理学硕士学位论文}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0) {\footnotesize \zihao{5}第2章\ 固定分布下风险中立的多产品单周期库存问题}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{
+\centerline{\footnotesize\thepage}
+}
+\def\@oddfoot{
+\centerline{\footnotesize \thepage}
+}
+
+\setcounter{section}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+%\makeatother 
+%\hspace{12mm}\\
+\def\oddhead{{\protect\WENXIANMEIZI\hfill
+    第2章\ \ 固定分布下风险中立的多产品单周期库存问题\hfill}}
+\def\evenhead{{\protect\WENXIANMEIZI\hfill
+    第2章\ \ 固定分布下风险中立的多产品单周期库存问题\hfill}}
+\hspace*{0.5cm}
+\begin{center}
+{\Large\heiti\zihao{3}\bf 第2章\ \ 固定分布下风险中立的多产品单周期库存问题}\label{pg:2}
+\end{center}
+\vskip 0.5cm
+\setcounter{mychapter}{2}
+\setcounter{equation}{0}
+
+针对多产品单周期库存问题,本章建立一类风险中立的期望值模型,其中我们用模糊变量的期望值来度量公司的不确定收益.根据分析结果,我们给出了一种求解模型的方法.
+最后我们通过数值实验来说明建模思想并验证求解方法的可行性和有效性.
+%本章部分内容已发表在国际期刊《Journal of Uncertain Systems》上.
+\section{\JIEZI\zihao{4}\!\!\!期望值库存模型
+\label{pg:2.1}}\hskip\parindent
+在这一章中,针对多产品单周期库存问题,我们建立一类风险中立的期望值模型.为了方便描述我们的期望值模型,我们采用以下的记号说明.\\
+{\bf 记号：}\\
+单产品\\
+$a$:单位库存产品的订购成本;\\
+$p$:单位库存产品的收益;\\
+$h$:单位储存成本;\\
+$\xi$:库存问题中的模糊需求;\\
+$x$:库存问题中的订购量;\\
+多产品\\
+$\textbf{a}=[a_{1}, a_{2},\cdots, a_{n}]$:单位库存产品的订购成本;\\
+$\textbf{p}=[p_{1}, p_{2},\cdots, p_{n}]$:单位库存产品的收益;\\
+$\textbf{h}=[h_{1}, h_{2},\cdots, h_{n}]$:单位储存成本;\\
+$\bm{\xi}=[\xi_{1}, \xi_{2},\cdots, \xi_{n}]$:库存问题中的模糊需求向量;\\
+$\textbf{x}=[x_{1}, x_{2},\cdots, x_{n}]$:库存问题中的订购量向量;\\
+$n$:库存产品的种类.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.5\textwidth]{fig1.eps}
+\caption{需求和库存量的关系}
+\label{figure:pi}
+\end{figure}
+
+若决策制定者想要获得最大利润,他们通常用利润的期望值作为目标函数并最大化总平均利润.
+
+很容易得到单产品的库存模型,其利润目标函数为
+\[
+\pi(x,\xi)=px-a-\frac{h{x}^{2}}{2\xi},
+\]
+其中 $px$ 为库存问题中的总收益,$a$ 为固定订购成本,$hx^{2}/2\xi$ 为库存成本.
+模糊利润 $\pi(x,\xi)$ 的期望值由 $\mathrm{E}[\pi(x,\xi)]$表示.由文献\cite{Liu2002}中的期望值算子的性质可知
+\begin{equation}\label{equation1}
+\begin{split}
+\E[\pi(x,\xi)]&=\mathrm{E}\left[px-a-\frac{h{x}^{2}}{2\xi}\right]\\
+&=px-a-\E\left[\frac{h{x}^{2}}{2\xi}\right]\\
+&=px-a-\frac{h{x}^{2}}{2}\E\left[\frac{1}{\xi}\right].\\
+\end{split}
+\end{equation}
+
+在这种情形下,单产品单周期库存问题的期望值模型为
+\begin{eqnarray}\label{ex-model--1}
+\qquad &\left\{
+\begin{aligned}
+&\max \quad \mathrm{E}[\pi(x,\xi)]\\
+&{\rm s.\; t.}\quad x\geq 0.\\
+\end{aligned}
+\right.
+\end{eqnarray}
+
+根据公式(\ref{equation1}),可得到模型(\ref{ex-model--1})的解:
+\[
+x^{\ast}=\frac{p}{hm},
+\]
+其中 $m=\E[1/\xi]$.
+
+在现实生活中,多产品单周期库存问题在理论和实际应用方面更具重要意义.接下来文章将讨论单周期内不同产品的库存问题.
+令 $i=1,2,\ldots,n$ 表示产品的类型并假设任意两种产品之间没有相互影响.这样,多产品利润函数即可表示为 
+\[
+\pi(\textbf{x},\bm{\xi})=\sum_{i=1}^{n}\left(p_{i}x_{i}-a_{i}-\frac{h_{i}{x_{i}^{2}}}{2\xi_{i}}\right).
+\]
+
+在风险中立的准则下,多产品单周期库存问题的期望值模型构建如下：
+\begin{eqnarray}\label{model--3}
+\qquad &\left\{
+\begin{aligned}
+&\max \quad \E[\pi(\textbf{x},\bm{\xi})]\\
+&{\rm s.\; t.}\quad \textbf{x}\geq 0.\\
+\end{aligned}
+\right.
+\end{eqnarray}
+
+若记需求向量为$\bm{\xi}$且$\bm{\xi}=(\xi_{1},\xi_{2},\cdots,\xi_{n})$,并假设需求变量 $\xi_i$ 是相互独立的模糊变量 \cite{LiuGao2007},则联合可能性分布 $\mu_{\bm{\xi}}$ 写作
+$$
+\mu_{\bm{\xi}}(t_{1},t_{2},\cdots,t_{n})=\min_{1\leq i\leq n}\mu_{\xi_{i}}(t_{i}).
+$$
+令
+\[
+\pi_{i}(x_i,\xi_{i})=p_{i}x_{i}-a_{i}-\frac{h_{i}{x_{i}^{2}}}{2\xi_{i}}, \quad i=1,2,\ldots,n.
+\]
+则 $\pi_{i}(x_i,\xi_{i}),i=1,2,\ldots,n$, 也是相互独立的.由期望值算子\cite{Liu2003}的独立线性可知
+\[
+\E[\pi(\textbf{x},\bm{\xi})]=\sum_{i=1}^{n}\E[\pi_{i}(x_i,\xi_{i})].
+\]
+计算可得
+\[
+\mathrm{E}[\pi(\textbf{x},\bm{\xi})]=\sum_{i=1}^{n}\left(p_{i}x_{i}-a_{i}-\frac{h_{i}{x_{i}^{2}}}{2}\mathrm{E}\left[\frac{1}{\xi_{i}}\right]\right).
+\]
+因此,模型(\ref{model--3})的等价模型为
+\begin{eqnarray}\label{model--4}
+\qquad &\left\{
+\begin{aligned}
+&\max \sum_{i=1}^{n}\left(p_{i}x_{i}-a_{i}-\frac{m_{i}h_{i}{x_{i}^{2}}}{2}\right)\\
+&{\rm s.\; t.}\quad \textbf{x}\geq 0,\\
+\end{aligned}
+\right.
+\end{eqnarray}
+\noindent
+其中
+\[
+m_{i}=\E\left[\frac{1}{\xi_{i}}\right],\quad i=1,2,\ldots,n.
+\]
+
+显然,模型(\ref{model--4})是一个凸规划模型,通过求解以下方程
+\[
+\frac{\partial}{\partial x_i}\sum_{i=1}^{n}\left(p_{i}x_{i}-a_{i}-\frac{m_{i}h_{i}{x_{i}^{2}}}{2}\right)=0,\quad i=1,2,\ldots,n,
+\]
+可得
+\[
+\textbf{x}^{\ast}=\left[\frac{p_{1}}{h_{1}m_{1}},\frac{p_{2}}{h_{2}m_{2}},\ldots,\frac{p_{n}}{h_{n}m_{n}}\right].
+\]
+
+目前为止,我们已经得到了模型(\ref{model--4})的一般解 $\textbf{x}^{\ast}$,其依赖于 $m_i=\E[{1}/{\xi_{i}}], i=1,2,\ldots,n$.
+下一节中,我们将讨论在常见需求分布下 $m_{i}, i=1,2,\ldots,n$ 的计算问题.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\JIEZI\zihao{4}\!\!\!常见需求分布下的期望值
+\label{pg:2.2}}\hskip\parindent 
+在这一节中,我们将在常见需求分布下讨论期望值 $\mathrm{E}[{1}/{\xi_{i}}]\,(i=1,2,\ldots,n)$ 的计算问题.
+分别讨论两种情形,一种是需求 $\xi_{i}\,(i=1,2,\ldots,n)$ 服从离散分布,另一种是需求服从常见的连续分布.
+\subsection{\XIAOJIEZI\zihao{-4}\!\!\!离散模糊需求分布下的期望值} 
+\label{pg:2.2.1} \hskip\parindent
+\begin{theorem}\label{theorem2-1}
+假设模型(\ref{ex-model--1})中的需求 $\xi$ 服从以下离散分布
+\begin{eqnarray*}
+\qquad &\xi\sim\left(
+\begin{array}{ccccc }
+                  t_{1} & t_{2}& \cdots & t_{n} & \cdots\\
+                  \mu_{1} & \mu_{2} & \cdots & \mu_{n} & \cdots
+                \end{array}
+\right),
+\end{eqnarray*}
+其中对任意的 $i$,有 $t_{i}\geq t_{i+1}$, $\mu_{i}>0$ 且 $\max_{1\leq i< +\infty}\mu_{i}=1$.则期望值 $\E[1/\xi]$ 为
+\begin{equation}\label{d-ev-formula}
+\E\left[\frac{1}{\xi}\right]=\sum_{i=1}^{+\infty}\frac{q_{i}}{t_{i}},
+\end{equation}
+其中权重 $q_{i}$ 取决于以下公式
+\begin{equation}\label{d-ev-formula-weights}
+q_{i}=\frac{1}{2}(\max_{j\leq i}\mu_{j}-\max_{j\leq i-1}\mu_{j})+\frac{1}{2}(\sup_{j\geq i}\mu_{j}-\sup_{j\geq i+1}\mu_{j})
+\end{equation}
+对于任意的 $i$,有 $\mu_0=0$.
+\\\em \pf
+由假设可知,需求 $\xi$ 的可能性分布如下所示 
+\begin{eqnarray*}
+\qquad &\xi\sim\left(
+\begin{array}{ccccc }
+                  t_{1} & t_{2}& \cdots & t_{n} & \cdots\\
+                  \mu_{1} & \mu_{2} & \cdots & \mu_{n} & \cdots
+                \end{array}
+\right),
+\end{eqnarray*}
+则变量 $1/\xi$ 可能性分布如下
+\begin{eqnarray*}
+\qquad &\frac{1}{\xi}\sim\left(
+\begin{array}{ccccc }
+                  \frac{1}{t_{1}} & \frac{1}{t_{2}}& \cdots & \frac{1}{t_{n}} & \cdots\\
+                  \mu_{1} & \mu_{2} & \cdots & \mu_{n} & \cdots
+                \end{array}
+\right).
+\end{eqnarray*}
+对于任意的 $i$,有
+\[
+\frac{1}{t_i}\le \frac{1}{t_{i+1}}.
+\]
+
+因此,由文献\cite{Liu2002}中的期望值算子的定义可知期望值 $\E[1/\xi]$ 有解析表达式 (\ref{d-ev-formula}).定理证明完毕.
+\pfd
+\end{theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\XIAOJIEZI\zihao{-4}\!\!\!常见连续模糊需求分布下的期望值} 
+\label{pg:2.2.2} \hskip\parindent 
+\begin{theorem}\label{theorem2-2}
+如果模型(\ref{ex-model--1})中的需求 $\xi$ 是三角模糊变量 $(r_{1},r_{2},r_{3})$ 且 $r_{1}> 0$,则期望值 $\E[1/\xi]$ 为
+\[
+\E\left[\frac{1}{\xi}\right]=\frac{1}{2(r_{3}-r_{2})}\ln{\frac{r_{3}}{r_{2}}}+\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}.
+\]
+在 $r_{1}=0$ 的情况下,期望值 $\E[1/\xi]$ 不存在.
+\\\em \pf
+若令 $\eta=1/\xi$,则 $\eta$ 的可能性分布为
+\[
+\mu{_\eta}(t)=\Pos\{{\eta=t}\}=\Pos\left\{{\xi=\frac{1}{t}}\right\}=\mu{_{\xi}}\left(\frac{1}{t}\right).
+\]
+
+由 $\xi=(r_{1},r_{2},r_{3})$ 的分布可知
+\begin{eqnarray*}
+\qquad &\mu{_\eta}(t)=\left\{
+\begin{aligned}
+&\frac{\frac{1}{t}-r_{1}}{r_{2}-r_{1}},&&r_{1}\leq\frac{1}{t}<r_{2}\\
+&\frac{r_{3}-\frac{1}{t}}{r_{3}-r_{2}},&&r_{2}\leq\frac{1}{t}<r_{3}\\
+&0,&& \mbox{其他}.
+\end{aligned}
+\right.
+\end{eqnarray*}
+因此,$\eta$ 的可能性分布为
+\begin{eqnarray*}
+\qquad &\mu{_\eta}(t)=\left\{
+\begin{aligned}
+&\frac{r_{3}t-1}{(r_{3}-r_{2})t},&&\frac{1}{r_{3}}\leq t\leq\frac{1}{r_{2}}\\
+&\frac{1-r_{1}t}{(r_{2}-r_{1})t},&&\frac{1}{r_{2}}\leq t\leq\frac{1}{r_{1}}\\
+&0,&& \mbox{其他}.
+\end{aligned}
+\right.
+\end{eqnarray*}
+对于任意的 $r> 0$, $\eta$ 的可信性分布计算如下
+\begin{eqnarray*}
+\qquad &\Cr\{\eta \geq r\}=\Cr\{\xi\leq\frac{1}{r}\}=\left\{
+\begin{aligned}
+&1,&& 0<r<\frac{1}{r_{3}}\\
+&\frac{(r_{3}-2r_{2})r+1}{2r(r_{3}-r_{2})},&& \frac{1}{r_{3}}\leq r<\frac{1}{r_{2}}\\
+&\frac{1-r_{1}r}{2r(r_{2}-r_{1})},&& \frac{1}{r_{2}}\leq r<\frac{1}{r_{1}}\\
+&0,&& r\geq\frac{1}{r_{1}}.
+\end{aligned}
+\right.
+\end{eqnarray*}
+
+于是,期望值 $\E[\eta]$ 的计算过程如下
+\begin{align*}
+\E[\eta]=&\int_{0}^{+\infty}\Cr\{\eta \geq r\}\dr-\int_{-\infty}^{0}\Cr\{\eta \leq r\}\dr\\
+=&\int_{0}^{+\infty}\Cr\{\eta \geq r\}\dr\\ 
+=&\int_{0}^{\frac{1}{r_{3}}}\dr+\int_{\frac{1}{r_{3}}}^{\frac{1}{r_{2}}}\frac{(r_{3}-2r_{2})r+1}{2r(r_{3}-r_{2})}\dr
++\int_{\frac{1}{r_{2}}}^{\frac{1}{r_{1}}}\frac{1-r_{1}r}{2r(r_{2}-r_{1})}\dr\\
+=&\frac{1}{2(r_{3}-r_{2})}\ln{\frac{r_{3}}{r_{2}}}+\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}.
+\end{align*}
+
+接下来证明当 $r_{1}=0$ 时,期望值 $\E[1/\xi]$ 不存在.事实上,在这种情形下,$\eta$ 的可信性分布为
+\begin{eqnarray*}
+\qquad &\Cr\{\eta \geq r\}=\Cr\{\xi\leq\frac{1}{r}\}=\left\{
+\begin{aligned}
+&1, &&0<r<\frac{1}{r_{3}}\\
+&\frac{(r_{3}-2r_{2})r+1}{2r(r_{3}-r_{2})},&& \frac{1}{r_{3}}\leq r<\frac{1}{r_{2}}\\
+&\frac{1}{2r_{2}r},&& r\geq \frac{1}{r_{2}}.
+\end{aligned}
+\right.
+\end{eqnarray*}
+期望值 $\E[\eta]$ 为
+\begin{align*}
+\E[\eta]=&\int_{0}^{+\infty}\Cr\{\eta \geq r\}\dr-\int_{-\infty}^{0}\Cr\{\eta \leq r\}\dr\\
+=&\int_{0}^{+\infty}\Cr\{\eta \geq r\}\dr\\
+=&\int_{0}^{\frac{1}{r_{3}}}\dr+\int_{\frac{1}{r_{3}}}^{\frac{1}{r_{2}}}\frac{(r_{3}-2r_{2})r+1}{2r(r_{3}-r_{2})}\dr
++\lim_{d\rightarrow +\infty}\int_{\frac{1}{r_{2}}}^{d}\frac{1}{2r_{2}r}\dr\\
+=&\frac{1}{2(r_{3}-r_{2})}\ln{\frac{r_{3}}{r_{2}}}+\frac{1}{2r_{2}}(1+\lim_{d\rightarrow+\infty}\ln{dr_{2}}),
+\end{align*}
+结果表明期望值 $\E[1/\xi]$ 不存在.定理证明完毕.
+\pfd
+\end{theorem}
+
+\begin{theorem}\label{theorem2-3}
+若模型(\ref{ex-model--1})中的需求 $\xi$ 是梯形模糊变量 $(r_{1},r_{2},r_{3},r_{4})$ 且 $r_{1}> 0$,则期望值$\E[1/\xi]$ 为
+\[
+\E\left[\frac{1}{\xi}\right]=\frac{1}{2(r_{4}-r_{3})}\ln{\frac{r_{4}}{r_{3}}}+\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}.
+\]
+在 $r_{1}=0$ 的情况下,期望值 $\E[1/\xi]$ 不存在.
+\\\em \pf
+记 $\eta=1/\xi$,则 $\eta$ 的可能性分布为
+\[
+\mu{_\eta}(t)=\Pos\{{\eta=t}\}=\Pos\left\{{\xi=\frac{1}{t}}\right\}=\mu{_{\xi}}\left(\frac{1}{t}\right).
+\]
+
+由 $\xi$ 的可能性分布可知
+\begin{eqnarray*}
+\qquad &\mu{_\eta}(t)=\left\{
+\begin{aligned}
+&\frac{r_{4}t-1}{(r_{4}-r_{3})t}, &&\frac{1}{r_{4}}< t\leq\frac{1}{r_{3}}\\
+&1,&& \frac{1}{r_{3}}<t\leq\frac{1}{r_{2}}\\
+&\frac{1-r_{1}t}{(r_{2}-r_{1})t}, &&\frac{1}{r_{2}}< t\leq\frac{1}{r_{1}}\\
+&0,&& \mbox{其他}.
+\end{aligned}
+\right.
+\end{eqnarray*}
+对于任意的 $r> 0$,$\eta$ 的可信性分布为
+\begin{eqnarray*}
+\qquad &\Cr\{\eta \geq r\}=\Cr\{\xi\leq\frac{1}{r}\}=\left\{
+\begin{aligned}
+&1, && 0<r<\frac{1}{r_{4}}\\
+&\frac{(r_{4}-2r_{3})r+1}{2r(r_{4}-r_{3})},&& \frac{1}{r_{4}}\leq r<\frac{1}{r_{3}}\\
+&\frac{1}{2}, &&\frac{1}{r_{3}}\leq r<\frac{1}{r_{2}}\\
+&\frac{1-r_{1}r}{2r(r_{2}-r_{1})}, &&\frac{1}{r_{2}}\leq r<\frac{1}{r_{1}}\\
+&0, && r\geq\frac{1}{r_{1}}.
+\end{aligned}
+\right.
+\end{eqnarray*}
+因此,期望值 $\E[\eta]$ 为
+\begin{align*}
+\E[\eta]=&\int_{0}^{+\infty}\Cr\{\eta \geq r\}\dr-\int_{-\infty}^{0}\Cr\{\eta \leq r\}\dr\\
+=&\int_{0}^{\frac{1}{r_{4}}}\dr+\int_{\frac{1}{r_{4}}}^{\frac{1}{r_{3}}}\frac{(r_{4}-2r_{3})r+1}{2r(r_{4}-r_{3})}\dr
++\int_{\frac{1}{r_{3}}}^{\frac{1}{r_{2}}}\frac{1}{2}\dr+\int_{\frac{1}{r_{2}}}^{\frac{1}{r_{1}}}\frac{1-r_{1}r}{2r(r_{2}-r_{1})}\dr\\
+=&\frac{1}{2(r_{4}-r_{3})}\ln{\frac{r_{4}}{r_{3}}}+\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}.
+\end{align*}
+
+接下来证明当 $r_{1}=0$ 时,期望值 $\E[1/\xi]$ 不存在.事实上,在这种情形下,$\eta$ 的可信性分布为
+\begin{eqnarray*}
+\qquad &\Cr\{\eta \geq r\}=\Cr\{\xi\leq\frac{1}{r}\}=\left\{
+\begin{aligned}
+&1, &&0<r<\frac{1}{r_{4}}\\
+&\frac{(r_{4}-2r_{3})r+1}{2r(r_{4}-r_{3})}, &&\frac{1}{r_{4}}\leq r<\frac{1}{r_{3}}\\
+&\frac{1}{2}, && \frac{1}{r_{3}}\leq r<\frac{1}{r_{2}}\\
+&\frac{1}{2r_{2}r}, && r\geq \frac{1}{r_{2}}.
+\end{aligned}
+\right.
+\end{eqnarray*}
+期望值 $\E[\eta]$ 为
+\begin{align*}
+\E[\eta]=&\int_{0}^{+\infty}\Cr\{\eta \geq r\}\dr-\int_{-\infty}^{0}\Cr\{\eta \leq r\}\dr\\
+=&\int_{0}^{+\infty}\Cr\{\eta \geq r\}\dr\\
+=&\int_{0}^{\frac{1}{r_{4}}}\dr+\int_{\frac{1}{r_{4}}}^{\frac{1}{r_{3}}}\frac{(r_{4}-2r_{3})r+1}{2r(r_{4}-r_{3})}\dr
++\int_{\frac{1}{r_{3}}}^{\frac{1}{r_{2}}}\frac{1}{2}\dr+\lim_{d\rightarrow+\infty}\int_{\frac{1}{r_{2}}}^{d}\frac{1}{2r_{2}r}\dr\\
+=&\frac{1}{2(r_{4}-r_{3})}\ln{\frac{r_{4}}{r_{3}}}+\frac{1}{2r_{2}}(1+\lim_{d\rightarrow+\infty}\ln{dr_{2}}),
+\end{align*}
+结果表明期望值 $\E[1/\xi]$ 不存在.定理证明完毕.
+\pfd
+\end{theorem}
+
+\begin{theorem}\label{theorem2-4}
+若模型(\ref{ex-model--1})中的需求 $\xi$ 是厄兰模糊变量 $\mathrm{Er}(\lambda,r)$,其中 $\xi\in[r_{1},r_2]$ 且 $r_{1}>0$, $r$ 是一个正整数,$\lambda >0$,则有\\
+(1) 若 $r=1$,则 $\eta$ 的期望值为
+\[
+\E[\eta]=\frac{e}{2\lambda}\bigg[\ln\frac{\lambda^2}{r_1r_2}+\sum_{i=1}^{+\infty}\frac{2(-1)^i-\Big(-\frac{r_1}{\lambda}\Big)^i-\Big(-\frac{r_2}{\lambda}\Big)^i}{i\cdot i!}\bigg]
++\frac{1}{\lambda}-\frac{1}{r_2},
+\]
+(2) 若 $r>1$,则 $\eta$ 的期望值为
+\begin{align*}
+\E[\eta]&=\frac{e^r}{2\lambda}\Big(\frac{1}{r}\Big)^r\bigg[\Big(\frac{r_1}{\lambda}\Big)^{r-2}e^{-\frac{r_1}{\lambda}}
++\Big(\frac{r_2}{\lambda}\Big)^{r-2}e^{-\frac{r_2}{\lambda}}-2r^{r-2}e^{-r}\\
+&+(r-2)\Big(\int_{\frac{r_2}{\lambda}}^{r}t^{r-3}e^{-t}\dt-\int_{r}^{\frac{r_1}{\lambda}}t^{r-3}e^{-t}\dt\Big)\bigg]+\frac{1}{\lambda r}-\frac{1}{r_2}.
+\end{align*}
+在 $r_{1}=0$ 的情况下,期望值 $\E[1/\xi]$ 不存在.
+\\\em \pf
+若需求 $\xi$ 是一个厄兰模糊变量 $\mathrm{Er}(\lambda,r)$,则 $\eta=1/\xi$ 的可能性分布为
+\[
+\mu{_\eta}(t)=\Pos\{{\eta=t}\}=\Pos\left\{{\xi=\frac{1}{t}}\right\}=\mu{_{\xi}}\left(\frac{1}{t}\right).
+\]
+
+由于
+$$
+\mu_{\xi}(t)=\left(\frac{t}{\lambda r}\right)^{r}\exp\left(r-\frac{t}{\lambda}\right),
+$$
+则
+$$
+\mu_{\eta}(t)=\left(\frac{1}{\lambda rt}\right)^{r}\exp\left(r-\frac{1}{\lambda t}\right).
+$$
+需求变量的倒数$\eta$ 的可信性分布为
+\begin{eqnarray*}
+\qquad &\Cr\{\eta \geq x\}=\Cr\{\xi\leq\frac{1}{x}\}=\left\{
+\begin{aligned}
+&1-\frac{1}{2}\left(\frac{1}{\lambda rx}\right)^{r}\exp\left(r-\frac{1}{\lambda x}\right),&& 0< x< \frac{1}{\lambda r}\\
+&\frac{1}{2}\left(\frac{1}{\lambda rx}\right)^{r}\exp\left(r-\frac{1}{\lambda x}\right),&& \frac{1}{\lambda r}\leq x\leq \frac{1}{r_{1}}.
+\end{aligned}
+\right.
+\end{eqnarray*}
+因此,期望值$\E[\eta]$ 为
+\begin{align*}
+\E[\eta]=&\int_{0}^{+\infty}\Cr\{\eta \geq x\}\dx-\int_{-\infty}^{0}\Cr\{\eta \leq x\}\dx\\
+=&\int_{0}^{+\infty}\Cr\{\eta \geq x\}\dx\\
+=&\int_{\frac{1}{r_2}}^{\frac{1}{\lambda r}}\bigg[1-\frac{1}{2}\Big(\frac{1}{\lambda rx}\Big)^{r}e^{r-\frac{1}{\lambda x}}\bigg]\dx
++\int_{\frac{1}{\lambda r}}^{\frac{1}{r_{1}}}\frac{1}{2}\Big(\frac{1}{\lambda rx}\Big)^{r}e^{r-\frac{1}{\lambda x}}\dx,
+\end{align*}
+若 $r=1$,则 $\eta$ 的期望值为
+\[
+m=\frac{e}{2\lambda}\bigg[\ln\frac{\lambda^2}{r_1r_2}+\sum_{i=1}^{+\infty}\frac{2(-1)^i-\Big(-\frac{r_1}{\lambda}\Big)^i-\Big(-\frac{r_2}{\lambda}\Big)^i}{i\cdot i!}\bigg]
++\frac{1}{\lambda}-\frac{1}{r_2},
+\]
+若 $r>1$,则 $\eta$ 的期望值为
+\begin{align*}
+m&=\frac{e^r}{2\lambda}\Big(\frac{1}{r}\Big)^r\bigg[\Big(\frac{r_1}{\lambda}\Big)^{r-2}e^{-\frac{r_1}{\lambda}}
++\Big(\frac{r_2}{\lambda}\Big)^{r-2}e^{-\frac{r_2}{\lambda}}-2r^{r-2}e^{-r}\\
+&+(r-2)\Big(\int_{\frac{r_2}{\lambda}}^{r}t^{r-3}e^{-t}\dt-\int_{r}^{\frac{r_1}{\lambda}}t^{r-3}e^{-t}\dt\Big)\bigg]+\frac{1}{\lambda r}-\frac{1}{r_2}.
+\end{align*}
+
+接下来的证明过程与定理\ref{theorem2-2}和定理\ref{theorem2-3}的证明类似,这里就不再赘述.定理证明完毕.
+\pfd
+\end{theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\JIEZI\zihao{4}\!\!\!数值实验与结果分析
+\label{pg:2.3}}\hskip\parindent
+在这一节中,我们给出具体的数值例子来分析以上提出的库存问题的最优化方法.该实验是在2.0GHz, 8G内存的计算机上使用Lingo11.0软件进行的.
+
+在本文的库存问题中,假定一家服装公司允许买家提前订购产品,这样它可以通过产品订购量来获得利润.在该库存问题中只考虑两种花费：固定订购成本和库存费用.
+相关经济参数 $\textbf{p}, \textbf{a}, \textbf{h}$ 已在表 \ref{tabl 2}中给出, 
+其中 $\textbf{p}$ 表示每单位库存产品的收益, $\textbf{a}$ 表示每单位库存产品的固定成本,而 $\textbf{h}$ 表示每单位库存产品的库存费用.
+\begin{table}[!ht]
+ \caption{库存问题的经济参数 (\$)}\label{tabl 2}
+ \begin{center}
+\begin{tabular}{ccccccccccc}\hline
+ 产品 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\\ \hline
+     $\textbf{p}$ & 10 & 11 & 12.5 & 13 & 12 & 9.5 & 14 & 13.5 & 12.5 & 15\\
+     $\textbf{a}$ & 1 & 2 & 2.5 & 1.5 & 1.8 & 2.2 & 2.3 & 4.1 & 1.9 & 2.7\\
+     $\textbf{h}$ & 0.55 & 0.6 & 0.65 & 0.71 & 0.53 & 0.56 & 0.68 & 0.81 & 0.92 & 0.5\\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\subsection{\XIAOJIEZI\zihao{-4}\!\!\!需求服从离散的模糊分布时的计算结果及与随机结果的比较} 
+\label{pg:2.3.1} \hskip\parindent 
+需求向量 $\bm{\xi}$ 服从离散分布,假定该库存问题中有10种产品,则需求 $\xi_i$ ($i=1,2,\ldots, 10$) 有以下可能性分布:
+\begin{eqnarray*}
+\qquad &\xi_{i}\sim\left(
+\begin{array}{ccccc}
+                  t_{1}^{i} & t_{2}^{i}& \cdots & t_{10}^{i} \\
+                  \mu_{1}^{i} & \mu_{2}^{i} & \cdots & \mu_{10}^{i}
+                \end{array}
+\right).
+\end{eqnarray*}
+
+需求 $\xi_i$ 可能性分布中的$t^i_j$ 取值见表 \ref{tabl 3},可能性 $\mu^i_j$ 取值见表 \ref{tabl 4}.
+\begin{table}[!ht]
+ \caption{需求 $\xi_i$ 可能性分布中的$t^i_j$ 取值}\label{tabl 3}
+ \begin{center}
+\begin{tabular}{ccccccccccc}\hline
+ 产品 & $t_{1}^{i}$ & $t_{2}^{i}$ & $t_{3}^{i}$ & $t_{4}^{i}$ & $t_{5}^{i}$ & $t_{6}^{i}$ & $t_{7}^{i}$ & $t_{8}^{i}$ & $t_{9}^{i}$ & $t_{10}^{i}$\\ \hline
+  1 & 40 & 35 & 30 & 25 & 20 & 18 & 15 & 13 & 10 & 5 \\
+  2 & 40 & 30 & 20 & 10 & 8 & 7 & 6 & 5 & 4 & 3 \\
+  3 & 35 & 30 & 20 & 15 & 14 & 12 & 10 & 9 & 7 & 5 \\
+  4 & 45 & 35 & 25 & 20 & 18 & 15 & 12 & 10 & 8 & 5 \\
+  5 & 50 & 48 & 45 & 40 & 36 & 32 & 30 & 25 & 20 & 15 \\
+  6 & 60 & 55 & 50 & 47 & 43 & 38 & 35 & 30 & 25 & 20 \\
+  7 & 55 & 50 & 44 & 40 & 35 & 32 & 30 & 25 & 21 & 16 \\
+  8 & 68 & 65 & 60 & 57 & 54 & 45 & 42 & 36 & 33 & 25 \\
+  9 & 70 & 65 & 62 & 59 & 55 & 50 & 45 & 40 & 35 & 30 \\
+ 10 & 65 & 62 & 54 & 50 & 47 & 43 & 34 & 30 & 28 & 25 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[!htbp]
+ \caption{需求 $\xi_i$ 可能性分布中的$\mu^i_j$ 取值}\label{tabl 4}
+ \begin{center}
+\begin{tabular}{ccccccccccc}\hline
+ 产品 & $\mu_{1}^{i}$ & $\mu_{2}^{i}$ & $\mu_{3}^{i}$ & $\mu_{4}^{i}$ & $\mu_{5}^{i}$ & $\mu_{6}^{i}$ & $\mu_{7}^{i}$ & $\mu_{8}^{i}$ & $\mu_{9}^{i}$ & $\mu_{10}^{i}$ \\ \hline
+  1 & 0.2 & 0.3 & 1 & 0.7 & 0.5 & 0.4 & 0.6 & 0.5 & 0.2 & 0.8 \\
+  2 & 0.3 & 1 & 0.5 & 0.4 & 0.2 & 0.6 & 0.7 & 0.8 & 0.1 & 0.2 \\
+  3 & 0.4 & 1 & 0.6 & 0.3 & 0.5 & 0.7 & 0.8 & 0.3 & 0.2 & 0.1 \\
+  4 & 1 & 0.8 & 0.4 & 0.5 & 0.6 & 0.3 & 0.2 & 0.2 & 0.1 & 0.1 \\
+  5 & 0.7 & 0.4 & 0.6 & 0.2 & 0.3 & 0.5 & 1 & 0.4 & 0.8 & 0.1 \\
+  6 & 0.8 & 0.7 & 0.5 & 0.9 & 0.3 & 0.2 & 0.6 & 1 & 0.5 & 0.4 \\
+  7 & 0.4 & 0.3 & 0.5 & 0.8 & 0.9 & 0.6 & 0.2 & 1 & 0.7 & 0.5 \\
+  8 & 0.3 & 0.2 & 0.4 & 0.5 & 0.7 & 0.9 & 0.6 & 0.8 & 1 & 0.4 \\
+  9 & 0.4 & 0.3 & 0.2 & 0.2 & 0.5 & 1 & 0.6 & 0.7 & 0.4 & 0.8 \\
+  10 & 0.4 & 0.3 & 0.5 & 0.8 & 1 & 0.7 & 0.6 & 0.4 & 0.5 & 0.2 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+基于需求 $\xi_i$ 的可能性分布,我们计算了期望值 $\E[1/\xi_i]$, 
+其中权重 $q_i$ 的计算由公式 (\ref{d-ev-formula-weights})得出,计算结果见表 \ref{tabl 5}.
+\begin{table}[!htbp]
+\caption{权重$q_i$的计算结果}\label{tabl 5}
+\begin{center}
+\begin{tabular}{ccccccccccc}\hline
+ 产品 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline
+  $q_{1}$ & 0.1 & 0.05 & 0.45 & 0 & 0 & 0 & 0 & 0 & 0 & 0.4 \\
+  $q_{2}$ & 0.15 & 0.45 & 0 & 0 & 0 & 0 & 0 & 0.3 & 0 & 0.1 \\
+  $q_{3}$ & 0.2 & 0.4 & 0 & 0 & 0 & 0 & 0.25 & 0.05 & 0.05 & 0.05 \\
+  $q_{4}$ & 0.6 & 0.1 & 0 & 0 & 0.15 & 0.05 & 0 & 0.05 & 0 & 0.05 \\
+  $q_{5}$ & 0.35 & 0 & 0 & 0 & 0 & 0 & 0.25 & 0 & 0.35 & 0.05 \\
+  $q_{6}$ & 0.4 & 0 & 0 & 0.05 & 0 & 0 & 0 & 0.3 & 0.05 & 0.2 \\
+  $q_{7}$ & 0.2 & 0 & 0.05 & 0.15 & 0.05 & 0 & 0 & 0.2 & 0.1 & 0.25 \\
+  $q_{8}$ & 0.15 & 0 & 0.05 & 0.05 & 0.1 & 0.1 & 0 & 0 & 0.35 & 0.2 \\
+  $q_{9}$ & 0.2 & 0 & 0 & 0 & 0.05 & 0.35 & 0 & 0 & 0 & 0.4 \\
+  $q_{10}$ & 0.2 & 0 & 0.05 & 0.15 & 0.25 & 0.05 & 0.05 & 0 & 0.15 & 0.1 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+基于定理 \ref{theorem2-1},我们计算出了 $\E[{1}/{\bm{\xi}}]$ 并且得到了最优订购策略
+\[
+\textbf{x}^{\ast}=\left[\frac{p_{1}}{h_{1}m_{1}},\frac{p_{2}}{h_{2}m_{2}},\cdots,\frac{p_{10}}{h_{10}m_{10}}\right],
+\]
+其中 $m_{i}=\E[{1}/{\xi_{i}}], i=1,2,\ldots,10$,计算结果见表 \ref{tabl 6}.
+\begin{table}[!htbp]
+\caption{离散需求分布下的最优订购策略}\label{tabl 6}
+\begin{center}
+\begin{tabular}{cccccc}
+  \hline
+  最优订购 &  \multicolumn{5}{c}{产品} \\ \cline{2-6}
+  策略  & 1 & 2 & 3 & 4 & 5 \\ \hline
+  $\E[\frac{1}{\xi_i}]$& 0.0989 & 0.1121 & 0.0667 & 0.0429 & 0.0362  \\
+  $x_i^{\ast}$& 184 & 164 & 288 & 427 & 625 \\
+  \hline
+  最优订购 &  \multicolumn{5}{c}{产品}  \\ \cline{2-6}
+  策略  &6 & 7 & 8 & 9 & 10\\ \hline
+  $\E[\frac{1}{\xi_i}]$& 0.0297 & 0.0383 & 0.0266 & 0.0241 & 0.0243 \\
+  $x_i^{\ast}$& 571 & 538 & 627 & 564 & 1235\\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+由表 \ref{tabl 2}--\ref{tabl 6} 的数据可知,模型 (\ref{model--4})的最大期望收益 $\E[\pi(\textbf{x}^{\ast},\bm{\xi})]$ 是 $\$33623.5$.
+
+接下来,给出随机环境下的最优订购策略并与模糊环境下的最优订购策略进行对比说明.
+
+假定需求服从随机环境下的离散分布,其可能取值与模糊环境下的取值相同,且每一个取值对应的概率相同即为$1/10$,
+则需求倒数的期望值及最优订购策略的计算结果见表\ref{tabl 2-6}.
+\begin{table}[!htbp]
+\caption{离散随机需求分布下的最优订购策略}\label{tabl 2-6}
+\begin{center}
+\begin{tabular}{cccccc}
+  \hline
+  最优订购 &  \multicolumn{5}{c}{产品} \\ \cline{2-6}
+  策略  & 1 & 2 & 3 & 4 & 5 \\ \hline
+  $\E[\frac{1}{\xi_i}]$& 0.0676 & 0.1426 & 0.0887 & 0.0771 & 0.0337  \\
+  $x_i^{\ast}$& 269 & 129 & 217 & 238 & 672 \\
+  \hline
+  最优订购 &  \multicolumn{5}{c}{产品}  \\ \cline{2-6}
+  策略  &6 & 7 & 8 & 9 & 10\\ \hline
+  $\E[\frac{1}{\xi_i}]$& 0.0278 & 0.0329 & 0.0227 & 0.0210 & 0.0253 \\
+  $x_i^{\ast}$& 611 & 626 & 735 & 647 & 1186\\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+由表 \ref{tabl 2}和表\ref{tabl 2-6}的数据可知,模型 (\ref{model--4})的最大期望收益 $\E[\pi(\textbf{x}^{\ast},\bm{\xi})]$ 是 $\$34152$.
+
+通过比较表\ref{tabl 6}和表\ref{tabl 2-6}以及各自的期望值收益可知,即使有相同的样本取值,模糊环境和随机环境下需求倒数的期望值也是不同的.
+从而最优订购策略和总的期望收益亦不尽相同.
+\subsection{\XIAOJIEZI\zihao{-4}\!\!\!需求服从三角模糊分布时的计算结果及与随机结果的比较} 
+\label{pg:2.3.2} \hskip\parindent 
+
+假定对于库存问题中考虑10种产品的需求 $\xi_{i}\,(i=1,2,\ldots,10)$ 服从三角分布  $(r_{1}^{i},r_{2}^{i},r_{3}^{i})$,
+需求$\xi_i$ 的可能性分布见表~\ref{tabl 7}.
+
+\begin{table}[!htbp]
+\caption{需求 $\xi_{i}$ 的三角模糊分布}\label{tabl 7}
+\begin{center}
+\begin{tabular}{cccccc}
+\hline
+   产品 & 1 & 2 & 3 & 4 & 5 \\ \hline
+   $(r_{1}^{i},r_{2}^{i},r_{3}^{i})$& (10,20,30) & (20,30,40) & (5,15,25) & (15,30,45) & (9,24,39) \\
+  \hline
+   产品 & 6 & 7 & 8 & 9 & 10 \\ \hline
+   $(r_{1}^{i},r_{2}^{i},r_{3}^{i})$& (10,15,25) & (8,20,30) & (15,20,35) & (25,35,45) & (16,32,40) \\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+基于定理 \ref{theorem2-2},我们计算出了 $\mathrm{E}[{1}/{\bm{\xi}}]$ 并且得到了最优订购策略
+\[
+\textbf{x}^{\ast}=\left[\frac{p_{1}}{h_{1}m_{1}},\frac{p_{2}}{h_{2}m_{2}},\cdots,\frac{p_{10}}{h_{10}m_{10}}\right],
+ \]
+其中 $m_{i}=\E[{1}/{\xi_{i}}], i=1,2,\ldots,10$,最优解 $\textbf{x}^{\ast}$ 见表 \ref{tabl 8}.
+\begin{table}[!htbp]
+\caption{三角需求分布下的最优订购策略}\label{tabl 8}
+\begin{center}
+\begin{tabular}{cccccc}
+  \hline
+  最优订购 & \multicolumn{5}{c}{产品}  \\ \cline{2-6}
+  策略& 1 & 2 & 3 & 4 & 5 \\ \hline
+  $\E[\frac{1}{\xi_i}]$& 0.0549 & 0.0347 & 0.0805 & 0.0366 & 0.0489  \\
+  ${x_i}^{\ast}$& 331 & 528 & 239 & 500 & 463 \\
+  \hline
+  最优订购 & \multicolumn{5}{c}{产品}  \\ \cline{2-6}
+  策略& 6 & 7 & 8 & 9 & 10\\ \hline
+  $\E[\frac{1}{\xi_i}]$& 0.0661 & 0.0585 & 0.0474 & 0.0294 & 0.0356 \\
+  $x_i^{\ast}$& 257 & 352 & 352 & 462 & 843\\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+由表\ref{tabl 2},表\ref{tabl 7}和表\ref{tabl 8}的数据可知,模型 (\ref{model--4})的最大期望值收益 
+$\E[\pi(\textbf{x}^{\ast},\bm{\xi})]$ 是 $\$27329.5$.
+
+接下来,给出随机环境下的最优订购策略并与模糊环境下的最优订购策略进行对比说明.
+
+假定需求服从随机环境下的三角分布,其支撑与模糊环境下的支撑相同,则需求倒数的期望值及最优订购策略的计算结果见表\ref{tabl 9}.
+\begin{table}[!htbp]
+\caption{三角随机需求分布下的最优订购策略}\label{tabl 9}
+\begin{center}
+\begin{tabular}{cccccc}
+  \hline
+  最优订购 & \multicolumn{5}{c}{产品}  \\ \cline{2-6}
+  策略& 1 & 2 & 3 & 4 & 5 \\ \hline
+  $\E[\frac{1}{\xi_i}]$& 0.0523 & 0.0340 & 0.0728 & 0.0349 & 0.0449  \\
+  ${x_i}^{\ast}$& 348 & 540 & 265 & 525 & 505 \\
+  \hline
+  最优订购 & \multicolumn{5}{c}{产品}  \\ \cline{2-6}
+  策略& 6 & 7 & 8 & 9 & 10\\ \hline
+  $\E[\frac{1}{\xi_i}]$& 0.0622 & 0.0550 & 0.0443 & 0.0290 & 0.0352 \\
+  $x_i^{\ast}$& 273 & 375 & 377 & 469 & 853\\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+由表 \ref{tabl 2}和表 \ref{tabl 9} 的数据可知,
+模型 (\ref{model--4})的最大期望值收益 
+$\E[\pi(\textbf{x}^{\ast},\bm{\xi})]$ 是 $\$28582$.
+
+通过比较表\ref{tabl 8}和表\ref{tabl 9}以及各自的期望值收益可知,即使有相同的分布支撑,模糊环境和随机环境下需求倒数的期望值也是不同的.
+从而最优订购策略和总的期望收益亦不尽相同.
+
+\section{\JIEZI\zihao{4}\!\!\!本章小结
+\label{pg:2.4}}\hskip\parindent
+本章利用可信性理论讨论了模糊环境中风险中立的多产品单周期库存问题.
+首先给出单产品单周期的库存利润函数并建立期望值库存模型,
+然后将单产品库存问题推广到多产品库存问题得到多产品利润函数,并在风险中立的准则下建立多产品单周期的期望值模型.
+在假定不确定需求相互独立的条件下导出期望值模型的等价模型,并对其进行模型分析得到了其解析解的公式表达.
+由于模型的解析解依赖于需求倒数的期望值,因此我们接下来在几种常见可能性分布下推导出了需求倒数的期望值表达,
+并以定理的形式给出.最后进行数值实验分析了本章的建模思想和求解方法的有效性,
+并且比较了随机环境和模糊环境下库存问题中的最优订购策略与期望收益.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------- 第二章-----第二章------第二章---------------------------------------------------- 
+
+%----------------------------- 第三章-----第三章------第三章---------------------------------------------------- 
+\renewcommand{\theequation}{\arabic{mychapter}.\arabic{equation}}
+\renewcommand{\thefigure}{\arabic{mychapter}-\arabic{figure}}
+\renewcommand{\thetable}{\arabic{mychapter}-\arabic{table}}
+\renewcommand{\thetheorem}{\arabic{mychapter}.\arabic{theorem}}
+\newpage
+\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\zihao{5}\songti河北大学理学硕士学位论文}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0) {\footnotesize \zihao{5}第3章\ 固定分布下风险规避的多产品单周期库存问题}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{
+\centerline{\footnotesize\thepage}
+}
+\def\@oddfoot{
+\centerline{\footnotesize \thepage}
+}
+
+\setcounter{section}{0}
+%\setcounter{figure}{0}
+%\setcounter{table}{0}
+%\makeatother 
+%\hspace{12mm}\\
+\def\oddhead{{\protect\WENXIANMEIZI\hfill
+    第3章\ \  固定分布下风险规避的多产品单周期库存问题\hfill}}
+\def\evenhead{{\protect\WENXIANMEIZI\hfill
+    第3章\ \  固定分布下风险规避的多产品单周期库存问题\hfill}}
+\hspace*{0.5cm}
+\begin{center}
+{\Large\heiti\zihao{3}\bf 第3章\ \  固定分布下风险规避的多产品单周期库存问题}\label{pg:3}
+\end{center}
+\vskip 0.5cm
+\setcounter{mychapter}{3}
+\setcounter{equation}{0}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\setcounter{theorem}{0}
+
+在上一章中,在风险中立的态度下,对于多产品单周期库存问题,我们建立了期望值库存模型.本章采用一种下行风险度量方法建立
+绝对半偏差准则下的最大-最小化库存模型.为了得到可解的模型,随后给出了优化模型的等价问题.最后讨论了绝对半偏差模型的求解方法,提供了数值实验及参数分析.
+\section{\JIEZI\zihao{4}\!\!\!绝对半偏差准则下的最大最小化库存模型
+\label{pg:3.1}}\hskip\parindent
+在这一章,针对多产品单周期库存问题,我们建立一类风险规避的绝对半偏差模型.为了方便描述我们的绝对半偏差模型,我们采用以下的记号说明.\\
+{\bf 记号:}\\
+$\textbf{a}=[a_{1}, a_{2},\cdots, a_{n}]$:单位库存产品的订购成本;\\
+$\textbf{p}=[p_{1}, p_{2},\cdots, p_{n}]$:单位库存产品的收益;\\
+$\textbf{h}=[h_{1}, h_{2},\cdots, h_{n}]$:单位储存成本;\\
+$\bm{\xi}=[\xi_{1}, \xi_{2},\cdots, \xi_{n}]$:库存问题中的模糊需求向量;\\
+$\textbf{x}=[x_{1}, x_{2},\cdots, x_{n}]$:库存问题中的订购量向量;\\
+$\gamma$:风险度量参数;\\
+$n$:库存产品的种类.
+
+对于库存问题中的绝对半偏差风险准则,有以下几种方法加以参考.\\
+(1)若以某一种产品的收益函数的最大绝对半偏差为目标函数,则目标函数如下所示:
+\[
+\rho_1=\max_{1\leq i\leq n}\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)=\max_{1\leq i\leq n}\E\Big[\pi_i(x_i,\xi_i)-\E\big[\pi_i(x_i,\xi_i)\big]\Big]^{-}.
+\]
+(2)若以某一种产品的收益函数的绝对半偏差之和为目标函数,则目标函数如下所示:
+\[
+\rho_2=\sum_{i=1}^{n}\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)=\sum_{i=1}^{n}\E\Big[\pi_i(x_i,\xi_i)-\E\big[\pi_i(x_i,\xi_i)\big]\Big]^{-}.
+\]
+(3)若以整体收益函数的绝对半偏差为目标函数,则目标函数如下所示:
+\[
+\rho_3=\rho^{-}\Big(\pi(\textbf{x},\bm{\xi})\Big)=\E\Big[\pi(\textbf{x},\bm{\xi})-\E\big[\pi(\textbf{x},\bm{\xi})\big]\Big]^{-}.
+\]
+
+
+在这一章节中,采用第(1)种绝对半偏差度量方法$\max_{1\leq i\leq n}\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)$为一种指标来研究多产品单周期库存问题.
+
+决策者如果想在风险规避的情况下获得最大收益,通常会使用利润的期望和风险规避度量作为目标函数,并且同时最大化总期望收益,最小化风险.
+在这种情形下,多产品单周期库存问题的双目标模型建立为
+\begin{eqnarray}\label{model-3-0}
+\qquad &\left\{
+\begin{aligned}
+\max \quad &\E[\pi(\textbf{x},\bm{\xi})]\\
+\min \quad &\max_{1\leq i\leq n}\bigg\{\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)\bigg\}\\
+{\rm s.\; t.}\quad &\textbf{x}\geq 0.\\
+\end{aligned}
+\right.
+\end{eqnarray}
+
+若决策制定者在期望订购收益的最小可接受水平 $r_{0}$下寻求带有最小风险的订购策略,问题(\ref{model-3-0})可转化为以下单目标风险最小化规划模型:
+\begin{eqnarray}\label{model-3-1}
+\qquad &\left\{
+\begin{aligned}
+\min \quad & \max_{1\leq i\leq n}\bigg\{\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)\bigg\}\\
+{\rm s.\; t.}\quad & \E[\pi(\textbf{x},\bm{\xi})]\geq r_{0},\\
+\quad & \textbf{x}\geq 0.\\
+\end{aligned}
+\right.
+\end{eqnarray}
+
+另一方面,若决策制定者想在最大可接受风险 $s_{0}$ 的水平下最大化期望收益,则问题(\ref{model-3-0})可转化为以下单目标收益最大化规划模型:
+\begin{eqnarray}\label{model-3-2}
+\qquad &\left\{
+\begin{aligned}
+\max \quad & \E[\pi(\textbf{x},\bm{\xi})]\\
+{\rm s.\; t.}\quad & \max_{1\leq i\leq n}\bigg\{\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)\bigg\}\leq s_{0},\\
+\quad & \textbf{x}\geq 0.\\
+\end{aligned}
+\right.
+\end{eqnarray}
+
+另外,为了最大化带有风险的期望收益,库存问题可建立为下面的单目标规划模型:
+\begin{eqnarray}\label{model-3-3}
+\qquad &\left\{
+\begin{aligned}
+\max \quad & \E[\pi(\textbf{x},\bm{\xi})]-\gamma\max_{1\leq i\leq n}\bigg\{\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)\bigg\}\\
+{\rm s.\; t.}\quad & \textbf{x}\geq 0,\\
+\end{aligned}
+\right.
+\end{eqnarray}
+其中 $\gamma$ 为关于绝对半偏差的一个正风险度量参数.参数 $\gamma$ 描述了关于绝对半偏差的风险的重要性,
+参数$\gamma$ 的值越低就越试图不考虑风险而最大化期望收益,然而参数$\gamma$ 的值越高就越倾向于最小化风险.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\JIEZI\zihao{4}\!\!\!模型分析
+\label{pg:3.2}}\hskip\parindent
+通过最大-最小化方法,可将模型~(\ref{model-3-1})-(\ref{model-3-3}) 分别转化为以下的等价模型.
+
+对于模型~(\ref{model-3-1}),引入附加变量 $t$ 并令 $t=\max_{1\leq i\leq n}\bigg\{\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)\bigg\}$.因此,模型~(\ref{model-3-1}) 转化为其等价形式：
+\begin{eqnarray}\label{model-3-1-1}
+\qquad &\left\{
+\begin{aligned}
+\min \quad & t\\
+{\rm s.\; t.}\quad & \E[\pi(\textbf{x},\bm{\xi})]\geq r_{0},\\
+\quad & \rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)\leq t, \ i=1,2,\ldots,n,\\
+\quad & \textbf{x}\geq 0.\\
+\end{aligned}
+\right.
+\end{eqnarray}
+
+在模型~(\ref{model-3-2})中,约束 $\max_{1\leq i\leq n}\bigg\{\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)\bigg\}\leq s_{0}$ 若成立,
+则意味着对任意的 $i$, $i=1,2,\ldots,n$,有 $\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)\leq s_{0}$. 模型~(\ref{model-3-2}) 转化为其等价形式:
+\begin{eqnarray}\label{model-3-2-1}
+\qquad &\left\{
+\begin{aligned}
+\max \quad & \E[\pi(\textbf{x},\bm{\xi})]\\
+{\rm s.\; t.}\quad & \rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)\leq s_{0},\ i=1,2,\ldots,n,\\
+\quad & \textbf{x}\geq 0.\\
+\end{aligned}
+\right.
+\end{eqnarray}
+
+对于模型~(\ref{model-3-3}),引入附加变量 $e$ 并令 $e=\min_{1\leq i\leq n}\bigg\{\E[\pi(\textbf{x},\bm{\xi})]-\gamma\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)\bigg\}$.
+因此,模型~(\ref{model-3-3}) 转化为其等价形式:
+\begin{eqnarray}\label{model-3-3-1}
+\qquad &\left\{
+\begin{aligned}
+\max \quad & e \\
+{\rm s.\; t.}\quad & \E[\pi(\textbf{x},\bm{\xi})]-\gamma\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)\geq e, \ i=1,2,\ldots,n,\\
+\quad & \textbf{x}\geq 0,\\
+\end{aligned}
+\right.
+\end{eqnarray}
+其中 $\gamma$ 为关于绝对半偏差的一个正风险度量参数.
+
+通过分析该库存模型,已使用最大最小化方法得到其等价模型,在下一节中,将讨论模型~(\ref{model-3-1-1})-(\ref{model-3-3-1}) 
+在需求 $\xi_i$, $i=1,2,\ldots,n$ 为相互独立的模糊变量时的具体等价形式.
+\section{\JIEZI\zihao{4}\!\!\!绝对半偏差准则下库存模型的等价形式
+\label{pg:3.3}}\hskip\parindent
+为了求解模型~(\ref{model-3-1})-(\ref{model-3-3}),关键在于第 $i$ 种产品利润函数 $\pi_i(x_i,\xi_i)$ 的期望值和绝对半偏差的计算.
+这一节中,就将讨论 $\E[\pi(\textbf{x},\bm{\xi})]$ 和 $\rho^{-}[\pi_i(x_i,\xi_i)]$ 计算的问题.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\XIAOJIEZI\zihao{-4}\!\!\!绝对半偏差的性质}
+\label{pg:3.3.1} \hskip\parindent 
+记需求向量为 $\bm{\xi}=(\xi_{1},\xi_{2},\cdots,\xi_{n})$, 
+并假定需求 $\xi_i$, $i=1,2,\ldots,n$ 是相互独立的模糊变量 \cite{LiuGao2007},则联合可能性分布 $\mu_{\bm{\xi}}$ 表示为
+$$
+\mu_{\bm{\xi}}(t_{1},t_{2},\cdots,t_{n})=\min_{1\leq i\leq n}\mu_{\xi_{i}}(t_{i}).
+$$
+
+由于 $\pi_{i}(x_i,\xi_{i})$ 是关于 $\xi_i$ 的模糊利润函数,则$\pi_{i}(x_i,\xi_{i}),i=1,2,\ldots,n$ 也是相互独立的.
+根据期望算子的独立线性 \cite{Liu2003} 可知期望利润函数为
+\[
+\E\Big[\pi(\textbf{x},\bm{\xi})\Big]=\sum_{i=1}^{n}\E\Big[\pi_{i}(x_i,\xi_{i})\Big],
+\]
+并且分离结果已在第二章中给出,如下所示：
+\[
+\E\Big[\pi(\textbf{x},\bm{\xi})\Big]=\sum_{i=1}^{n}\bigg(p_{i}x_{i}-a_{i}-\frac{h_{i}{x_{i}^{2}}}{2}\E\Big[\frac{1}{\xi_{i}}\Big]\bigg).
+\]
+
+进一步则有
+\begin{equation*}\label{equation 1}
+\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)=\E\Big[\pi_i(x_i,\xi_i)-\E\big[\pi_i(x_i,\xi_i)\big]\Big]^{-}
+=\E\Bigg[-\frac{h_{i}{x_{i}^{2}}}{2}\bigg(\frac{1}{\xi_{i}}-\E\Big[\frac{1}{\xi_{i}}\Big]\bigg)\Bigg]^{-}.
+\end{equation*}
+
+对任意的有有限期望值的模糊变量 $\xi_{i}$,当 $b_{i}\in\R, i=1,2,\ldots,n$ 时,有如下结论:
+\begin{theorem}\label{theorem3-2}
+若 $\xi_{i}$ 是相互独立的模糊变量且 $b_{i}\in\R, i=1,2,\ldots,n$,则有\\
+(1) 当 $b_{i}\geq 0$ 时,等价表达为
+\[
+\E\Bigg[b_{i}\bigg(\frac{1}{\xi_{i}}-\E\Big[\frac{1}{\xi_{i}}\Big]\bigg)\Bigg]^{-}=b_{i}\E\bigg(\frac{1}{\xi_{i}}-\E\Big[\frac{1}{\xi_{i}}\Big]\bigg)^{-},
+\]
+(2) 当 $b_{i}< 0$ 时,等价表达为
+\[
+\E\Bigg[b_{i}\bigg(\frac{1}{\xi_{i}}-\E\Big[\frac{1}{\xi_{i}}\Big]\bigg)\Bigg]^{-}=(-b_{i})\E\bigg(\frac{1}{\xi_{i}}-\E\Big[\frac{1}{\xi_{i}}\Big]\bigg)^{+}.
+\]
+\\ \em \pf
+当$b_{i}\geq 0$ 时,结果显然成立. 
+
+当 $b_{i}< 0$ 时,则有
+\[
+\E\Bigg[b_{i}\bigg(\frac{1}{\xi_{i}}-\E\Big[\frac{1}{\xi_{i}}\Big]\bigg)\Bigg]^{-} =\E\Bigg[b_{i}\bigg(\frac{1}{\xi_{i}}-\E\Big[\frac{1}{\xi_{i}}\Big]\bigg)^{-}\Bigg]
+=(-b_{i})\E\bigg(\frac{1}{\xi_{i}}-\E\Big[\frac{1}{\xi_{i}}\Big]\bigg)^{+}.
+\]
+
+定理证明完毕.
+\pfd
+\end{theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\XIAOJIEZI\zihao{-4}\!\!\!原问题的等价问题}
+\label{pg:3.3.2} \hskip\parindent 
+在这一子节中,为了模型的计算和分析,我们将原问题~(\ref{model-3-1-1})-(\ref{model-3-3-1}) 转化为其等价问题.
+
+基于定理~\ref{theorem3-2},当 $b_{i}< 0, i=1,2,\cdots,n$ 时,有如下公式成立 
+\[
+\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)=-b_{i}\E\bigg[\frac{1}{\xi_{i}}-\E\Big[\frac{1}{\xi_{i}}\Big]\bigg]^{+}.
+\]
+
+若$b_{i}=-h_{i}{x_{i}^{2}}/{2}, i=1,2,\cdots,n$,显然可知$-h_{i}{x_{i}^{2}}/{2}< 0$,则模型~(\ref{model-3-1-1})可以转化为以下等价的风险最小化模型:
+\begin{eqnarray}\label{model-3-5}
+\qquad &\left\{
+\begin{aligned}
+\min \quad & t\\
+{\rm s.\; t.}\quad & \sum_{i=1}^{n}\left(p_{i}x_{i}-a_{i}-\frac{h_{i}m_{i}{x_{i}^{2}}}{2}\right)\geq r_{0},\\
+\quad & \frac{h_{i}{x_{i}^{2}}}{2}\E\Big(\frac{1}{\xi_{i}}-m_{i}\Big)^{+}\leq t,\ i=1,2,\ldots,n,\\
+\quad & \textbf{x}\geq 0,\\
+\end{aligned}
+\right.
+\end{eqnarray}
+
+同样地,模型~(\ref{model-3-2-1})可以转化为以下等价的期望收益最大化模型:
+\begin{eqnarray}\label{model-3-6}
+\qquad &\left\{
+\begin{aligned}
+\max \quad & \sum_{i=1}^{n}\left(p_{i}x_{i}-a_{i}-\frac{h_{i}m_{i}{x_{i}^{2}}}{2}\right)\\
+{\rm s.\; t.}\quad & \frac{h_{i}{x_{i}^{2}}}{2}\E\Big(\frac{1}{\xi_{i}}-m_{i}\Big)^{+}\leq s_{0},\ i=1,2,\ldots,n,\\
+\quad & \textbf{x}\geq 0,\\
+\end{aligned}
+\right.
+\end{eqnarray}
+模型~(\ref{model-3-3-1})可以转化为以下等价模型:
+\begin{eqnarray}\label{model-3-7}
+&\left\{
+\begin{aligned}
+\max \; & e\\
+{\rm s.\; t.}\; & \sum_{i=1}^{n}\left(p_{i}x_{i}\!-\!a_{i}\!-\!\frac{h_{i}m_{i}{x_{i}^{2}}}{2}\right)
+\!-\!\gamma\frac{h_{i}{x_{i}^{2}}}{2}\E\Big(\frac{1}{\xi_{i}}-m_{i}\Big)\!^{+}\!\geq\! e,\ i=1,2,\ldots,n,\\
+\quad & \textbf{x}\geq 0,\\
+\end{aligned}
+\right.
+\end{eqnarray}
+\noindent
+其中 $m_{i}=\E\left[\frac{1}{\xi_{i}}\right],\quad i=1,2,\ldots,n.$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{\JIEZI\zihao{4}\!\!\!常见需求分布下绝对半偏差的计算
+\label{pg:3.4}}\hskip\parindent
+
+在这一节中,将处理 $\E\Big[\big(\frac{1}{\xi_{i}}-m_{i}\big)^{+}\Big],(i=1,2,\ldots,n)$ 在三角,梯形和厄兰模糊需求分布下的等价形式.
+\subsection{\XIAOJIEZI\zihao{-4}\!\!\!三角模糊需求分布下的绝对半偏差} 
+\label{pg:3.4.1} \hskip\parindent 
+
+首先,这一小节讨论在三角模糊需求分布下的相关结论,如下所示:
+\begin{theorem}\label{theorem3-3}
+若需求 $\xi$ 为三角模糊变量 $(r_{1},r_{2},r_{3})$,$r_{1}> 0$ 且 $m=\E[1/\xi]$,则绝对半偏差 $\E\left[(\frac{1}{\xi}-m)^{+}\right]$ 等价于
+\begin{align}\label{equation3-22}
+\E\left[(\frac{1}{\xi}-m)^{+}\right]=&\nonumber
+\begin{cases}
+\frac{1}{2(r_{3}-r_{2})}\ln \frac{1}{r_{2}m}+\frac{1}{2(r_{2}-r_{1})}\ln \frac{r_{2}}{r_{1}}+\frac{m(2r_{2}-r_{3})-1}{2(r_{3}-r_{2})},& \frac{1}{r_{3}}\leq m<\frac{1}{r_{2}}\\
+\frac{1}{2(r_{2}-r_{1})}\ln \frac{1}{r_{1}m}+\frac{mr_{1}-1}{2(r_{2}-r_{1})},& \frac{1}{r_{2}}\leq m<\frac{1}{r_{1}}.
+\end{cases}
+\end{align}
+当 $r_{1}=0$ 时,绝对半偏差 $\E\left[(\frac{1}{\xi}-m)^{+}\right]$ 不存在.
+\\\em \pf
+若记 $\eta=1/\xi$,则 $\eta$ 的可能性分布为
+\[
+\mu{_\eta}(t)=\Pos\{{\eta=t}\}=\Pos\left\{{\xi=\frac{1}{t}}\right\}=\mu{_{\xi}}\left(\frac{1}{t}\right).
+\]
+
+由 $\xi=(r_{1},r_{2},r_{3})$ 的分布可知,$\eta$ 的可能性分布为
+\begin{eqnarray*}
+\qquad &\mu{_\eta}(t)=\left\{
+\begin{aligned}
+&\frac{r_{3}t-1}{(r_{3}-r_{2})t},&&\frac{1}{r_{3}}\leq t\leq\frac{1}{r_{2}}\\
+&\frac{1-r_{1}t}{(r_{2}-r_{1})t},&&\frac{1}{r_{2}}\leq t\leq\frac{1}{r_{1}}\\
+&0,&& \mbox{其他}.
+\end{aligned}
+\right.
+\end{eqnarray*}
+
+对于任意的 $r> 0$,$\eta$ 的可信性分布为
+\begin{eqnarray*}\label{Formulation 3}
+\qquad &\Cr\{\eta \leq r\}=\left\{
+\begin{aligned}
+&0,&& 0<r<\frac{1}{r_{3}}\\
+&\frac{r_{3}-\frac{1}{r}}{2(r_{3}-r_{2})},&& \frac{1}{r_{3}}\leq r<\frac{1}{r_{2}}\\
+&\frac{2r_{2}-r_{1}-\frac{1}{r}}{2(r_{2}-r_{1})},&& \frac{1}{r_{2}}\leq r<\frac{1}{r_{1}}\\
+&1,&& r\geq\frac{1}{r_{1}}.
+\end{aligned}
+\right.
+\end{eqnarray*}
+
+由于 $\E[\eta]=m=\frac{1}{2(r_{3}-r_{2})}\ln{\frac{r_{3}}{r_{2}}}+\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}$ 已经在第二章中计算得出,可知
+\begin{eqnarray}\label{Formulation3-4}
+\qquad &(\eta-m)^{+}=\left\{
+\begin{aligned}
+&\eta-m,&& \eta \geq m\\
+&0,&& \eta <m,
+\end{aligned}
+\right.
+\end{eqnarray}
+因此,当$m\in[\frac{1}{r_{3}},\frac{1}{r_{2}})$时,$(\eta-m)^{+}$ 的期望如下:
+\[
+\begin{split}
+\E[(\eta-m)^{+}]&\!=\!\int_{(m,+\infty)}(r-m)\d\Cr\{\eta\leq r\}\\
+&\!=\!\int_{(m,\frac{1}{r_{2}})}\!(r\!-\!m)\d\frac{r_{3}\!-\!\frac{1}{r}}{2(r_{3}-r_{2})}
+\!+\!\int_{(\frac{1}{r_{2}},\frac{1}{r_{1}})}\!(r\!-\!m)\d\frac{2r_{2}-r_{1}\!-\!\frac{1}{r}}{2(r_{2}-r_{1})}\\
+&\!=\!\frac{1}{2(r_{3}-r_{2})}\ln \!\frac{1}{r_{2}m}\!+\!\frac{1}{2(r_{2}-r_{1})}\ln\! \frac{r_{2}}{r_{1}}\!+\!\frac{m(2r_{2}-r_{3})-1}{2(r_{3}-r_{2})}.
+\end{split}
+\]
+
+类似地,当 $m\in[\frac{1}{r_{2}},\frac{1}{r_{1}}]$时,则有
+\[
+\E[(\eta-m)^{+}]=\frac{1}{2(r_{2}-r_{1})}\ln \frac{1}{r_{1}m}+\frac{mr_{1}-1}{2(r_{2}-r_{1})}.
+\]
+
+接下来证明当 $r_{1}=0$ 时,绝对半偏差 $\E[(\eta-m)^{+}]$ 不存在.
+
+事实上,在 $r_{1}=0$ 的情况下,$\eta$ 的可信性分布为
+\begin{eqnarray*}\label{Formulation 5}
+\qquad &\Cr\{\eta \geq r\}=\left\{
+\begin{aligned}
+&1, &&0<r<\frac{1}{r_{3}}\\
+&\frac{(r_{3}-2r_{2})r+1}{2r(r_{3}-r_{2})},&& \frac{1}{r_{3}}\leq r<\frac{1}{r_{2}}\\
+&\frac{1}{2r_{2}r},&& r\geq \frac{1}{r_{2}}.
+\end{aligned}
+\right.
+\end{eqnarray*}
+
+因此,期望值 $m$ 可计算得出为
+\[
+\begin{split}
+m&=\int_{0}^{+\infty}\Cr\{\eta \geq r\}\dr-\int_{-\infty}^{0}\Cr\{\eta \leq r\}\dr\\
+&=\int_{0}^{+\infty}\Cr\{\eta \geq r\}\dr\\
+&=\int_{0}^{\frac{1}{r_{3}}}\dr+\int_{\frac{1}{r_{3}}}^{\frac{1}{r_{2}}}\frac{(r_{3}-2r_{2})r+1}{2r(r_{3}-r_{2})}\dr
++\lim_{d\rightarrow +\infty}\int_{\frac{1}{r_{2}}}^{d}\frac{1}{2r_{2}r}\dr\\
+&=\frac{1}{2(r_{3}-r_{2})}\ln{\frac{r_{3}}{r_{2}}}+\frac{1}{2r_{2}}(1+\lim_{d\rightarrow+\infty}\ln{dr_{2}}),
+\end{split}
+\]
+可知期望值 $m$ 不存在,所以绝对半偏差 $\E[(\eta-m)^{+}]$ 也不存在.定理证明完毕.
+\pfd
+\end{theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\XIAOJIEZI\zihao{-4}\!\!\!梯形模糊需求分布下的绝对半偏差} 
+\label{pg:3.4.2} \hskip\parindent 
+对于梯形模糊需求分布,有如下相关结论：
+\begin{theorem}\label{theorem3-4}
+若需求 $\xi$ 是梯形模糊变量 $(r_{1},r_{2},r_{3},r_{4})$,$r_{1}> 0$ 且 $m=\E[1/\xi]$,则绝对半偏差 $\E\Big[\big(\frac{1}{\xi}-m\big)^{+}\Big]$ 等价于
+\begin{align}\label{equation3-23}
+\E\left[(\frac{1}{\xi}-m)^{+}\right]=&\nonumber
+\begin{cases}
+\frac{1}{2(r_{4}-r_{3})}\ln \frac{1}{r_{3}m}+\frac{1}{2(r_{2}-r_{1})}\ln \frac{r_{2}}{r_{1}}+\frac{m(2r_{3}-r_{4})-1}{2(r_{4}-r_{3})},& \frac{1}{r_{4}}\leq m<\frac{1}{r_{3}}\\
+\frac{1}{2(r_{2}-r_{1})}\ln \frac{r_{2}}{r_{1}}-\frac{m}{2},& \frac{1}{r_{3}}\leq m<\frac{1}{r_{2}}\\
+\frac{1}{2(r_{2}-r_{1})}\ln \frac{1}{r_{1}m}+\frac{mr_{1}-1}{2(r_{2}-r_{1})},& \frac{1}{r_{2}}\leq m<\frac{1}{r_{1}}.
+\end{cases}
+\end{align}
+当 $r_{1}= 0$ 时,绝对半偏差 $\E\left[(\frac{1}{\xi}-m)^{+}\right]$ 不存在.
+\\\em \pf
+若记 $\eta=1/\xi$,则 $\eta$ 的可能性分布为
+\[
+\mu{_\eta}(t)=\Pos\{{\eta=t}\}=\Pos\left\{{\xi=\frac{1}{t}}\right\}=\mu{_{\xi}}\left(\frac{1}{t}\right).
+\]
+
+根据 $\xi$ 的分布,有
+\begin{eqnarray*}
+\qquad &\mu{_\eta}(t)=\left\{
+\begin{aligned}
+&\frac{r_{4}t-1}{(r_{4}-r_{3})t}, &&\frac{1}{r_{4}}< t\leq\frac{1}{r_{3}}\\
+&1,&& \frac{1}{r_{3}}<t\leq\frac{1}{r_{2}}\\
+&\frac{1-r_{1}t}{(r_{2}-r_{1})t}, &&\frac{1}{r_{2}}< t\leq\frac{1}{r_{1}}\\
+&0,&& \mbox{其他}.
+\end{aligned}
+\right.
+\end{eqnarray*}
+
+对于任意的 $r> 0$,$\eta$ 的可信性分布为
+\begin{eqnarray*}\label{Formulation 6}
+\qquad &\Cr\{\eta \leq r\}=\left\{
+\begin{aligned}
+&0, && 0<r<\frac{1}{r_{4}}\\
+&\frac{r_{4}-\frac{1}{r}}{2(r_{4}-r_{3})},&& \frac{1}{r_{4}}\leq r<\frac{1}{r_{3}}\\
+&\frac{1}{2}, &&\frac{1}{r_{3}}\leq r<\frac{1}{r_{2}}\\
+&\frac{2r_{2}-r_{1}-\frac{1}{r}}{2(r_{2}-r_{1})}, &&\frac{1}{r_{2}}\leq r<\frac{1}{r_{1}}\\
+&1, && r\geq\frac{1}{r_{1}}.
+\end{aligned}
+\right.
+\end{eqnarray*}
+
+由于 $m=\frac{1}{2(r_{4}-r_{3})}\ln{\frac{r_{4}}{r_{3}}}+\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}$ 已在第二章中计算得出, 当 $m\in[\frac{1}{r_{4}},\frac{1}{r_{3}})$ 时,
+$(\eta-m)^{+}$ 的期望值如下:
+\[
+\begin{split}
+\E[(\eta-m)^{+}]&=\int_{(m,+\infty)}(r-m)\d\Cr\{\eta \leq r\}\\
+&=\int_{(m,\frac{1}{r_{3}})}(r-m)\d\frac{r_{4}-\frac{1}{r}}{2(r_{4}-r_{3})}+\int_{(\frac{1}{r_{3}},\frac{1}{r_{2}})}(r-m)\d\frac{1}{2}\\
+&+\int_{(\frac{1}{r_{2}},\frac{1}{r_{1}})}(r-m)\d\frac{2r_{2}-r_{1}-\frac{1}{r}}{2(r_{2}-r_{1})}+\int_{(\frac{1}{r_{1}},+\infty)}(r-m)\d1\\
+&=\frac{1}{2(r_{4}-r_{3})}\ln \frac{1}{r_{3}m}+\frac{1}{2(r_{2}-r_{1})}\ln \frac{r_{2}}{r_{1}}+\frac{m(2r_{3}-r_{4})-1}{2(r_{4}-r_{3})}.
+\end{split}
+\]
+
+类似地,当 $m\in[\frac{1}{r_{3}},\frac{1}{r_{2}})$ 时,有
+\[
+\E[(\eta-m)^{+}]=\frac{1}{2(r_{2}-r_{1})}\ln \frac{r_{2}}{r_{1}}-\frac{m}{2}.
+\]
+
+当 $m\in[\frac{1}{r_{2}},\frac{1}{r_{1}}]$ 时,有
+\[
+\E[(\eta-m)^{+}]=\frac{1}{2(r_{2}-r_{1})}\ln \frac{1}{r_{1}m}+\frac{mr_{1}-1}{2(r_{2}-r_{1})}.
+\]
+
+接下来,证明当 $r_{1}=0$ 时,绝对半偏差 $\E[(\eta-m)^{+}]$ 不存在.
+
+事实上,在 $r_{1}=0$ 的情况下,$\eta$ 的可信性分布为
+\begin{eqnarray*}\label{Formulation 7}
+\qquad &\Cr\{\eta \geq r\}=\left\{
+\begin{aligned}
+&1, &&0<r<\frac{1}{r_{4}}\\
+&\frac{(r_{4}-2r_{3})r+1}{2r(r_{4}-r_{3})}, &&\frac{1}{r_{4}}\leq r<\frac{1}{r_{3}}\\
+&\frac{1}{2}, && \frac{1}{r_{3}}\leq r<\frac{1}{r_{2}}\\
+&\frac{1}{2r_{2}r}, && r\geq \frac{1}{r_{2}}.
+\end{aligned}
+\right.
+\end{eqnarray*}
+
+因此,期望值 $m$ 可计算得出为
+\[
+\begin{split}
+\qquad m&=\int_{0}^{+\infty}\Cr\{\eta \geq r\}\dr-\int_{-\infty}^{0}\Cr\{\eta \leq r\}\dr\\
+\qquad &=\int_{0}^{+\infty}\Cr\{\eta \geq r\}\dr\\
+\qquad &=\int_{0}^{\frac{1}{r_{4}}}\dr+\int_{\frac{1}{r_{4}}}^{\frac{1}{r_{3}}}\frac{(r_{4}-2r_{3})r+1}{2r(r_{4}-r_{3})}\dr
++\int_{\frac{1}{r_{3}}}^{\frac{1}{r_{2}}}\frac{1}{2}\dr+\lim_{d\rightarrow+\infty}\int_{\frac{1}{r_{2}}}^{d}\frac{1}{2r_{2}r}\dr\\
+\qquad
+&=\frac{1}{2(r_{4}-r_{3})}\ln{\frac{r_{4}}{r_{3}}}+\frac{1}{2r_{2}}(1+\lim_{d\rightarrow+\infty}\ln{dr_{2}}),
+\end{split}
+\]
+可知期望值 $m$ 不存在,所以绝对半偏差 $\E[(\eta-m)^{+}]$ 也不存在.定理证明完毕.
+\pfd
+\end{theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\XIAOJIEZI\zihao{-4}\!\!\!厄兰模糊需求分布下的绝对半偏差} 
+\label{pg:3.4.3} \hskip\parindent 
+对于厄兰模糊需求分布,有如下相关结论:
+\begin{theorem}\label{theorem3-5}
+若需求 $\xi$ 是一个厄兰模糊变量 $\mathrm{Er}(\lambda,r)$,其中 $\xi$ 在 $[r_{1},r_2]$ 上变化且 $r_{1}>0$, $r$是一个正整数,$\lambda >0$,
+则绝对半偏差 $\E\Big[\big(\frac{1}{\xi}-m\big)^{+}\Big]$ 等价于\\
+(1) 当 $\frac{1}{r_2}\leq m<\frac{1}{\lambda r}$ 且 $r=1$ 时,有
+\[
+\begin{split}
+\E\left[(\frac{1}{\xi}-m)^{+}\right]&=\Big(\frac{1}{r_{1}}-m\Big)\bigg(1-\frac{r_1}{2\lambda}e^{1-\frac{r_1}{\lambda}}\bigg)-\Big(\frac{1}{r_1}-\frac{1}{\lambda}\Big)\\
+&+\frac{e}{2\lambda}\bigg[\ln\frac{m\lambda^2}{r_1}+\sum_{i=1}^{+\infty}\frac{2(-1)^i-\Big(-\frac{1}{\lambda m}\Big)^i-\Big(-\frac{r_1}{\lambda}\Big)^i}{i\cdot i!}\bigg],
+\end{split}
+\]
+其中
+\[
+m=\frac{e}{2\lambda}\bigg[\ln\frac{\lambda^2}{r_1r_2}+\sum_{i=1}^{+\infty}\frac{2(-1)^i-\Big(-\frac{r_2}{\lambda}\Big)^i
+-\Big(-\frac{r_1}{\lambda}\Big)^i}{i\cdot i!}\bigg]+\frac{1}{\lambda}-\frac{1}{r_2}.
+\]
+(2) 当 $\frac{1}{r_2}\leq m<\frac{1}{\lambda r}$ 且 $r=n>1$ 时,有
+\[
+\begin{split}
+\E\left[(\frac{1}{\xi}-m)^{+}\right]&\!=\!\Big(\frac{1}{r_{1}}\!-\!m\Big)\bigg[1\!-\!\frac{1}{2}\Big(\frac{r_1}{\lambda r}\Big)^{r}e^{r\!-\!\frac{r_1}{\lambda}}\bigg]
+\!\!-\!\!\Big(\frac{1}{r_1}\!-\!\frac{1}{\lambda r}\Big)\!+\!\frac{e^r}{2\lambda}\Big(\frac{1}{r}\Big)^r\bigg[\Big(\frac{1}{\lambda m}\Big)^{r\!-\!2}e^{\!-\!\frac{1}{\lambda m}}\\
+&\!\!+\!\!\Big(\frac{r_1}{\lambda}\Big)^{r\!-\!2}e^{\!-\!\frac{r_1}{\lambda}}\!-\!2r^{r\!-\!2}e^{\!-\!r}
+\!+\!(r\!-\!2)\!\Big(\int_{(\frac{1}{\lambda m},r)}t^{r\!-\!3}e^{\!-\!t}\dt\!\!-\!\!\int_{(r,\frac{r_1}{\lambda})}t^{r\!-\!3}e^{\!-\!t}\dt\Big)\bigg].
+\end{split}
+\]
+其中
+\[
+\begin{split}
+m&=\frac{e^r}{2\lambda}\Big(\frac{1}{r}\Big)^r\bigg[-2r^{r-2}e^{-r}+\Big(\frac{r_2}{\lambda}\Big)^{r-2}e^{-\frac{r_2}{\lambda}}
++\Big(\frac{r_1}{\lambda}\Big)^{r-2}e^{-\frac{r_1}{\lambda}}\\
+&+(r-2)\Big(\int_{\frac{r_2}{\lambda}}^{r}t^{r-3}e^{-t}\dt-\int_{r}^{\frac{r_1}{\lambda}}t^{r-3}e^{-t}\dt\Big)\bigg]+\frac{1}{\lambda r}-\frac{1}{r_2}.
+\end{split}
+\]
+(3) 当 $\frac{1}{\lambda r}\leq m \leq\frac{1}{r_{1}}$ 且 $r=1$时,有
+\[
+\E\left[(\frac{1}{\xi}-m)^{+}\right]=-\Big(\frac{1}{r_1}-m\Big)\Big(\frac{r_1e^{1-\frac{r_1}{\lambda}}}{2\lambda}\Big)
+-\frac{e}{2\lambda}\bigg[\ln mr_1+\sum_{i=1}^{+\infty}\frac{\Big(-\frac{r_1}{\lambda}\Big)^i-\Big(-\frac{1}{\lambda m}\Big)^i}{i\cdot i!}\bigg],
+\]
+其中
+\[
+m=\frac{e}{2\lambda}\bigg[\ln\frac{\lambda^2}{r_1r_2}+\sum_{i=1}^{+\infty}\frac{2(-1)^i-\Big(-\frac{r_2}{\lambda}\Big)^i
+-\Big(-\frac{r_1}{\lambda}\Big)^i}{i\cdot i!}\bigg]+\frac{1}{\lambda}-\frac{1}{r_2}.
+\]
+(4) 当 $\frac{1}{\lambda r}\leq m \leq\frac{1}{r_{1}}$ 且 $r=n>1$ 时,有
+\[
+\begin{split}
+\E[(\eta-m)^{+}]&=-\frac{1}{2}\Big(\frac{1}{r_1}-m\Big)\Big(\frac{r_1}{\lambda r}\Big)^re^{r-\frac{r_1}{\lambda}}
++\frac{e^r}{2\lambda}\Big(\frac{1}{r}\Big)^r\bigg[\Big(\frac{r_1}{\lambda}\Big)^{r-2}e^{-\frac{r_1}{\lambda}}\\
+&-\Big(\frac{1}{\lambda m}\Big)^{r-2}e^{-\frac{1}{\lambda m}}-(r-2)\int_{(\frac{1}{\lambda m},\frac{r_1}{\lambda})}t^{r-3}e^{-t}\dt\bigg].
+\end{split}
+\]
+其中
+\[
+\begin{split}
+m&=\frac{e^r}{2\lambda}\Big(\frac{1}{r}\Big)^r\bigg[\Big(\frac{r_1}{\lambda}\Big)^{r-2}e^{-\frac{r_1}{\lambda}}
++\Big(\frac{r_2}{\lambda}\Big)^{r-2}e^{-\frac{r_2}{\lambda}}-2r^{r-2}e^{-r}\\
+&+(r-2)\Big(\int_{\frac{r_2}{\lambda}}^{r}t^{r-3}e^{-t}\dt-\int_{r}^{\frac{r_1}{\lambda}}t^{r-3}e^{-t}\dt\Big)\bigg]+\frac{1}{\lambda r}-\frac{1}{r_2}.
+\end{split}
+\]
+当 $r_{1}=0$ 时,绝对半偏差 $\E\left[(\frac{1}{\xi}-m)^{+}\right]$ 不存在.
+\\\em \pf
+若需求 $\xi$ 是一个厄兰模糊变量 $\mathrm{Er}(\lambda,r)$,则 $\eta=1/\xi$ 的可能性分布为
+$$
+\mu_{\eta}(t)=\left(\frac{1}{\lambda rt}\right)^{r}e^{r-\frac{1}{\lambda t}},
+$$
+$\eta$ 的可信性分布为
+\begin{eqnarray*}
+\qquad &\Cr\{\eta \leq x\}=\left\{
+\begin{aligned}
+&\frac{1}{2}\left(\frac{1}{\lambda rx}\right)^{r}e^{r-\frac{1}{\lambda x}},&& \frac{1}{r_2}\leq x< \frac{1}{\lambda r}\\
+&1-\frac{1}{2}\left(\frac{1}{\lambda rx}\right)^{r}e^{r-\frac{1}{\lambda x}},&& \frac{1}{\lambda r}\leq x\leq \frac{1}{r_{1}}.
+\end{aligned}
+\right.
+\end{eqnarray*}
+
+由于 $\eta$ 的期望值已在第二章中给出,即\\
+当 $r=1$ 时, $\eta$ 的期望值为
+\[
+m=\frac{e}{2\lambda}\bigg[\ln\frac{\lambda^2}{r_1r_2}+\sum_{i=1}^{+\infty}\frac{2(-1)^i-\Big(-\frac{r_1}{\lambda}\Big)^i
+-\Big(-\frac{r_2}{\lambda}\Big)^i}{i\cdot i!}\bigg]+\frac{1}{\lambda}-\frac{1}{r_2},
+\]
+当 $r=n>1$ 时,$\eta$ 的期望值为
+\[
+\begin{split}
+m&=\frac{e^r}{2\lambda}\Big(\frac{1}{r}\Big)^r\bigg[\Big(\frac{r_1}{\lambda}\Big)^{r-2}e^{-\frac{r_1}{\lambda}}
++\Big(\frac{r_2}{\lambda}\Big)^{r-2}e^{-\frac{r_2}{\lambda}}-2r^{r-2}e^{-r}\\
+&+(r-2)\Big(\int_{\frac{r_2}{\lambda}}^{r}t^{r-3}e^{-t}\dt-\int_{r}^{\frac{r_1}{\lambda}}t^{r-3}e^{-t}\dt\Big)\bigg]+\frac{1}{\lambda r}-\frac{1}{r_2}.
+\end{split}
+\]
+
+因此,当 $m\in[\frac{1}{r_2},\frac{1}{\lambda r})$ 时,$(\eta-m)^{+}$ 的期望值为
+\[
+\begin{split}
+\qquad\E[(\eta-m)^{+}]&=\int_{(m,+\infty)}(x-m)\d\Cr\{\eta \leq x\}\\
+&=\int_{(m,\frac{1}{\lambda r})}(x-m)\d\frac{1}{2}\left(\frac{1}{\lambda rx}\right)^{r}e^{r-\frac{1}{\lambda x}}\\
+&+\int_{(\frac{1}{\lambda r},\frac{1}{r_{1}})}(x-m)\d\bigg[1-\frac{1}{2}\Big(\frac{1}{\lambda rx}\Big)^{r}e^{r-\frac{1}{\lambda x}}\bigg]\\
+&=\Big(\frac{1}{r_{1}}-m\Big)\bigg[1-\frac{1}{2}\Big(\frac{r_1}{\lambda r}\Big)^{r}e^{r-\frac{r_1}{\lambda}}\bigg]-\Big(\frac{1}{r_1}-\frac{1}{\lambda r}\Big)\\
+&+\frac{1}{2\lambda}\Big(\frac{1}{r}\Big)^{r}e^r\Big(\int_{(\frac{1}{\lambda m},r)}t^{r-2}e^{-t}\dt-\int_{(r,\frac{r_1}{\lambda})}t^{r-2}e^{-t}\dt\Big).
+\end{split}
+\]
+
+接下来,根据 $r$ 的不同取值,当 $\frac{1}{r_2}\leq m\leq\frac{1}{\lambda r}$ 时,对于 $\E[(\eta-m)^{+}]$ 的计算有以下几种情况.\\
+(1) 当 $\frac{1}{r_2}\leq m<\frac{1}{\lambda r}$ 且 $r=1$ 时,有
+\[
+\begin{split}
+\E\left[(\frac{1}{\xi}-m)^{+}\right]&=\Big(\frac{1}{r_{1}}-m\Big)\bigg(1-\frac{r_1}{2\lambda}e^{1-\frac{r_1}{\lambda}}\bigg)-\Big(\frac{1}{r_1}-\frac{1}{\lambda}\Big)\\
+&+\frac{e}{2\lambda}\bigg[\ln\frac{m\lambda^2}{r_1}+\sum_{i=1}^{+\infty}\frac{2(-1)^i-\Big(-\frac{1}{\lambda m}\Big)^i-\Big(-\frac{r_1}{\lambda}\Big)^i}{i\cdot i!}\bigg],
+\end{split}
+\]
+(2) 当 $\frac{1}{r_2}\leq m<\frac{1}{\lambda r}$ 且 $r=n>1$ 时,有
+\[
+\begin{split}
+\E[(\eta-m)^{+}]&\!=\!\Big(\frac{1}{r_{1}}\!-\!m\Big)\bigg[1\!-\!\frac{1}{2}\Big(\frac{r_1}{\lambda r}\Big)^{r}e^{r\!-\!\frac{r_1}{\lambda}}\bigg]
+\!\!-\!\!\Big(\frac{1}{r_1}\!-\!\frac{1}{\lambda r}\Big)\!+\!\frac{e^r}{2\lambda}\Big(\frac{1}{r}\Big)^r\bigg[\Big(\frac{1}{\lambda m}\Big)^{r\!-\!2}e^{\!-\!\frac{1}{\lambda m}}\\
+&\!\!+\!\!\Big(\frac{r_1}{\lambda}\Big)^{r\!-\!2}e^{\!-\!\frac{r_1}{\lambda}}\!-\!2r^{r\!-\!2}e^{\!-\!r}
+\!+\!(r\!-\!2)\!\Big(\int_{(\frac{1}{\lambda m},r)}t^{r\!-\!3}e^{\!-\!t}\dt\!\!-\!\!\int_{(r,\frac{r_1}{\lambda})}t^{r\!-\!3}e^{\!-\!t}\dt\Big)\bigg].
+\end{split}
+\]
+
+类似地,当 $m\in[\frac{1}{\lambda r},\frac{1}{r_1}]$ 时,$(\eta-m)^{+}$ 的期望值为\\
+(1) 当 $\frac{1}{\lambda r}\leq m \leq\frac{1}{r_{1}}$ 且 $r=1$时,有
+\[
+\E\left[(\frac{1}{\xi}-m)^{+}\right]=-\Big(\frac{1}{r_1}-m\Big)\Big(\frac{r_1e^{1-\frac{r_1}{\lambda}}}{2\lambda}\Big)
+-\frac{e}{2\lambda}\bigg[\ln mr_1+\sum_{i=1}^{+\infty}\frac{\Big(-\frac{r_1}{\lambda}\Big)^i-\Big(-\frac{1}{\lambda m}\Big)^i}{i\cdot i!}\bigg],
+\]
+(2) 当 $\frac{1}{\lambda r}\leq m \leq\frac{1}{r_{1}}$ 且 $r=n>1$ 时,有
+\[
+\begin{split}
+\E[(\eta-m)^{+}]&=-\frac{1}{2}\Big(\frac{1}{r_1}-m\Big)\Big(\frac{r_1}{\lambda r}\Big)^re^{r-\frac{r_1}{\lambda}}
++\frac{e^r}{2\lambda}\Big(\frac{1}{r}\Big)^r\bigg[\Big(\frac{r_1}{\lambda}\Big)^{r-2}e^{-\frac{r_1}{\lambda}}\\
+&-\Big(\frac{1}{\lambda m}\Big)^{r-2}e^{-\frac{1}{\lambda m}}-(r-2)\int_{(\frac{1}{\lambda m},\frac{r_1}{\lambda})}t^{r-3}e^{-t}\dt\bigg].
+\end{split}
+\]
+
+接下来的定理证明过程与以上定理类似.定理证明完毕.
+\pfd
+\end{theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{\JIEZI\zihao{4}\!\!\!数值实验与结果分析
+\label{pg:3.5}}\hskip\parindent
+在这一节中,我们沿用第二章的问题描述,相关经济参数见表 \ref{tabl 2},并将展开数值例子来分析以上提出的库存问题的最优化方法.
+
+为了帮助决策制定者制定最优订购策略,本节以模型(\ref{model-3-5})-(\ref{model-3-7})为例展开数值分析.该实验是在2.0GHz, 8G内存的计算机上使用Lingo11.0软件进行的.
+
+{\JIEZI\zihao{-4} 模型(\ref{model-3-5})的计算结果:} 假定需求 $\xi_{i}\,(i=1,2,3,4)$ 服从三角分布 $(r_{1}^{i},r_{2}^{i},r_{3}^{i})$,$\xi_{i}\,(i=5,6,7)$ 
+服从梯形分布 $(r_{1}^{i},r_{2}^{i},r_{3}^{i},r_{4}^{i})$, $\xi_{i}\,(i=8,9,10)$ 服从厄兰分布 $\mathrm{Er}(\lambda_i,r_i)$,其中 $\xi_i\in[1,40]$.
+需求$\xi_i$ 的可能性分布见第二章的表 \ref{tabl3-1}.
+
+基于第二章中的定理\ref{theorem2-2}-\ref{theorem2-4}和本章的定理 \ref{theorem3-3}-\ref{theorem3-5},可得到期望值 $\E[{1}/{\bm{\xi}}]$ 
+和绝对半偏差 $\E[({1}/{\bm{\xi}}-\E[{1}/{\bm{\xi}}])^{+}]$ 计算的结果,如表 \ref{tabl3-2}所示.
+随后,通过使用 Lingo 求解模型(\ref{model-3-5}),可得到最优订购策略 $\textbf{x}^{\ast}$,其结果详见表 \ref{tabl3-3}.
+\begin{table}[!ht]
+\caption{需求 $\xi_{i}$ 的分布}\label{tabl3-1}
+\begin{center}
+\begin{tabular}{cccccc}
+\hline
+    产品 & $\xi_{i}$ &产品 & $\xi_{i}$  &产品 & $\xi_{i}$ \\ \hline
+   1& (10,20,30) & 5& (9,24,39,44)   & 8  & $\mathrm{Er}(10,2)$ \\
+   2& (20,30,40) & 6 & (10,15,25,30) & 9  & $\mathrm{Er}(15,2)$  \\
+   3& (5,15,25)  & 7 & (8,20,30,40)  & 10 & $\mathrm{Er}(5,3)$    \\
+   4& (15,30,45) &  \\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[!ht]
+\caption{期望值和绝对半偏差的计算结果}\label{tabl3-2}
+\begin{center}
+\begin{tabular}{cccccc}
+  \hline
+  期望值和& \multicolumn{5}{c}{产品}   \\ \cline{2-6}
+  绝对半偏差 & 1 & 2 & 3 & 4 & 5 \\ \hline
+  $\E[\frac{1}{\xi_i}]$& 0.0549 & 0.0347 & 0.0805 & 0.0366 & 0.0448 \\
+  $\E\left(\frac{1}{\xi_i}-\E[\frac{1}{\xi_i}]\right)^{+}$& 0.0074 & 0.0030 & 0.0156 & 0.0050 & 0.0104 \\
+  \hline
+  期望值和&  \multicolumn{5}{c}{产品}  \\ \cline{2-6}
+  绝对半偏差 & 6 & 7 & 8 & 9 & 10\\ \hline
+  $\E[\frac{1}{\xi_i}]$& 0.0588 & 0.0526 & 0.0853 & 0.0535 &  0.0853\\
+  $\E\left(\frac{1}{\xi_i}-\E[\frac{1}{\xi_i}]\right)^{+}$& 0.0111 & 0.0119 & 0.0473 & 0.0363 & 0.0470 \\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[!ht]
+\caption{不同最小可接受利润水平下的最优订购策略}\label{tabl3-3}
+\begin{center}
+\begin{tabular}{ccccccccccc}
+  \hline
+  最小可接受& \multicolumn{10}{c}{最优订购策略}   \\ \cline{2-11}
+  利润水平& $x_{1}$ & $x_{2}$ & $x_{3}$ & $x_{4}$ & $x_{5}$ & $x_{6}$ & $x_{7}$ & $x_{8}$ & $x_{9}$ & $x_{10}$ \\ \hline
+  $r_{0}=5000$ & 59 & 90 & 37 & 63 & 51 & 48 & 42 & 19 & 20 & 24 \\
+  $r_{0}=10000$ & 129 & 193 & 81 & 138 & 110 & 104 & 91 & 42 & 45 & 53 \\
+  $r_{0}=15000$ & 218 & 328 & 138 & 234 & 187 & 177 & 155 & 71 & 76 & 91 \\
+  $r_{0}=20000$ & 331 & 530 & 239 & 416 & 334 & 285 & 276 & 126 & 135 & 161 \\
+  $r_{0}=21970$ & 331 & 528 & 239 & 500 & 505 & 290 & 390 & 194 & 254 & 345 \\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+根据表 \ref{tabl 2},表 \ref{tabl3-2}和表 \ref{tabl3-3}中的数据,在不同最小可接受利润水平 $r_{0}$ 下,
+模型(\ref{model-3-5})的最小目标函数值 $\max_{1\leq i\leq n}\rho^{-}[\pi(x_{i}^{\ast},\xi_i)]$ 见表 \ref{tabl3-4}.
+\begin{table}[!ht]
+\caption{最小目标函数值的计算结果}\label{tabl3-4}
+\begin{center}
+\tabcolsep 0.02in 
+\begin{tabular}{cccccc}
+  \hline
+ 最小目标  & \multicolumn{5}{c}{最小可接受利润水平 $r_{0}$}  \\ \cline{2-6}
+  函数值(\$) & $r_{0}=5000$ & $r_{0}=10000$ & $r_{0}=15000$ & $r_{0}=20000$ & $r_{0}=21700$  \\ \hline
+  $\max_{1\leq i\leq n}\rho^{-}[\pi(x_{i}^{\ast},\xi_i)]$& 7.29 & 33.86 & 97.37 & 308.21 & 1398.54\\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.6\textwidth]{figure4-1.eps}
+\caption{最小目标值与最小可接受利润水平 $r_0$ 之间的关系}
+\label{figure3-1}
+\end{figure}
+
+通过观察表 \ref{tabl3-3}和表 \ref{tabl3-4}中的数据,不难发现,最优订购策略随着最小可接受利润水平 $r_{0}$ 的增大而减小.
+相反的,最小目标函数值随着最小可接受利润水平 $r_{0}$ 的增大而增大.
+因此,结果表明我们建立的模型是符合实际意义的.
+
+{\JIEZI\zihao{-4} 模型(\ref{model-3-6})的计算结果:} 假定需求 $\xi_{i}\,(i=1,2,\ldots,10)$ 可能性分布见第表~\ref{tabl3-1}.
+期望值 $\E[{1}/{\xi_i}]$ 和绝对半偏差 $\E[({1}/{\xi_i}-\E[{1}/{\xi_i}])^{+}]$, $i=1,2,\ldots,10$ 的计算结果见表~\ref{tabl3-2}.
+
+随后,将期望值 $\E[{1}/{\xi_i}]$ 和绝对半偏差 $\E[({1}/{\xi_i}-\E[{1}/{\xi_i}])^{+}]$ 的计算结果代入到模型~(\ref{model-3-6}),
+当最大可接受风险 $s_{0}$ 给定时,通过使用Lingo软件便得到 
+最优订购策略 $\textbf{x}^{\ast}$,见表~\ref{tabl3-5}.
+
+\begin{table}[!ht]
+\caption{不同最大可接受风险水平下的最优订购策略}\label{tabl3-5}
+\begin{center}
+\begin{tabular}{ccccccccccc}
+  \hline
+  最大可接受  & \multicolumn{10}{c}{最优订购策略}  \\ \cline{2-11}
+  风险水平 & $x_{1}$ & $x_{2}$ & $x_{3}$ & $x_{4}$ & $x_{5}$ & $x_{6}$ & $x_{7}$ & $x_{8}$ & $x_{9}$ & $x_{10}$ \\ \hline
+   $s_{0}=50$ & 156 & 235 & 99 & 167 & 134 & 126 & 111 & 51 & 54 & 65 \\
+  $s_{0}=100$ & 221 & 333 & 140 & 237 & 190 & 179 & 157 & 72 & 77 & 92 \\
+  $s_{0}=500$ & 331 & 528 & 239 & 500 & 425 & 289 & 351 & 161 & 173 & 206 \\
+  $s_{0}=1000$ & 331 & 528 & 239 & 500 & 505 & 289 & 391 & 195 & 244 & 291 \\
+  $s_{0}=1500$ & 331 & 528 & 239 & 500 & 505 & 289 & 391 & 195 & 254 & 352 \\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+根据表~\ref{tabl 2},表~\ref{tabl3-2}和表~\ref{tabl3-5}中的数据可知, 
+不同最大可接受风险水平 $s_{0}$ 下,模型~(\ref{model-3-6})中的最大目标函数值 $\E[\pi(\x,\bm{\xi})]$ 的计算结果见表~\ref{tabl3-6}.
+
+\begin{table}[!ht]
+\caption{最大目标函数值的计算结果}\label{tabl3-6}
+\begin{center}
+\begin{tabular}{cccccc}
+  \hline
+  最大目标  & \multicolumn{5}{c}{最大可接受风险水平 $s_0$}  \\ \cline{2-6}
+  函数值(\$) & $s_{0}=50$ & $s_{0}=100$ & $s_{0}=500$ & $s_{0}=1000$ & $s_{0}=1500$  \\ \hline
+  $\E[\pi(\x,\bm{\xi})]$& 11721.29 & 15138.26 & 21210.31 & 21890.08 & 21971.09 \\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.6\textwidth]{figure4-2.eps}
+\caption{最大目标值和最大可接受风险水平 $s_0$ 之间的关系}
+\label{figure3-2}
+\end{figure}
+
+由表~\ref{tabl3-6} 和图~\ref{figure3-2}可知,总库存期望收益 $\E[\pi(\textbf{x}^{\ast},\bm{\xi})]$ 随最大可接受风险水平 $s_{0}$ 的变化而变化.
+计算结果表明,寻求的风险越大,获得的收益越高.这一结果具有一定的现实意义.
+
+{\JIEZI\zihao{-4} 模型(\ref{model-3-7})的计算结果:} 基于第二章中的的定理\ref{theorem2-2}-\ref{theorem2-4} 和本章中的的定理\ref{theorem3-3}-\ref{theorem3-5},
+可得到期望值 $\E[{1}/{\bm{\xi}}]$ 和绝对半偏差 $\E[({1}/{\bm{\xi}}-\E[{1}/{\bm{\xi}}])^{+}]$ 计算的结果,
+如表 \ref{tabl3-2}所示.风险度量参数 $\gamma$不同取值下最优订购策略 $\textbf{x}^{\ast}$ 的结果见表 \ref{tabl3-7}.
+
+\begin{table}[!ht]
+\caption{不同风险度量参数下的最优订购策略}\label{tabl3-7}
+\begin{center}
+\begin{tabular}{ccccccccccc}
+  \hline
+  风险度量& \multicolumn{10}{c}{最优订购策略}   \\ \cline{2-11}
+    参数& $x_{1}$ & $x_{2}$ & $x_{3}$ & $x_{4}$ & $x_{5}$ & $x_{6}$ & $x_{7}$ & $x_{8}$ & $x_{9}$ & $x_{10}$ \\ \hline
+  $\gamma=0$ & 331 & 528 & 239 & 500 & 505 & 289 & 391 & 195 & 254 & 352 \\
+  $\gamma=0.5$ & 331 & 528 & 239 & 500 & 505 & 289 & 391 & 195 & 239 & 285 \\
+  $\gamma=1$ & 331 & 528 & 239 & 500 & 505 & 289 & 391 & 195 & 213 & 254  \\
+  $\gamma=1.5$ & 331 & 528 & 239 & 500 & 487 & 289 & 391 & 184 & 198 & 236  \\
+  $\gamma=2$ & 331 & 528 & 239 & 500 & 475 & 289 & 391 & 180 & 193 & 230 \\
+  $\gamma=2.5$ & 331 & 528 & 239 & 500 & 456 & 289 & 376 & 173 & 185 & 221  \\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+根据表 \ref{tabl 2},表\ref{tabl3-2} 和表\ref{tabl3-7}中的数据可知,模型(\ref{model-3-7}) 的最优目标函数值 
+$\E[\pi(\textbf{x}^{\ast},\bm{\xi})]-\gamma\rho^{-}[\pi_i(x_i^{\ast},\xi_i)]$ 见表 \ref{tabl3-8}.
+\begin{table}[!ht]
+\caption{最大目标函数值的计算结果(\$)}\label{tabl3-8}
+\begin{center}
+\begin{tabular}{ccccccc}
+  \hline
+ 最大目标  &  \multicolumn{6}{c}{风险度量参数}  \\ \cline{2-7}
+  函数值(\$)& $\gamma=0$ &  $\gamma=0.5$  & $\gamma=1$ & $\gamma=1.5$ & $\gamma=2$ & $\gamma=2.5$ \\ \hline
+  $e$& 21971.09 & 21393.51 & 20968.18 & 20618.12 & 20300.69 & 20004.55 \\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.6\textwidth]{figure4-3.eps}
+\caption{最大目标值与风险度量参数的关系}
+\label{figure3-3}
+\end{figure}
+
+由表\ref{tabl3-8}和图\ref{figure3-3}可知,当风险度量参数 $\gamma$ 变化的时候, 
+库存收益 $\E[\pi(\textbf{x}^{\ast},\bm{\xi})]-\gamma\rho^{-}[\pi_i(x_i^{\ast},\xi_i)]$ 也相应地发生变化.
+因此,计算结果表明,对于构建多产品库存问题模型绝对半偏差准则是一种新方法,它能为库存问题提供多样化的订购策略,具有一定的实际意义.
+
+\section{\JIEZI\zihao{4}\!\!\!本章小结
+\label{pg:3.6}}\hskip\parindent
+本章通过可信性理论和L-S积分方法讨论了模糊环境中带有风险的库存问题,并建立了风险规避的多产品库存模型.
+首先,在需求不确定的情况下建立了一个以期望收益和绝对半偏差为目标函数的双目标库存模型.
+随后将双目标库存模型转化为三个等价的单目标库存模型.由于所建立的模型为最大最小化模型,为了便于计算,
+通过引入附加变量将模型转化为可求解的线性目标形式.在需求相互独立的条件下给出了绝对半偏差的一些性质
+并得到了具体的等价模型.通过模型分析可知,求解模型的关键在于需求倒数期望值和绝对半偏差值的计算,
+因此我们讨论了在常见模糊需求分布下绝对半偏差的计算公式.最后以一家服装销售公司为例,
+考虑到多产品需求分布的多样性,我们假定不确定需求服从不同类型的可能性分布,
+然后分别对所建立的模型进行了数值实验,并用Lingo软件分别对其进行求解.
+通过分析对比结果得出了风险与收益的内在联系,从而验证了模型和优化方法的有效性.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------- 第三章-----第三章------第三章---------------------------------------------------- 
+
+
+ %----------------------------- 第四章-----第四章------第四章----------------------------------------------------
+\renewcommand{\theequation}{\arabic{mychapter}.\arabic{equation}}
+\renewcommand{\thefigure}{\arabic{mychapter}-\arabic{figure}}
+\renewcommand{\thetable}{\arabic{mychapter}-\arabic{table}}
+\renewcommand{\thetheorem}{\arabic{mychapter}.\arabic{theorem}}
+\newpage
+\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\zihao{5}河北大学理学硕士学位论文}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0) {\footnotesize \zihao{5}第4章\ 可变分布下风险规避的多产品单周期库存问题}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{
+\centerline{\footnotesize\thepage}
+}
+\def\@oddfoot{
+\centerline{\footnotesize \thepage}
+}
+
+\setcounter{section}{0}
+%\setcounter{figure}{0}
+%\setcounter{table}{0}
+%\makeatother 
+%\hspace{12mm}\\
+\def\oddhead{{\protect\WENXIANMEIZI\hfill
+    第4章\ \  可变分布下风险规避的多产品单周期库存问题\hfill}}
+\def\evenhead{{\protect\WENXIANMEIZI\hfill
+    第4章\ \  可变分布下风险规避的多产品单周期库存问题\hfill}}
+\hspace*{0.5cm}
+\begin{center}
+{\Large\heiti\zihao{3}\bf 第4章\ \  可变分布下风险规避的多产品单周期库存问题}\label{pg:4}
+\end{center}
+\vskip 0.5cm
+\setcounter{mychapter}{4}
+\setcounter{equation}{0}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\setcounter{theorem}{0}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+上一章中讨论了固定分布下风险规避的多产品单周期库存问题,建立了最大-最小化库存模型并进行了模型分析.这一章中,
+将采用另一种风险度量方法—整体绝对半偏差风险度量方法来讨论可变分布下风险规避的多产品单周期库存问题.
+在该风险度量方法下建立了风险规避的库存模型,分析模型并推导出其等价模型.
+然后分析讨论了参数区间值模糊变量在常见参数可能性分布下的期望值及绝对半偏差值的计算公式.
+最后给出数值算例演示所提建模思想,实验结果说明了所建模型的有效性.
+%有关参数可能性分布的理论应用,部分成果已发表在国际期刊《 Mathematical Problems in Engineering》上.
+\section{\JIEZI\zihao{4}\!\!\!绝对半偏差准则下的库存模型
+\label{pg:4.1}}\hskip\parindent
+在这一章,针对多产品单周期库存问题,我们建立一类风险规避的绝对半偏差模型.为了方便描述我们的绝对半偏差模型,我们采用以下的记号说明.\\
+{\bf 记号:}\\
+$\textbf{a}=[a_{1}, a_{2},\cdots, a_{n}]$:单位库存产品的订购成本;\\
+$\textbf{p}=[p_{1}, p_{2},\cdots, p_{n}]$:单位库存产品的收益;\\
+$\textbf{h}=[h_{1}, h_{2},\cdots, h_{n}]$:单位储存成本;\\
+$\bm{\xi}=[\xi_{1}, \xi_{2},\cdots, \xi_{n}]$:库存问题中的模糊需求向量;\\
+$\textbf{x}=[x_{1}, x_{2},\cdots, x_{n}]$:库存问题中的订购量向量;\\
+$\gamma$:风险度量参数;\\
+$n$:库存产品的种类;\\
+$\lambda$:选择参数;\\
+$\theta=(\theta_l,\theta_r)$:跨度参数.
+
+对于库存问题中的绝对半偏差风险准则,有以下几种方法加以参考.\\
+(1)若以某一种产品的收益函数的最大绝对半偏差为目标函数,则目标函数如下所示：
+\[
+\rho_1=\max_{1\leq i\leq n}\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)=\max_{1\leq i\leq n}\E\Big[\pi_i(x_i,\xi_i)-\E\big[\pi_i(x_i,\xi_i)\big]\Big]^{-}.
+\]
+(2)若以某一种产品的收益函数的绝对半偏差之和为目标函数,则目标函数如下所示：
+\[
+\rho_2=\sum_{i=1}^{n}\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)=\sum_{i=1}^{n}\E\Big[\pi_i(x_i,\xi_i)-\E\big[\pi_i(x_i,\xi_i)\big]\Big]^{-}.
+\]
+(3)若以整体收益函数的绝对半偏差为目标函数,则目标函数如下所示：
+\[
+\rho_3=\rho^{-}\Big(\pi(\textbf{x},\bm{\xi})\Big)=\E\Big[\pi(\textbf{x},\bm{\xi})-\E\big[\pi(\textbf{x},\bm{\xi})\big]\Big]^{-}.
+\]
+
+在这一章节中,采用第(2)种绝对半偏差度量方法$\sum_{i=1}^{n}\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)$为一种指标来研究多产品单周期库存问题.
+
+基于绝对半偏差风险准则,多产品库存问题的双目标模型构建如下:
+\begin{eqnarray}\label{model-4-0}
+\qquad &\left\{
+\begin{aligned}
+\max \quad &\E[\pi(\textbf{x},\bm{\xi})]\\
+\min \quad &\sum_{i=1}^{n}\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)\\
+{\rm s.\; t.}\quad &\textbf{x}\geq 0.\\
+\end{aligned}
+\right.
+\end{eqnarray}
+
+若决策制定者在期望订购收益的最小可接受水平 $r_{0}$下寻求带有最小风险的订购策略,问题(\ref{model-4-0})可转化为以下单目标风险最小化模型:
+\begin{eqnarray}\label{model-4-1}
+\qquad &\left\{
+\begin{aligned}
+\min \quad & \sum_{i=1}^{n}\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)\\
+{\rm s.\; t.}\quad & \E[\pi(\textbf{x},\bm{\xi})]\geq r_{0},\\
+\quad & \textbf{x}\geq 0.\\
+\end{aligned}
+\right.
+\end{eqnarray}
+
+另一方面,若决策制定者想在最大可接受风险 $s_{0}$ 的水平下最大化期望收益,则问题(\ref{model-4-0})可转化为以下单目标收益最大化模型:
+\begin{eqnarray}\label{model-4-2}
+\qquad &\left\{
+\begin{aligned}
+\max \quad & \E[\pi(\textbf{x},\bm{\xi})]\\
+{\rm s.\; t.}\quad & \sum_{i=1}^{n}\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)\leq s_{0},\\
+\quad & \textbf{x}\geq 0.\\
+\end{aligned}
+\right.
+\end{eqnarray}
+
+另外,为了最大化带有风险的期望收益,库存问题(\ref{model-4-0})可建立为下面的单目标规划模型:
+\begin{eqnarray}\label{model-4-3}
+\qquad &\left\{
+\begin{aligned}
+\max \quad & \E[\pi(\textbf{x},\bm{\xi})]-\gamma\sum_{i=1}^{n}\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)\\
+{\rm s.\; t.}\quad & \textbf{x}\geq 0,\\
+\end{aligned}
+\right.
+\end{eqnarray}
+其中 $\gamma$ 为关于绝对半偏差的一个正风险度量参数.参数 $\gamma$ 描述了关于绝对半偏差的风险的重要性,
+参数$\gamma$ 的值越低就越试图不考虑风险而最大化期望收益,然而参数$\gamma$ 的值越高就越倾向于最小化风险.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\JIEZI\zihao{4}\!\!\!等价模型
+\label{pg:4.2}}\hskip\parindent
+在这一子节中,为了模型的计算和分析,我们将原问题~(\ref{model-4-1})-(\ref{model-4-3}) 转化为其等价问题.
+
+模型~(\ref{model-4-1}) 转化为以下等价的风险最小化模型:
+\begin{eqnarray}\label{model-4-4}
+&\left\{
+\begin{aligned}
+\min \quad & \sum_{i=1}^{n}\frac{h_{i}{x_{i}^{2}}}{2}\E\bigg[\Big(\frac{1}{\xi_{i}}-m_{i}\Big)^{+}\bigg]\\
+{\rm s.\; t.}\quad & \sum_{i=1}^{n}\left(p_{i}x_{i}-a_{i}-\frac{h_{i}m_{i}{x_{i}^{2}}}{2}\right)\geq r_{0},\\
+\quad & \textbf{x}\geq 0,\\
+\end{aligned}
+\right.
+\end{eqnarray}
+其中 $m_{i}=\E\left[\frac{1}{\xi_{i}}\right],\quad i=1,2,\ldots,n.$
+
+类似地,模型~(\ref{model-4-2}) 可转化为以下等价的收益最大化模型:
+\begin{eqnarray}\label{model-4-5}
+&\left\{
+\begin{aligned}
+\max \quad & \sum_{i=1}^{n}\left(p_{i}x_{i}-a_{i}-\frac{h_{i}m_{i}{x_{i}^{2}}}{2}\right)\\
+{\rm s.\; t.}\quad & \sum_{i=1}^{n}\frac{h_{i}{x_{i}^{2}}}{2}\E\bigg[\Big(\frac{1}{\xi_{i}}-m_{i}\Big)^{+}\bigg]\leq s_{0},\\
+\quad & \textbf{x}\geq 0,\\
+\end{aligned}
+\right.
+\end{eqnarray}
+模型~(\ref{model-4-3}) 可转化为以下等价的风险收益模型:
+\begin{eqnarray}\label{model-4-6}
+&\left\{
+\begin{aligned}
+\max \quad &\sum_{i=1}^{n}(p_{i}x_{i}-a_{i})-\sum_{i=1}^{n}\frac{h_{i}{x_{i}^{2}}}{2}\Bigg[m_{i}+\gamma\E\bigg[\Big(\frac{1}{\xi_{i}}-m_{i}\Big)^{+}\bigg]\Bigg]\\
+{\rm s.\; t.}\quad & \textbf{x}\geq 0,\\
+\end{aligned}
+\right.
+\end{eqnarray}
+\noindent
+其中 $m_{i}=\E\left[\frac{1}{\xi_{i}}\right],\quad i=1,2,\ldots,n.$
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\JIEZI\zihao{4}\!\!\!选择变量的性质
+\label{pg:4.3}}\hskip\parindent
+分析上节中的模型可知,求解模型的关键在于需求倒数的期望值和绝对半偏差值的计算,
+这一节我们将讨论选择变量的一些性质及常见参数可能性分布下需求倒数期望值和绝对半偏差值的计算问题.
+\subsection{\XIAOJIEZI\zihao{-4}\!\!\!常见参数可能性分布下的期望值} 
+\label{pg:4.3.1} \hskip\parindent 
+首先计算参数区间值三角模糊变量的选择变量的期望值.
+\begin{theorem}\label{Theorem4.1}
+假设$\xi=[r_1,r_2,r_3;\theta_l,\theta_r]$是参数区间值三角模糊变量,$\xi^{\lambda}$是$\xi$的$\lambda$的选择变量,
+则$\lambda$选择变量$\xi^{\lambda}$的倒数$\frac{1}{{\xi}^{\lambda}}$的期望值为
+\begin{equation}\label{equation4-1}
+\begin{split}
+\E[\frac{1}{{\xi}^{\lambda}}]=&\frac{\lambda\theta_{r}-(1-\lambda)\theta_{l}}{2(r_{3}-r_{2})}\ln{\frac{4r_{2}r_{3}}{(r_{2}+r_{3})^{2}}}
++\frac{\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{(r_{1}+r_{2})^{2}}{4r_{1}r_{2}}}\\
+&+\frac{1}{2(r_{3}-r_{2})}\ln{\frac{r_{3}}{r_{2}}}+\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}.
+\end{split}
+\end{equation}
+\\\em \pf
+由于$\xi=[r_1,r_2,r_3;\theta_l,\theta_r]$是参数区间值三角模糊变量,$\xi^{\lambda}$是$\xi$的$\lambda$的选择变量,
+记跨度参数$\theta=(\theta_l,\theta_r)$,则$\lambda$选择变量$\xi^{\lambda}$的倒数$\frac{1}{{\xi}^{\lambda}}$的参数可能性分布为
+\begin{equation*}
+\mu_{\frac{1}{{\xi}^{\lambda}}}(x; \theta)=\left\{
+\begin{array}{ll}
+\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](r_3-\frac{1}{x})}{r_3-r_2} , &\mbox{ $\frac{1}{r_{3}}\leq x\leq\frac{2}{r_{2}+r_{3}}$}\\[.2cm]
+\frac{[\lambda\theta_r-(1-\lambda)\theta_l-1]\frac{1}{x}+[(1-\lambda)\theta_l-\lambda\theta_r]r_2+r_3}{r_3-r_2} , &\mbox{ $\frac{2}{r_{2}+r_{3}}< x\leq\frac{1}{r_{2}}$}\\[.2cm]
+\frac{[1-\lambda\theta_r+(1-\lambda)\theta_l]\frac{1}{x}+[\lambda\theta_r-(1-\lambda)\theta_l]r_2-r_1}{r_2-r_1} ,&\mbox{ $\frac{1}{r_{2}}< x\leq\frac{2}{r_{1}+r_{2}}$}\\[.2cm]
+\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](\frac{1}{x}-r_1)}{r_2-r_1} ,&\mbox{ $\frac{2}{r_{1}+r_{2}}< x\leq\frac{1}{r_{1}}$}.\\[.2cm]
+\end{array}\right.
+\end{equation*}
+
+通过计算可知$\frac{1}{{\xi}^{\lambda}}$的可信性分布函数为如下形式
+\begin{equation*}
+\Cr\{\frac{1}{{\xi}^{\lambda}}\geq x\}=\left\{
+\begin{array}{ll}
+1,  &\mbox{ $0< x\leq \frac{1}{r_{3}}$}\\[.2cm]
+1-\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](r_3-\frac{1}{x})}{2(r_3-r_2)} , &\mbox{ $\frac{1}{r_{3}}\leq x\leq\frac{2}{r_{2}+r_{3}}$}\\[.2cm]
+1-\frac{[\lambda\theta_r-(1-\lambda)\theta_l-1]\frac{1}{x}+[(1-\lambda)\theta_l-\lambda\theta_r]r_2+r_3}{2(r_3-r_2)} , &\mbox{ $\frac{2}{r_{2}+r_{3}}< x\leq\frac{1}{r_{2}}$}\\[.2cm]
+\frac{[1-\lambda\theta_r+(1-\lambda)\theta_l]\frac{1}{x}+[\lambda\theta_r-(1-\lambda)\theta_l]r_2-r_1}{2(r_2-r_1)} ,&\mbox{ $\frac{1}{r_{2}}< x\leq\frac{2}{r_{1}+r_{2}}$}\\[.2cm]
+\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](\frac{1}{x}-r_1)}{2(r_2-r_1)} ,&\mbox{ $\frac{2}{r_{1}+r_{2}}< x\leq\frac{1}{r_{1}}$}\\[.2cm]
+0, &\mbox{ $ x>\frac{1}{r_{1}}$}.\\[.2cm]
+\end{array}\right.
+\end{equation*}
+
+根据期望值的定义,可得
+\begin{equation*}
+\begin{split}
+\E[\frac{1}{{\xi}^{\lambda}}]=&\int_{0}^{+\infty}\Cr\{\frac{1}{{\xi}^{\lambda}}\geq x\}\dr-\int_{-\infty}^{0}\Cr\{\frac{1}{{\xi}^{\lambda}}\leq x\}\dr\\
+=&\frac{\lambda\theta_{r}-(1-\lambda)\theta_{l}}{2(r_{3}-r_{2})}\ln{\frac{4r_{2}r_{3}}{(r_{2}+r_{3})^{2}}}
++\frac{\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{(r_{1}+r_{2})^{2}}{4r_{1}r_{2}}}\\
+&+\frac{1}{2(r_{3}-r_{2})}\ln{\frac{r_{3}}{r_{2}}}+\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}.
+\end{split}
+\end{equation*}
+
+定理证明完毕.
+\pfd
+\end{theorem}
+
+对于参数区间值梯形模糊变量的期望值有如下性质:
+\begin{theorem}\label{Theorem4.2}
+假设$\xi=[r_{1}, r_{2}, r_{3}, r_{4}; \theta_l, \theta_r]$是参数区间值梯形模糊变量,
+$\xi^{\lambda}$是$\xi$的$\lambda$的选择变量,
+则$\lambda$选择变量$\xi^{\lambda}$的倒数$\frac{1}{{\xi}^{\lambda}}$的期望值为
+\begin{equation}\label{equation4-2}
+\begin{split}
+\E[\frac{1}{{\xi}^{\lambda}}]=&\frac{\lambda\theta_{r}-(1-\lambda)\theta_{l}}{2(r_{4}-r_{3})}\ln{\frac{4r_{3}r_{4}}{(r_{3}+r_{4})^{2}}}
++\frac{\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{(r_{1}+r_{2})^{2}}{4r_{1}r_{2}}}\\
+&+\frac{1}{2(r_{4}-r_{3})}\ln{\frac{r_{4}}{r_{3}}}+\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}.
+\end{split}
+\end{equation}
+\\\em \pf
+假设$\xi=[r_{1}, r_{2}, r_{3}, r_{4}; \theta_l, \theta_r]$是参数区间值梯形模糊变量,
+$\xi^{\lambda}$是$\xi$的$\lambda$的选择变量,
+记跨度参数$\theta=(\theta_l,\theta_r)$,则$\lambda$选择变量$\xi^{\lambda}$的倒数$\frac{1}{{\xi}^{\lambda}}$的参数可能性分布为
+\begin{equation*} 
+\mu_{\frac{1}{{\xi}^{\lambda}}}(x; \theta)=\left\{
+\begin{array}{ll}
+\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](r_4-\frac{1}{x})}{r_4-r_3} , &\mbox{ $\frac{1}{r_4}\leq x \leq \frac{2}{r_3+r_4}$}\\[.2cm]
+\frac{[\lambda\theta_r-(1-\lambda)\theta_l-1]\frac{1}{x}+[(1-\lambda)\theta_l-\lambda\theta_r]r_3+r_4}{r_4-r_3} , &\mbox{ $\frac{2}{r_3+r_4}< x \leq \frac{1}{r_3}$}\\[.2cm]
+1, &\mbox{ $\frac{1}{r_3}< x \leq \frac{1}{r_2}$}\\[.2cm]
+\frac{[1-\lambda\theta_r+(1-\lambda)\theta_l]\frac{1}{x}+[\lambda\theta_r-(1-\lambda)\theta_l]r_2-r_1}{r_2-r_1} ,&\mbox{ $\frac{1}{r_2}< x \leq \frac{2}{r_1+r_2}$}\\[.2cm]
+\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](\frac{1}{x}-r_1)}{r_2-r_1} ,&\mbox{ $\frac{2}{r_1+r_2} < x \leq \frac{1}{r_1}$}.\\[.2cm]
+\end{array}\right.
+\end{equation*}
+
+通过计算可知$\frac{1}{{\xi}^{\lambda}}$的可信性分布函数为如下形式
+\begin{equation*} 
+\Cr\{\frac{1}{{\xi}^{\lambda}}\geq x\}=\left\{
+\begin{array}{ll}
+1, &\mbox{ $0< x \leq \frac{1}{r_4}$}\\[.2cm]
+1-\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](r_4-\frac{1}{x})}{2(r_4-r_3)} , &\mbox{ $\frac{1}{r_4}\leq x \leq \frac{2}{r_3+r_4}$}\\[.2cm]
+1-\frac{[\lambda\theta_r-(1-\lambda)\theta_l-1]\frac{1}{x}+[(1-\lambda)\theta_l-\lambda\theta_r]r_3+r_4}{2(r_4-r_3)} , &\mbox{ $\frac{2}{r_3+r_4}< x \leq \frac{1}{r_3}$}\\[.2cm]
+\frac{1}{2}, &\mbox{ $\frac{1}{r_3}< x \leq \frac{1}{r_2}$}\\[.2cm]
+\frac{[1-\lambda\theta_r+(1-\lambda)\theta_l]\frac{1}{x}+[\lambda\theta_r-(1-\lambda)\theta_l]r_2-r_1}{2(r_2-r_1)} ,&\mbox{ $\frac{1}{r_2}< x \leq \frac{2}{r_1+r_2}$}\\[.2cm]
+\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](\frac{1}{x}-r_1)}{2(r_2-r_1)} ,&\mbox{ $\frac{2}{r_1+r_2} < x \leq \frac{1}{r_1}$}\\[.2cm]
+0, &\mbox{ $ x>\frac{1}{r_{1}}$}.\\[.2cm]
+\end{array}\right.
+\end{equation*}
+
+根据期望值的定义,可得
+\begin{equation*}\label{equation4-2}
+\begin{split}
+\E[\frac{1}{{\xi}^{\lambda}}]=&\int_{0}^{+\infty}\Cr\{\frac{1}{{\xi}^{\lambda}}\geq x\}\dr-\int_{-\infty}^{0}\Cr\{\frac{1}{{\xi}^{\lambda}}\leq x\}\dr\\
+=&\frac{\lambda\theta_{r}-(1-\lambda)\theta_{l}}{2(r_{4}-r_{3})}\ln{\frac{4r_{3}r_{4}}{(r_{3}+r_{4})^{2}}}
++\frac{\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{(r_{1}+r_{2})^{2}}{4r_{1}r_{2}}}\\
+&+\frac{1}{2(r_{4}-r_{3})}\ln{\frac{r_{4}}{r_{3}}}+\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}.
+\end{split}
+\end{equation*}
+
+定理证明完毕.
+\pfd
+\end{theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\XIAOJIEZI\zihao{-4}\!\!\!常见参数可能性分布下的绝对半偏差} 
+\label{pg:4.3.2} \hskip\parindent 
+对于参数区间值三角模糊变量的绝对半偏差,有如下结论:
+\begin{theorem}\label{Theorem4.3}
+假设$\xi=[r_1,r_2,r_3;\theta_l,\theta_r]$是参数区间值三角模糊变量,$\xi^{\lambda}$是$\xi$的$\lambda$的选择变量,
+记期望值$\E[\frac{1}{{\xi}^{\lambda}}]$为$m$,则$\lambda$选择变量$\xi^{\lambda}$的倒数$\frac{1}{{\xi}^{\lambda}}$的绝对半偏差为\\
+(1)当$m\in[\frac{1}{r_{3}},\frac{2}{r_{2}+r_{3}}]$时,绝对半偏差$\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]$为
+\begin{equation}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]\!=\!&\frac{\lambda\theta_{r}-(1-\lambda)\theta_{l}}{2(r_{3}-r_{2})}\ln{\frac{4r_{2}}{m(r_{2}+r_{3})^{2}}}
+\!+\!\frac{\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{(r_{1}+r_{2})^{2}}{4r_{1}r_{2}}}
+\!+\!\frac{1}{2(r_{3}-r_{2})}\ln{\frac{1}{r_{2}m}}\\
+&\!+\!\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}\!+\!\frac{[\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}](r_3m-1)+(r_2m-1)}{2(r_{3}-r_{2})}
+-\frac{m}{2}.
+\end{array}
+\end{equation}
+(2)当$m\in(\frac{2}{r_{2}+r_{3}},\frac{1}{r_{2}}]$时,绝对半偏差$\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]$为
+\begin{equation}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]\!=\!&\frac{1-\lambda\theta_{r}+(1-\lambda)\theta_{l}}{2(r_{3}-r_{2})}\ln{\frac{1}{r_2m}}
+\!+\!\frac{\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{(r_{1}+r_{2})^{2}}{4r_{1}r_{2}}}\\
+&\!+\!\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}\!+\!\frac{[1-\lambda\theta_{r}\!+\!(1-\lambda)\theta_{l}](r_2m-1)}{2(r_{3}-r_{2})}\!-\!\frac{m}{2}.
+\end{array}
+\end{equation}
+(3)当$m\in(\frac{1}{r_{2}},\frac{2}{r_{1}+r_{2}}]$时,绝对半偏差$\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]$为
+\begin{equation}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]\!=\!&\frac{\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{m(r_{1}+r_{2})^{2}}{4r_{1}}}
+\!+\!\frac{1}{2(r_{2}-r_{1})}\ln{\frac{1}{r_{1}m}}\\
+&-\frac{[\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}](r_2m-1)-(r_1m-1)}{2(r_{2}-r_{1})}.
+\end{array}
+\end{equation}
+(4)当$m\in(\frac{2}{r_{1}+r_{2}},\frac{1}{r_{1}}]$时,绝对半偏差$\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]$为
+\begin{equation}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]\!=\!\frac{1+\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{1}{r_{1}m}}
++\frac{[1+\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}](r_1m-1)}{2(r_{2}-r_{1})}.
+\end{array}
+\end{equation}
+\\\em \pf
+由于$\xi=[r_1,r_2,r_3;\theta_l,\theta_r]$是参数区间值三角模糊变量,$\xi^{\lambda}$是$\xi$的$\lambda$的选择变量,
+记跨度参数$\theta=(\theta_l,\theta_r)$,则选择变量$\xi^{\lambda}$的倒数$\frac{1}{{\xi}^{\lambda}}$的参数可能性分布为
+\begin{equation*}
+\mu_{\frac{1}{{\xi}^{\lambda}}}(x; \theta)=\left\{
+\begin{array}{ll}
+\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](r_3-\frac{1}{x})}{r_3-r_2} , &\mbox{ $\frac{1}{r_{3}}\leq x\leq\frac{2}{r_{2}+r_{3}}$}\\[.2cm]
+\frac{[\lambda\theta_r-(1-\lambda)\theta_l-1]\frac{1}{x}+[(1-\lambda)\theta_l-\lambda\theta_r]r_2+r_3}{r_3-r_2} , &\mbox{ $\frac{2}{r_{2}+r_{3}}< x\leq\frac{1}{r_{2}}$}\\[.2cm]
+\frac{[1-\lambda\theta_r+(1-\lambda)\theta_l]\frac{1}{x}+[\lambda\theta_r-(1-\lambda)\theta_l]r_2-r_1}{r_2-r_1} ,&\mbox{ $\frac{1}{r_{2}}< x\leq\frac{2}{r_{1}+r_{2}}$}\\[.2cm]
+\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](\frac{1}{x}-r_1)}{r_2-r_1} ,&\mbox{ $\frac{2}{r_{1}+r_{2}}< x\leq\frac{1}{r_{1}}$}.\\[.2cm]
+\end{array}\right.
+\end{equation*}
+
+通过计算可知$\frac{1}{{\xi}^{\lambda}}$的可信性分布函数为如下形式
+\begin{equation*}
+\Cr\{\frac{1}{{\xi}^{\lambda}}\leq x\}=\left\{
+\begin{array}{ll}
+0,  &\mbox{ $0< x\leq \frac{1}{r_{3}}$}\\[.2cm]
+\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](r_3-\frac{1}{x})}{2(r_3-r_2)} , &\mbox{ $\frac{1}{r_{3}}\leq x\leq \frac{2}{r_{2}+r_{3}}$}\\[.2cm]
+\frac{[\lambda\theta_r-(1-\lambda)\theta_l-1]\frac{1}{x}+[(1-\lambda)\theta_l-\lambda\theta_r]r_2+r_3}{2(r_3-r_2)} , &\mbox{ $\frac{2}{r_{2}+r_{3}}< x\leq\frac{1}{r_{2}}$}\\[.2cm]
+1-\frac{[1-\lambda\theta_r+(1-\lambda)\theta_l]\frac{1}{x}+[\lambda\theta_r-(1-\lambda)\theta_l]r_2-r_1}{2(r_2-r_1)} ,&\mbox{ $\frac{1}{r_{2}}< x\leq\frac{2}{r_{1}+r_{2}}$}\\[.2cm]
+1-\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](\frac{1}{x}-r_1)}{2(r_2-r_1)} ,&\mbox{ $\frac{2}{r_{1}+r_{2}}< x\leq\frac{1}{r_{1}}$}\\[.2cm]
+1, &\mbox{ $ x>\frac{1}{r_{1}}$}.\\[.2cm]
+\end{array}\right.
+\end{equation*}
+
+根据绝对半偏差的计算公式可得绝对半偏差为\\
+(1)当$m\in[\frac{1}{r_{3}},\frac{2}{r_{2}+r_{3}}]$时,绝对半偏差$\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]$为
+\begin{equation}\label{equation--1}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]&\!=\!\int_{(m,+\infty)} (x-m) \d\Cr\{\frac{1}{{\xi}^{\lambda}}\leq x\} \\
+&\!=\!\int_{(m,\frac{2}{r_{2}+r_{3}})} (x-m) \d\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](r_3-\frac{1}{x})}{2(r_3-r_2)} \\
+&\!+\!\int_{(\frac{2}{r_{2}+r_{3}},\frac{1}{r_{2}})} (x-m) \d\frac{[\lambda\theta_r-(1-\lambda)\theta_l-1]\frac{1}{x}+[(1-\lambda)\theta_l-\lambda\theta_r]r_2+r_3}{2(r_3-r_2)}\\
+&\!+\!\int_{(\frac{1}{r_{2}},\frac{2}{r_{1}+r_{2}})} (x-m) \d\Big(1\!-\!\frac{[1-\lambda\theta_r+(1-\lambda)\theta_l]\frac{1}{x}+[\lambda\theta_r-(1-\lambda)\theta_l]r_2-r_1}{2(r_2-r_1)}\Big)\\
+&\!+\!\int_{(\frac{2}{r_{1}+r_{2}},\frac{1}{r_{1}})} (x-m) \d\Big(1\!-\!\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](\frac{1}{x}-r_1)}{2(r_2-r_1)}\Big),
+\end{array}
+\end{equation}
+由公式~(\ref{equation--1})可得
+\begin{equation*}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]\!=\!&\frac{\lambda\theta_{r}-(1-\lambda)\theta_{l}}{2(r_{3}-r_{2})}\ln{\frac{4r_{2}}{m(r_{2}+r_{3})^{2}}}
+\!+\!\frac{\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{(r_{1}+r_{2})^{2}}{4r_{1}r_{2}}}
+\!+\!\frac{1}{2(r_{3}-r_{2})}\ln{\frac{1}{r_{2}m}}\\
+&\!+\!\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}\!+\!\frac{[\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}](r_3m-1)+(r_2m-1)}{2(r_{3}-r_{2})}
+-\frac{m}{2}.
+\end{array}
+\end{equation*}
+
+同理可有以下计算结果:\\
+(2)当$m\in(\frac{2}{r_{2}+r_{3}},\frac{1}{r_{2}}]$时,绝对半偏差$\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]$为
+\begin{equation*}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]\!=\!&\frac{1-\lambda\theta_{r}+(1-\lambda)\theta_{l}}{2(r_{3}-r_{2})}\ln{\frac{1}{r_2m}}
+\!+\!\frac{\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{(r_{1}+r_{2})^{2}}{4r_{1}r_{2}}}\\
+&\!+\!\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}\!+\!\frac{[1-\lambda\theta_{r}\!+\!(1-\lambda)\theta_{l}](r_2m-1)}{2(r_{3}-r_{2})}\!-\!\frac{m}{2}.
+\end{array}
+\end{equation*}
+(3)当$m\in(\frac{1}{r_{2}},\frac{2}{r_{1}+r_{2}}]$时,绝对半偏差$\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]$为
+\begin{equation*}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]\!=\!&\frac{\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{m(r_{1}+r_{2})^{2}}{4r_{1}}}
+\!+\!\frac{1}{2(r_{2}-r_{1})}\ln{\frac{1}{r_{1}m}}\\
+&-\frac{[\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}](r_2m-1)-(r_1m-1)}{2(r_{2}-r_{1})}.
+\end{array}
+\end{equation*}
+(4)当$m\in(\frac{2}{r_{1}+r_{2}},\frac{1}{r_{1}}]$时,绝对半偏差$\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]$为
+\begin{equation*}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]\!=\!\frac{1+\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{1}{r_{1}m}}
++\frac{[1+\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}](r_1m-1)}{2(r_{2}-r_{1})}.
+\end{array}
+\end{equation*}
+
+定理证明完毕.
+\pfd
+\end{theorem}
+
+对于参数区间值梯形模糊变量的绝对半偏差,有如下结论:
+\begin{theorem}\label{Theorem4.4}
+假设$\xi=[r_1,r_2,r_3,r_4;\theta_l,\theta_r]$是参数区间值梯形模糊变量,$\xi^{\lambda}$是$\xi$的$\lambda$的选择变量,
+记期望值$\E[\frac{1}{{\xi}^{\lambda}}]$为$m$,则$\lambda$选择变量$\xi^{\lambda}$的倒数$\frac{1}{{\xi}^{\lambda}}$的绝对半偏差为\\
+(1)当$m\in[\frac{1}{r_{4}},\frac{2}{r_{3}+r_{4}}]$时,绝对半偏差$\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]$为
+\begin{equation}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]\!=\!&\frac{\lambda\theta_{r}-(1-\lambda)\theta_{l}}{2(r_{4}-r_{3})}\ln{\frac{4r_{3}}{m(r_{3}+r_{4})^{2}}}
+\!+\!\frac{\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{(r_{1}+r_{2})^{2}}{4r_{1}r_{2}}}
+\!+\!\frac{1}{2(r_{4}-r_{3})}\ln{\frac{1}{r_{3}m}}\\
+&\!+\!\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}\!+\!\frac{[\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}](r_4m-1)+(r_3m-1)}{2(r_{4}-r_{3})}
+-\frac{m}{2}.
+\end{array}
+\end{equation}
+(2)当$m\in(\frac{2}{r_{3}+r_{4}},\frac{1}{r_{3}}]$时,绝对半偏差$\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]$为
+\begin{equation}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]\!=\!&\frac{1-\lambda\theta_{r}+(1-\lambda)\theta_{l}}{2(r_{4}-r_{3})}\ln{\frac{1}{r_3m}}
+\!+\!\frac{\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{(r_{1}+r_{2})^{2}}{4r_{1}r_{2}}}\\
+&\!+\!\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}\!+\!\frac{[1-\lambda\theta_{r}\!+\!(1-\lambda)\theta_{l}](r_3m-1)}{2(r_{4}-r_{3})}\!-\!\frac{m}{2}.
+\end{array}
+\end{equation}
+(3)当$m\in(\frac{1}{r_{3}},\frac{1}{r_{2}}]$时,绝对半偏差$\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]$为
+\begin{equation}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]\!=\!\frac{\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{(r_{1}+r_{2})^{2}}{4r_{1}r_{2}}}
+\!+\!\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}\!-\!\frac{m}{2}.
+\end{array}
+\end{equation}
+(4)当$m\in(\frac{1}{r_{2}},\frac{2}{r_{1}+r_{2}}]$时,绝对半偏差$\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]$为
+\begin{equation}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]\!=\!&\frac{\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{m(r_{1}+r_{2})^{2}}{4r_{1}}}
+\!+\!\frac{1}{2(r_{2}-r_{1})}\ln{\frac{1}{r_{1}m}}\\
+&-\frac{[\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}](r_2m-1)-(r_1m-1)}{2(r_{2}-r_{1})}.
+\end{array}
+\end{equation}
+(5)当$m\in(\frac{2}{r_{1}+r_{2}},\frac{1}{r_{1}}]$时,绝对半偏差$\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]$为
+\begin{equation}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]\!=\!\frac{1+\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{1}{r_{1}m}}
++\frac{[1+\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}](r_1m-1)}{2(r_{2}-r_{1})}.
+\end{array}
+\end{equation}
+\\\em \pf
+假设$\xi=[r_{1}, r_{2}, r_{3}, r_{4}; \theta_l, \theta_r]$是参数区间值梯形模糊变量,
+$\xi^{\lambda}$是$\xi$的$\lambda$的选择变量,
+记跨度参数$\theta=(\theta_l,\theta_r)$,则选择变量$\xi^{\lambda}$的倒数$\frac{1}{{\xi}^{\lambda}}$的参数可能性分布为
+\begin{equation*} 
+\mu_{\frac{1}{{\xi}^{\lambda}}}(x; \theta)=\left\{
+\begin{array}{ll}
+\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](r_4-\frac{1}{x})}{r_4-r_3} , &\mbox{ $\frac{1}{r_4}\leq x \leq \frac{2}{r_3+r_4}$}\\[.2cm]
+\frac{[\lambda\theta_r-(1-\lambda)\theta_l-1]\frac{1}{x}+[(1-\lambda)\theta_l-\lambda\theta_r]r_3+r_4}{r_4-r_3} , &\mbox{ $\frac{2}{r_3+r_4}< x \leq \frac{1}{r_3}$}\\[.2cm]
+1, &\mbox{ $\frac{1}{r_3}< x \leq \frac{1}{r_2}$}\\[.2cm]
+\frac{[1-\lambda\theta_r+(1-\lambda)\theta_l]\frac{1}{x}+[\lambda\theta_r-(1-\lambda)\theta_l]r_2-r_1}{r_2-r_1} ,&\mbox{ $\frac{1}{r_2}< x \leq \frac{2}{r_1+r_2}$}\\[.2cm]
+\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](\frac{1}{x}-r_1)}{r_2-r_1} ,&\mbox{ $\frac{2}{r_1+r_2} < x \leq \frac{1}{r_1}$}.\\[.2cm]
+\end{array}\right.
+\end{equation*}
+
+通过计算可知$\frac{1}{{\xi}^{\lambda}}$的可信性分布函数为如下形式
+\begin{equation} 
+\Cr\{\frac{1}{{\xi}^{\lambda}}\leq x\}=\left\{
+\begin{array}{ll}
+0, &\mbox{ $0< x \leq \frac{1}{r_4}$}\\[.2cm]
+\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](r_4-\frac{1}{x})}{2(r_4-r_3)} , &\mbox{ $\frac{1}{r_4}\leq x \leq \frac{2}{r_3+r_4}$}\\[.2cm]
+\frac{[\lambda\theta_r-(1-\lambda)\theta_l-1]\frac{1}{x}+[(1-\lambda)\theta_l-\lambda\theta_r]r_3+r_4}{2(r_4-r_3)} , &\mbox{ $\frac{2}{r_3+r_4}< x \leq \frac{1}{r_3}$}\\[.2cm]
+\frac{1}{2}, &\mbox{ $\frac{1}{r_3}< x \leq \frac{1}{r_2}$}\\[.2cm]
+1-\frac{[1-\lambda\theta_r+(1-\lambda)\theta_l]\frac{1}{x}+[\lambda\theta_r-(1-\lambda)\theta_l]r_2-r_1}{2(r_2-r_1)} ,&\mbox{ $\frac{1}{r_2}< x \leq \frac{2}{r_1+r_2}$}\\[.2cm]
+1-\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](\frac{1}{x}-r_1)}{2(r_2-r_1)} ,&\mbox{ $\frac{2}{r_1+r_2} < x \leq \frac{1}{r_1}$}\\[.2cm]
+1, &\mbox{ $ x>\frac{1}{r_{1}}$}.\\[.2cm]
+\end{array}\right.
+\end{equation}
+
+根据绝对半偏差的计算公式可得绝对半偏差为\\
+(1)当$m\in[\frac{1}{r_{4}},\frac{2}{r_{3}+r_{4}}]$时,绝对半偏差$\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]$为
+\begin{equation}\label{equation--2}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]&\!=\!\int_{(m,+\infty)} (x\!-\!m) \d\Cr\{\frac{1}{{\xi}^{\lambda}}\leq x\} \\
+&\!=\!\int_{(m,\frac{2}{r_{3}+r_{4}})} (x\!-\!m) \d\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](r_4-\frac{1}{x})}{2(r_4-r_3)} \\
+&\!+\!\int_{(\frac{2}{r_{3}+r_{4}},\frac{1}{r_3})} (x\!-\!m) \d\frac{[\lambda\theta_r-(1-\lambda)\theta_l-1]\frac{1}{x}\!+\![(1-\lambda)\theta_l-\lambda\theta_r]r_3+r_4}{2(r_4-r_3)}\\
+&\!+\!\int_{(\frac{1}{r_2},\frac{2}{r_1+r_2})} (x\!-\!m) \d\Big(1\!-\!\frac{[1-\lambda\theta_r+(1-\lambda)\theta_l]\frac{1}{x}\!+\![\lambda\theta_r-(1-\lambda)\theta_l]r_2-r_1}{2(r_2-r_1)}\Big) \\
+&\!+\!\int_{(\frac{2}{r_1+r_2},\frac{1}{r_1})} (x\!-\!m) \d\Big(1\!-\!\frac{[1+\lambda\theta_r-(1-\lambda)\theta_l](\frac{1}{x}-r_1)}{2(r_2-r_1)}\Big),
+\end{array}
+\end{equation}
+由公式~(\ref{equation--2})可得
+\begin{equation*}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]\!=\!&\frac{\lambda\theta_{r}-(1-\lambda)\theta_{l}}{2(r_{4}-r_{3})}\ln{\frac{4r_{3}}{m(r_{3}+r_{4})^{2}}}
+\!+\!\frac{\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{(r_{1}+r_{2})^{2}}{4r_{1}r_{2}}}
+\!+\!\frac{1}{2(r_{4}-r_{3})}\ln{\frac{1}{r_{3}m}}\\
+&\!+\!\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}\!+\!\frac{[\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}](r_4m-1)+(r_3m-1)}{2(r_{4}-r_{3})}
+-\frac{m}{2}.
+\end{array}
+\end{equation*}
+
+
+同理可有以下计算结果:\\
+(2)当$m\in(\frac{2}{r_{3}+r_{4}},\frac{1}{r_{3}}]$时,绝对半偏差$\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]$为
+\begin{equation*}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]\!=\!&\frac{1-\lambda\theta_{r}+(1-\lambda)\theta_{l}}{2(r_{4}-r_{3})}\ln{\frac{1}{r_3m}}
+\!+\!\frac{\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{(r_{1}+r_{2})^{2}}{4r_{1}r_{2}}}\\
+&\!+\!\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}\!+\!\frac{[1-\lambda\theta_{r}\!+\!(1-\lambda)\theta_{l}](r_3m-1)}{2(r_{4}-r_{3})}\!-\!\frac{m}{2}.
+\end{array}
+\end{equation*}
+(3)当$m\in(\frac{1}{r_{3}},\frac{1}{r_{2}}]$时,绝对半偏差$\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]$为
+\begin{equation*}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]\!=\!\frac{\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{(r_{1}+r_{2})^{2}}{4r_{1}r_{2}}}
+\!+\!\frac{1}{2(r_{2}-r_{1})}\ln{\frac{r_{2}}{r_{1}}}\!-\!\frac{m}{2}.
+\end{array}
+\end{equation*}
+(4)当$m\in(\frac{1}{r_{2}},\frac{2}{r_{1}+r_{2}}]$时,绝对半偏差$\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]$为
+\begin{equation*}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]\!=\!&\frac{\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{m(r_{1}+r_{2})^{2}}{4r_{1}}}
+\!+\!\frac{1}{2(r_{2}-r_{1})}\ln{\frac{1}{r_{1}m}}\\
+&-\frac{[\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}](r_2m-1)-(r_1m-1)}{2(r_{2}-r_{1})}.
+\end{array}
+\end{equation*}
+(5)当$m\in(\frac{2}{r_{1}+r_{2}},\frac{1}{r_{1}}]$时,绝对半偏差$\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]$为
+\begin{equation*}
+\begin{array}{ll}
+\E\left[(\frac{1}{{\xi}^{\lambda}}-m)^{+}\right]\!=\!\frac{1+\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}}{2(r_{2}-r_{1})}\ln{\frac{1}{r_{1}m}}
++\frac{[1+\lambda\theta_{r}\!-\!(1-\lambda)\theta_{l}](r_1m-1)}{2(r_{2}-r_{1})}.
+\end{array}
+\end{equation*}
+
+定理证明完毕.
+\pfd
+\end{theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\JIEZI\zihao{4}\!\!\!数值实验与结果分析
+\label{pg:4.4}}\hskip\parindent
+本节以模型~(\ref{model-4-6})为例进行数值实验来验证所提建模思想及所建模型的有效性.
+首先对研究的库存问题进行了简单的描述,并给出了相关的经济参数值,
+然后分别在可变可能性分布和固定可能性分布下给出了相关的计算结果,
+并对比了两种分布下的最优订购策略及最优目标函数值.该实验是在2.0GHz, 8G内存的计算机上使用Lingo11.0软件进行的.
+
+假定一家服装公司允许提前订购产品,我们以该公司的10种产品为研究对象,下面给出了相关的经济参数值.
+该公司10种产品的单位收益分别为$\textbf{p}$=[10, 11, 12.5, 13, 12, 9.5, 14, 13.5, 12.5, 15],
+该公司10种产品的单位订购成本分别为$\textbf{a}$=[1, 2, 2.5, 1.5, 1.8, 2.2, 2.3, 4.1, 1.9, 2.7],
+该公司10种产品的单位储存成本分别为$\textbf{h}$=[0.55, 0.6, 0.65, 0.71, 0.53, 0.56, 0.68, 0.81, 0.92, 0.5],单位是美元($\$$).
+
+{\JIEZI\zihao{-4}(1)可变可能性分布下的计算结果}
+
+假定不确定需求$\xi_{i}\,(i=1,2,\ldots,10)$ 为参数区间值三角模糊变量
+$(r_{1}^{i},r_{2}^{i},r_{3}^{i};\theta_{l}^{i},\theta_{r}^{i})$,其可能性分布见表~\ref{tabl4-1}.
+
+\begin{table}[!ht]
+\caption{需求$\xi_{i}$的参数区间值三角可能性分布}\label{tabl4-1}
+\begin{center}
+\begin{tabular}{cc|cc}
+\hline
+   产品 & $\xi_{i}$ &产品 & $\xi_{i}$   \\ \hline
+   $1$& $(10,20,30;\theta_{l}^{1},\theta_{r}^{1})$ & $6$ & $(10,15,25;\theta_{l}^{6},\theta_{r}^{6})$ \\
+   $2$& $(20,30,40;\theta_{l}^{2},\theta_{r}^{2})$ & $7$ & $(8,20,30;\theta_{l}^{7},\theta_{r}^{7})$ \\
+   $3$& $(5,15,25;\theta_{l}^{3},\theta_{r}^{3})$ & $8$ & $(15,20,35;\theta_{l}^{8},\theta_{r}^{8})$ \\
+   $4$& $(15,30,45;\theta_{l}^{4},\theta_{r}^{4})$ & $9$ & $(25,35,45;\theta_{l}^{9},\theta_{r}^{9})$  \\
+   $5$& $(9,24,39;\theta_{l}^{5},\theta_{r}^{5})$ & $10$ & $(16,32,40;\theta_{l}^{10},\theta_{r}^{10})$ \\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+假定需求分布的跨度参数$(\theta_{l}^{i},\theta_{r}^{i})$, $i=1,2,\ldots,10$ 取值相同,
+并且我们采用随机生成的方式在区间$[0,1]$随机生成以上跨度参数$(\theta_{l}^{i},\theta_{r}^{i})=(0.1256772,0.2676746)$,
+则由定理~\ref{Theorem4.1}和定理~\ref{Theorem4.3}可得需求倒数的期望值和绝对半偏差值,表~\ref{tabl4-2}中的数据为
+不同选择参数$\lambda$下需求倒数期望值和绝对半偏差值的计算结果.
+\begin{table}[!ht]
+\caption{不同选择参数下的期望值和绝对半偏差值}\label{tabl4-2}
+\begin{center}
+\begin{tabular}{cccccc}
+  \hline
+  $\E[\frac{1}{\bm{\xi}}]$ & $\lambda=0$ & $\lambda=0.25$ & $\lambda=0.5$ & $\lambda=0.75$ & $\lambda=1$  \\  \hline
+  1 & 0.0544  & 0.0548  & 0.0552  & 0.0556  & 0.0560   \\
+  2 & 0.0345  & 0.0346  & 0.0347  & 0.0348  & 0.0349  \\
+  3 & 0.0791  & 0.0802  & 0.0813  & 0.0824  & 0.0835  \\
+  4 & 0.0363  & 0.0366  & 0.0368  & 0.0371  & 0.0373  \\
+  5 & 0.0482  & 0.0487  & 0.0493  & 0.0499  & 0.0504  \\
+  6 & 0.0660  & 0.0661  & 0.0661  & 0.0662  & 0.0663  \\
+  7 & 0.0576  & 0.0583  & 0.0589  & 0.0595  & 0.0602  \\
+  8 & 0.0475  & 0.0474  & 0.0474  & 0.0473  & 0.0473  \\
+  9 & 0.0293  & 0.0294  & 0.0294  & 0.0295  & 0.0296  \\
+ 10 & 0.0352  & 0.0355  & 0.0358  & 0.0361  & 0.0364  \\
+  \hline
+  $\E\Big[\big(\frac{1}{\bm{\xi}}-\E[\frac{1}{\bm{\xi}}]\big)^{+}\Big]$& $\lambda=0$ & $\lambda=0.25$ & $\lambda=0.5$ & $\lambda=0.75$ & $\lambda=1$ \\ \hline
+  1 & 0.0069  & 0.0073  & 0.0077  & 0.0081  & 0.0085    \\
+  2 & 0.0028  & 0.0030  & 0.0031  & 0.0033  & 0.0034  \\
+  3 & 0.0144  & 0.0154  & 0.0163  & 0.0172  & 0.0180  \\
+  4 & 0.0046  & 0.0049  & 0.0051  & 0.0054  & 0.0057  \\
+  5 & 0.0080  & 0.0086  & 0.0091  & 0.0095  & 0.0100  \\
+  6 & 0.0070  & 0.0074  & 0.0078  & 0.0081  & 0.0085  \\
+  7 & 0.0088  & 0.0093  & 0.0099  & 0.0104  & 0.0109  \\
+  8 & 0.0048  & 0.0051  & 0.0053  & 0.0055  & 0.0057  \\
+  9 & 0.0021  & 0.0021  & 0.0022  & 0.0023  & 0.0024  \\
+ 10 & 0.0039  & 0.0041  & 0.0043  & 0.0045  & 0.0047  \\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+假定选取风险度量参数$\gamma=0.5$,则不同选择参数$\lambda$下的最优订购策略及模型~(\ref{model-4-6})的目标值
+ $\E[\pi(\textbf{x},\bm{\xi})]\!-\!\gamma\!\sum_{i=1}^{n}\!\!\rho^{-}\big(\pi_i(x_i,\xi_i)\big)$的计算结果见表~\ref{tabl4-4}.
+\begin{table}[!ht]
+\caption{不同选择参数下的最优订购策略}\label{tabl4-4}
+\begin{center}
+\begin{tabular}{cccccccccccc}
+  \hline
+  选择& \multicolumn{10}{c}{最优订购策略}  &  最大目标 \\ \cline{2-11}
+    参数& $x_{1}$ & $x_{2}$ & $x_{3}$ & $x_{4}$ & $x_{5}$ & $x_{6}$ & $x_{7}$ & $x_{8}$ & $x_{9}$ & $x_{10}$ & 函数值(\$)\\ \hline
+  $\lambda=0$    & 315 & 511 & 223 & 474 & 434 & 244 & 332 & 334 & 448 & 808 & 26029.56 \\
+  $\lambda=0.25$ & 311 & 508 & 218 & 469 & 427 & 243 & 327 & 334 & 446 & 799 & 25781.67 \\
+  $\lambda=0.5$  & 308 & 506 & 215 & 465 & 420 & 242 & 323 & 333 & 445 & 791 & 25559.12 \\
+  $\lambda=0.75$ & 305 & 503 & 211 & 460 & 414 & 242 & 318 & 333 & 443 & 782 & 25325.15 \\
+  $\lambda=1$    & 302 & 501 & 208 & 456 & 409 & 241 & 314 & 332 & 441 & 774 & 25101.85 \\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+{\JIEZI\zihao{-4}(2)固定可能性分布下的计算结果}
+
+在风险度量参数$\gamma=0.5$,选择参数$\lambda=0$且跨度参数$\theta_{l}^{i}=\theta_{r}^{i}=0,i=1,2,\ldots,10$时,
+固定可能性分布下需求倒数的期望值和绝对半偏差的计算结果见表~\ref{tabl4-5}.
+\begin{table}[!ht]
+\caption{固定可能性分布下期望值和绝对半偏差的计算结果}\label{tabl4-5}
+\begin{center}
+\begin{tabular}{cccccc}
+  \hline
+  期望值和 & \multicolumn{5}{c}{产品}  \\ \cline{2-6}
+  绝对半偏差 & 1 & 2 & 3 & 4 & 5 \\ \hline
+  $\E[\frac{1}{\bm{\xi}}]$& 0.0549 & 0.0347 & 0.0805 & 0.0366 & 0.0489  \\
+  $\E\Big[\big(\frac{1}{\bm{\xi}}-\E[\frac{1}{\bm{\xi}}]\big)^{+}\Big]$& 0.0074 & 0.0030 & 0.0156 & 0.0050 & 0.0087 \\
+  \hline
+  期望值和 & \multicolumn{5}{c}{产品}  \\ \cline{2-6}
+  绝对半偏差 & 6 & 7 & 8 & 9 & 10\\ \hline
+  $\E[\frac{1}{\bm{\xi}}]$& 0.0661 & 0.0585 & 0.0474 & 0.0294 & 0.0356 \\
+  $\E\Big[\big(\frac{1}{\bm{\xi}}-\E[\frac{1}{\bm{\xi}}]\big)^{+}\Big]$& 0.0075 & 0.0095 & 0.0051 & 0.0021 & 0.0041\\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+通过使用Lingo软件可得固定可能性分布下模型~(\ref{model-4-6})的最优订购策略$\textbf{x}^{\ast}$=[310, 506, 218, 468, 425, 243, 325, 334, 446, 796],
+风险规避情况下的最大收益为 $\$25720.25$.
+
+根据表~\ref{tabl4-4}给出的计算结果,风险度量参数一定时,比较模型~(\ref{model-4-6})在固定可能性分布和可变参数可能性分布下的最优订购策略和最大收益.
+不确定需求的固定可能性分布是可变可能性分布的一种特殊情况,即跨度参数均为零的情况,因此使用可变可能性分布来描述库存问题中的模糊不确定需求更加全面、灵活.
+
+\section{\JIEZI\zihao{4}\!\!\!本章小结}\label{pg:4.5} 
+%\VSPACEB
+\hskip\parindent
+本章通过可信性理论和L-S积分方法讨论了模糊环境中带有风险的库存问题,并建立了可变可能性分布下风险规避的多产品库存模型.
+首先,在需求不确定的情况下建立了一个以期望收益和绝对半偏差为目标函数的双目标库存模型.
+随后将双目标库存模型转化为三个等价的单目标库存模型.在需求相互独立的条件下给出了绝对半偏差的一些性质
+并得到了具体的等价模型.通过模型分析可知,求解模型的关键在于需求倒数期望值和绝对半偏差值的计算,
+因此我们讨论了在常见参数可能性分布下需求倒数期望值和绝对半偏差的计算公式.
+最后,数值算例演示所提建模思想,并且分析对比了可变可能性分布和固定可能性分布下的数值结果,实验结果说明了所建模型的有效性.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------- 第四章-----第四章------第四章----------------------------------------------------
+
+%----------------------------- 第五章-----第五章------第五章----------------------------------------------------
+
+\newpage
+\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\songti\footnotesize{\zihao{5}河北大学理学硕士学位论文}}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\songti\footnotesize{\zihao{5}第5章\ 结论与展望}}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{
+\centerline{\footnotesize \thepage}
+}
+\def\@oddfoot{
+\centerline{\footnotesize \thepage}
+}
+\setcounter{section}{0}
+%\makeatother 
+\hspace{0.5cm}\\
+\def\oddhead{{\protect\WENXIANMEIZI\hfill 第5章\ \ 结论与展望\hfill}}
+\def\evenhead{{\protect\WENXIANMEIZI\hfill 第5章\ \ 结论与展望\hfill}}
+\centerline{\Large\heiti\zihao{3}\bf 第5章\ \ 结论与展望}\label{pg:5}
+%\VSPACEA
+\vskip 0.5cm 
+\setcounter{mychapter}{5}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{\JIEZI\zihao{4}\!\!\!论文的主要工作及创新点}\label{pg:5.1}
+\hskip\parindent
+库存问题在运筹研究文献中是一个比较经典的研究主题,并且对于许多企业来说也是一个非常重要的决策制定问题.
+在实际的库存问题中,需求、供应等因素通常带有不确定性,因此我们采用可信性理论方法研究模糊环境下的库存问题.
+
+本文首先建立了一个风险中立的多产品库存模型,以最大期望收益为目标,当不确定需求为模糊变量时,
+用可信性优化方法给出模型分析.并在常见可能性分布下讨论了需求倒数的期望值计算公式.
+考虑到不确定性带来的损失风险,论文以期望收益和绝对半偏差风险为目标函数,
+建立了双目标绝对半偏差库存模型.然后给出了一类单目标的最大最小化等价模型,同时分析了其性质.
+在几种常见可能性分布下,给出了关于库存需求倒数的绝对半偏差计算公式.
+同样对于风险规避的多产品单周期库存模型,采用另一种风险度量方法—整体绝对半偏差风险度量方法对其进行研究并加以讨论,建立模型并给出等价模型.
+然后在常见参数可能性分布下讨论了库存需求倒数的期望值和绝对半偏差的计算公式.
+最后通过数值实验说明了建模思想与求解方法的可行性.
+
+本文的主要工作及创新点可以总结如下:
+
+(1) 对于多产品单周期的库存问题建立了可信性优化模型,其中不确定需求由可能性分布函数刻画;
+
+(2) 以绝对半偏差为下行风险度量建立了最大最小化库存模型并分析了其可计算的等价模型;
+ 
+(3) 在常见固定可能性分布和可变参数可能性分布下,讨论了需求关于期望值和绝对半偏差值的性质;
+
+(4) 在数值实验部分,假定需求服从不同类型的可能性分布,表明了多产品需求分布的多样性,
+具有一定的实际意义.
+
+\section{\JIEZI\zihao{4}\!\!\!对今后工作的展望}
+%\VSPACEB
+\label{pg:5.2} \hskip\parindent 
+在研究模糊环境下风险规避的多产品单周期问题中,本论文在第三章和第四章中分别采用了$\max_{1\leq i\leq n}\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)$和
+$\sum_{i=1}^{n}\rho^{-}\Big(\pi_i(x_i,\xi_i)\Big)$作为下行风险度量指标来建立库存模型.在今后的研究中还可以采用其他的风险度量方法来构建模型,
+例如以$\rho^{-}[\pi(\textbf{x},\bm{\xi})]$作为一种下行风险度量指标,则可建立如下双目标模型
+\begin{eqnarray*}\label{model-5-1}
+\qquad &\left\{
+\begin{aligned}
+\max \quad &\E[\pi(\textbf{x},\bm{\xi})]\\
+\min \quad &\rho^{-}[\pi(\textbf{x},\bm{\xi})]\\
+{\rm s.\; t.}\quad &\textbf{x}\geq 0.\\
+\end{aligned}
+\right.
+\end{eqnarray*}
+通过模型分析可将该模型转化为单目标的等价模型在对其进行求解,等价的单目标库存模型如下所示
+\begin{eqnarray*}\label{model-5-2}
+\qquad &\left\{
+\begin{aligned}
+\max \quad & \E[\pi(\textbf{x},\bm{\xi})]-\gamma\rho^{-}[\pi(\textbf{x},\bm{\xi})]\\
+{\rm s.\; t.}\quad & \textbf{x}\geq 0,\\
+\end{aligned}
+\right.
+\end{eqnarray*}
+其中$\gamma$是关于绝对半偏差$\rho^{-}[\pi(\textbf{x},\bm{\xi})]$的风险度量参数.
+
+在本论文中,我们研究的是模糊环境下的多产品库存问题,论文的进一步工作可以对双重不确定环境下的该库存问题进行讨论,
+建立模型并对模型的一些性质加以研究对比.
+同时论文只考虑了一种不确定变量—需求,今后的工作还可以考虑多种不确定变量,如成本、订货周期等.
+另外,论文是在没有缺货损失的情况下研究的该库存问题,考虑到库存问题中的多种情况,
+还可以增加缺货损失这一因素建立新的模型研究其性质.
+
+
+
+%----------------------------- 参考文献-----参考文献------参考文献----------------------------------------------------
+
+\newpage
+\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\footnotesize\hfill
+{\songti\zihao{5}  河北大学理学硕士学位论文}\hfill }}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0) {\footnotesize \hfill
+{\songti\zihao{5} 参考文献}\hfill}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{
+\centerline{\footnotesize\songti\zihao{-5} \thepage} }
+\def\@oddfoot{
+\centerline{\footnotesize\songti\zihao{-5} \thepage} } 
+\makeatother \hspace{12mm}\\
+\centerline{\Large\heiti\zihao{3}\bf 参考文献}\label{pg:ref}
+\newcounter{fig} 
+%\setcounter{mychapter}{6} \setcounter{equation}{0}
+
+\begin{list}{\upshape[\arabic{fig}]}
+{\usecounter{fig}
+\setlength{\labelsep}{0.5cm}\setlength{\labelwidth}{1cm}\setlength{\leftmargin
+}{1.1cm}}\small
+\addtolength{\itemsep}{-0.8em} %调整参考文献间距
+
+\bibitem{LiYongJian2008}
+李勇建, 王辉, 魏灿生. 含有自治复原退货物流的单周期库存问题研究[J]. 管理科学, 2008, 21(4): 8-17.
+
+\bibitem{Halman}
+N. Halman, J. B. Orlin and D. Simchi-Levi. Approximating the nonlinear newsvendor and single-item stochastic lot-sizing problems when data is given by an oracle[J]. 
+Operations Research, 2012, 60(2): 429--446.
+
+\bibitem{Tsao}
+Y. C. Tsao and G. J. Sheen. A multi-item supply chain with credit periods and weight freight cost discounts[J]. International Journal of Production Economics, 2012, 135(1): 106-115.
+
+\bibitem{Akbalik}
+A. Akbalik, B. Penz and C. Rapine. Multi-item uncapacitated lot sizing problem with inventory bounds[J]. Optimization Letters, 2015, 9(1): 143-154.
+
+\bibitem{Rossi}
+R. Rossi, S. Prestwich, S. A. Tarim, et al. Confidence-based optimisation for the newsvendor problem under binomial, poisson and exponential demand[J]. 
+European Journal of Operational Research, 2014, 239(3): 674--684.
+
+\bibitem{Sayin}
+F. Say{\i}n, F. Karaesmen and S. \"{O}zekici. Newsvendor model with random supply and financial hedging: utility-based approach[J]. 
+International Journal of Production Economics , 2014, 154(4): 178--189.
+
+\bibitem{Absi}
+N. Absi, S. Dauz\`{e}re-P\'{e}r\`{e}s, S. Kedad-Sidhoum, et al. The single-item green lot-sizing problem with fixed carbon emissions[J]. 
+European Journal of Operational Research, 2016, 248(3): 849--855.
+
+\bibitem{Borgonovo}
+E. Borgonovo and L Peccati. Financial management in inventory problems: risk averse vs risk neutral policies[J]. 
+International Journal of Production Economics, 2009, 118(1): 233--242.
+
+\bibitem{Shi2011}
+Y. Shi, L. Yao and J. Xu. A probability maximization model based on rough approximation and its application to the inventory problem[J]. 
+International Journal of Approximate Reasoning, 2011, 52(2): 261--280.
+
+\bibitem{Sancak}
+E. Sancak and F. S. Salman. Multi-item dynamic lot-sizing with delayed transportation policy[J]. 
+International Journal of Production Economics, 2011, 131(2): 595--603
+
+\bibitem{Tempelmeier}
+H. Tempelmeier. A column generation heuristic for dynamic capacitated lot sizing with random demand under a fill rate constraint[J]. Omega, 2011, 39(6): 627--633.
+
+\bibitem{Serel}
+D. A. Serel. Multi-item quick response system with budget constraint[J]. International Journal of Production Economics, 2012, 137(2): 235--249.
+
+\bibitem{Li2012}
+Y. Li, Y. Tao and F. Wang. An effective approach to multi-item capacitated dynamic lot-sizing problems[J]. International Journal of Production Research, 2012, 50(19): 1--15.
+
+\bibitem{MengLiJun2013}
+孟丽君, 黄祖庆. 基于退货的单周期替代性两产品的联合库存模型[J]. 系统管理学报, 2013, 22(5): 629--639.
+
+\bibitem{Mousavi}
+S. M. Mousavi, V. Hajipour, S. T. A Niaki, et al. Optimizing multi-item multi-period inventory control system with discounted cash flow and inflation: 
+two calibrated meta-heuristic algorithms[J]. Applied Mathematical Modelling, 2013, 37(4): 2241--2256.
+
+\bibitem{ChenJie2015}
+陈杰, 陈志祥. 具有多元马氏需求的多产品多阶段库存优化模型[J]. 中国管理科学, 2015, 23(5): 151--160.
+
+
+
+\bibitem{Taleizadeh}
+A. A. Taleizadeh, F. Barzinpour and H. M Wee. Meta-heuristic algorithms for solving a fuzzy single-period problem[J]. Mathematical and Computer Modelling, 2011, 54(5-6): 1273--1285.
+
+\bibitem{Baykasoglu}
+A. Baykasoglu and T. Gocken. Solving fully fuzzy mathematical programming model of EOQ problem with a direct approach based on fuzzy ranking and PSO[J]. 
+Journal of Intelligent and Fuzzy Systems, 2011, 22(5): 237--251.
+
+\bibitem{Chen2011}
+S. P. Chen and Y. H. Ho. Analysis of the newsboy problem with fuzzy demands and incremental discounts[J]. International Journal of Production Economics, 2011, 129(1): 169--177.
+
+\bibitem{Bjork}
+K. M. Bjork. A multi-item fuzzy economic production quantity problem with a finite production rate[J]. International Journal of Production Economics, 2012, 135(2): 702--707.
+
+\bibitem{Dutta}
+D. Dutta and P. Kumar. Application of fuzzy goal programming approach to multi-objective linear fractional inventory model[J]. 
+International Journal of Systems Science, 2013, 46(12): 1--10.
+
+\bibitem{Nia}
+A. R. Nia, M. H. Far, and S.T.A. Niaki. A fuzzy vendor managed inventory of multi-item economic order quantity model under shortage: an ant colony optimization algorithm[J]. 
+International Journal of Production Economics, 2014, 155: 259--271.
+
+\bibitem{Jana}
+D. K. Jana, B. Das and M. Maiti. Multi-item partial backlogging inventory models over random planninghorizon in random fuzzy environment[J]. Applied Soft Computing, 2014, 21(3): 12--27.
+
+\bibitem{Sadeghi}
+J. Sadeghi, S. T. A. Niaki, M. R. Malekian, et al. Optimising multi-item economic production quantity model with trapezoidal fuzzy demand and backordering: two tuned meta-heuristics[J]. 
+European Journal of Industrial Engineering, 2016, 10(2): 170--195.
+
+\bibitem{Ben-Tal}
+A. Ben-Tal, D. Den Hertog, A. De Waegenaere, et al. Robust solutions of optimization problems affected by uncertain probabilities[J]. Management Science, 2011, 59(2): 341--357.
+
+\bibitem{Klabjan}
+D. Klabjan, D. Simchi-Levi and M. Song. Robust stochastic lot-sizing by means of histograms[J]. Production and Operations Management, 2013, 22(3): 691--710.
+
+\bibitem{SunCaiHong2014}
+孙彩虹. 部分信息下联合鲁棒定价、订货决策的报童模型[J]. 系统工程理论与实践, 2014(5): 1122--1130.
+
+\bibitem{Olivares-Nadal}
+A. V. Olivares-Nadal, E. Carrizosa and P. Ram\'{u}rez-Cobo. Robust newsvendor problem with autoregressive demand[J]. Computers and Operations Research, 2016, 68: 123--133.
+
+\bibitem{Herweg}
+F. Herweg. The expectation-based loss-averse newsvendor[J]. Economics Letters, 2013, 120(3): 429--432.
+
+\bibitem{Katariya}
+A. P. Katariya, S. Cetinkaya and E. Tekin. On the comparison of risk-neutral and risk-averse newsvendor problems[J]. 
+Journal of the Operational Research Society, 2014, 65(7): 1090--1107.
+
+\bibitem{Choi}
+S. Choi and K. Park. A risk-averse inventory model with markovian purchasing costs[J]. Mathematical Problems in Engineering, 2015, 2015: 1--9.
+
+\bibitem{Liu and Wang}
+刘彦奎, 王曙明. 模糊随机优化理论[M]. 北京: 中国农业大学出版社, 2007.
+
+\bibitem{Liu2013}
+刘彦奎, 陈艳菊, 刘颖, 等. 模糊优化方法与应用[M]. 北京: 科学出版社, 2013.
+
+\bibitem{Liu2014}
+Y. K. Liu and Y. Liu. Measure generated by joint credibility distribution function[J]. Journal of Uncertain Systems, 2014, 8(3): 239--240. 
+
+\bibitem{Klir1999} 
+G. J. Klir. On fuzzy-set interpretation of possibility theory[J]. Fuzzy Sets and Systems, 1999, 108(3): 263--273.
+
+\bibitem{Liu2002}
+B. Liu, and Y. K. Liu. Expected value of fuzzy variable and fuzzy expected value models[J]. IEEE Transaction on Fuzzy System, 2002, 10(4): 445--450.
+
+\bibitem{Liu2006}  
+B. Liu. A survey of credibility theory[J]. Fuzzy Optimization and Decision, 2006, 5: 387-408.
+
+\bibitem{Wang1982}  
+P. Wang. Fuzzy contactability and fuzzy variables[J]. Fuzzy Sets and Systems, 1982, 8(1): 81--92.
+
+
+\bibitem{Nahmias1978} 
+S. Nahmias. Fuzzy variables. Fuzzy Sets and Systems[J], 1978, 1: 97--101.
+
+\bibitem{Chen2012}
+Y. Chen, Y. Liu and X. Wu. A new risk criterion in fuzzy environment and its application[J]. Applied Mathematical Modelling, 2012, 36(7): 3007--3028.
+
+\bibitem{LiuGao2007}
+Y. K. Liu and J. Gao. The independent of fuzzy variables with applications to fuzzy random optimization[J]. 
+International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems, 2007, 15(2): 1--20.
+
+
+
+%\vspace{-3mm}\bibitem{Liu2005}
+%Y. Liu. Fuzzy programming with resource[J]. International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems, 2005, 13: 381--413.
+
+\bibitem{Liu2003}
+Y. K. Liu and B. Liu. Expected value operator of random fuzzy variable and random fuzzy expected value models[J]. 
+International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems, 2003, 11(2): 195--216.
+
+
+
+
+
+\end{list}
+
+
+%----------------------------- 参考文献-----参考文献------参考文献----------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%----------------------------- 致谢-----致谢------致谢----------------------------------------------------
+\newpage
+\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\zihao{5}河北大学理学硕士学位论文}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0) {\footnotesize \zihao{5}\ 致~~~~谢}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\hspace{12mm}\\
+\centerline {\Large\heiti\zihao{3}\bf 致~~~谢}\label{pg:thanks}\\
+\par 
+在学位论文完成之际,衷心感谢我的导师刘彦奎教授在我的研究生学习期间给予的悉心指导和帮助. 
+     
+感谢母校河北大学对我多年的培养, 是她为我提供了宁静的学习与研究环境, 
+使我可以静下心来做自己喜欢做的事情, 而不受到外面纷繁喧闹的世界的干扰.
+
+此外, 我还要感谢和我一起学习生活的师兄、师姐、师弟、师妹和同学, 他
+们在学习和生活上都给予了我很大的帮助, 在此表示诚挚的谢意.
+     
+最后, 感谢我的家人, 正是他们的关心、支持、理解和鼓励, 
+才使我得以全身心地投入到学习和研究中.
+     
+本文的研究工作得到了“国家自然科学基金项目”,项目名称:不确定性平衡优化理论及其应用
+\!\!（\!\!\!\!\!批准号:\!\!61374184\!\!\!）的资助, 特此致谢.
+
+
+
+%----------------------------- 致谢-----致谢------致谢----------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-----------------------------攻读学位期间取得的科研成果----------------------------------------------------
+\newpage
+\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\zihao{5}河北大学理学硕士学位论文}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0) {\zihao{5}攻读学位期间取得的科研成果}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{
+\centerline{\footnotesize \thepage} }
+\def\@oddfoot{
+\centerline{\footnotesize \thepage} }
+ \makeatother\hspace{12mm}\\
+\centerline{\Large\heiti\zihao{3}\bf 攻读学位期间取得的科研成果}\label{pg:papers}\\
+
+\begin{itemize}
+\item[{一、}] 已发表的学术论文
+\begin{itemize}
+\item[{[1]}] \textbf{Y. N. Li} and Y. Liu. Optimizing fuzzy multi-item single-period inventory problem under risk-neutral criterion. Journal of Uncertain Systems, 2016, 10(2): 130--141.
+(CiteScore:0.72, SJR:0.462, SNIP:0.726)
+\item[{[2]}] Y. Liu and \textbf{Y. N. Li}. A parametric Sharpe ratio optimization approach for fuzzy portfolio selection problem. Mathematical Problems in Engineering, 2017, 
+Article ID 6279859: 1--17. (SCI/SSCI收录,WOS:000394833200001)
+\end{itemize} 
+\item[{二、}] 主持的科研项目
+\begin{itemize}
+\item[{[1]}] 分布鲁棒的项目投资选择问题研究,河北省研究生创新资助项目(S2016017),经费0.8万元,2016年1月-- 2016年12月.(已结题)
+\end{itemize} 
+\item[{三、}] 参与的学术活动
+\begin{itemize}
+\item[{[1]}] 第五届国际电子商务联合会中国区学术年会暨第四届国际决策科学论坛,青岛,2016年7月. 
+\item[{[2]}] 智能优化与社会计算国际研讨会,长沙,2017年1月.
+\end{itemize} 
+\end{itemize} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\end{document}
+%----------------------------- 个人简历-----个人简历------个人简历----------------------------------------------------
+
+\newpage
+\makeatletter
+\def\@evenhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0){\zihao{5}个人简历}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@oddhead{
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,1)
+\put(7.27,0.4){\makebox(0,0) {\footnotesize \zihao{5}\ 作者简介}}
+{\linethickness{0.8mm}\put(-0.2,0.08){\line(1,0){15}}}
+\put(-0.2,0){\line(1,0){15}}
+\end{picture}
+}
+\def\@evenfoot{
+\centerline{\footnotesize \thepage} }
+\def\@oddfoot{
+\centerline{\footnotesize \thepage} } \setcounter{section}{0}
+\setcounter{section}{0}
+
+\def\oddhead{{\protect\WENXIANMEIZI\hfill
+    作者简介\hfill}}
+\def\evenhead{{\protect\WENXIANMEIZI\hfill
+     作者简介\hfill}}
+\centerline {\Large\heiti\zihao{3}\bf 作\ \ 者\ \ 简\ \ 介}\label{pg:me}
+\VSPACEA \setcounter{mychapter}{2} \setcounter{equation}{0}
+
+李亚男, 女, 汉族, 1990年2月出生于河北省黄骅市.
+
+2010年9月考入河北大学数学与计算机学院, 2014年6月本科毕业并获得理学学士学位.
+
+2014年9月于河北大学数学与信息科学学院攻读运筹学与控制论硕士学位.
+
+导师是刘彦奎教授, 研究方向为最优化理论与方法. 
+在读期间以第一作者身份发表国际期刊论文1篇,以通讯作者身份发表SCI期刊论文1篇.
+
