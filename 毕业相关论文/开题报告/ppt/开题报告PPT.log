@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2018.10.26)  26 JUN 2019 12:47
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2018.10.26)  26 JUN 2019 13:28
 entering extended mode
 **d:/qjx/Paper/毕业相关论文/开题报告/ppt/开题报告PPT
 (d:/qjx/Paper/毕业相关论文/开题报告/ppt/开题报告PPT.tex
@@ -2147,13 +2147,18 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 
 [39
 
-]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 219--219
+] <generate1.png, id=1436, 578.16pt x 430.7292pt>
+File: generate1.png Graphic file (type png)
+ <use generate1.png>
+Package pdftex.def Info: generate1.png used on input line 226.
+(pdftex.def)             Requested size: 231.2599pt x 172.28862pt.
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 226--226
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 219--219
+Overfull \hbox (12.0pt too wide) in paragraph at lines 226--226
 [][]  
  []
 
@@ -2164,13 +2169,18 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 
 [40
 
-]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 219--219
+ <d:/qjx/Paper/毕业相关论文/开题报告/ppt/generate1.png>]
+File: generate1.png Graphic file (type png)
+ <use generate1.png>
+Package pdftex.def Info: generate1.png used on input line 226.
+(pdftex.def)             Requested size: 231.2599pt x 172.28862pt.
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 226--226
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 219--219
+Overfull \hbox (12.0pt too wide) in paragraph at lines 226--226
 [][]  
  []
 
@@ -2182,12 +2192,12 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 [41
 
 ]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 223--223
+Overfull \hbox (12.0pt too wide) in paragraph at lines 231--231
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 223--223
+Overfull \hbox (12.0pt too wide) in paragraph at lines 231--231
 [][]  
  []
 
@@ -2199,12 +2209,12 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 [42
 
 ]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 223--223
+Overfull \hbox (12.0pt too wide) in paragraph at lines 231--231
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 223--223
+Overfull \hbox (12.0pt too wide) in paragraph at lines 231--231
 [][]  
  []
 
@@ -2216,12 +2226,12 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 [43
 
 ]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 227--227
+Overfull \hbox (12.0pt too wide) in paragraph at lines 235--235
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 227--227
+Overfull \hbox (12.0pt too wide) in paragraph at lines 235--235
 [][]  
  []
 
@@ -2233,12 +2243,12 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 [44
 
 ]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 227--227
+Overfull \hbox (12.0pt too wide) in paragraph at lines 235--235
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 227--227
+Overfull \hbox (12.0pt too wide) in paragraph at lines 235--235
 [][]  
  []
 
@@ -2249,18 +2259,13 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 
 [45
 
-] <smote.png, id=1623, 760.8425pt x 373.395pt>
-File: smote.png Graphic file (type png)
- <use smote.png>
-Package pdftex.def Info: smote.png used on input line 235.
-(pdftex.def)             Requested size: 190.21016pt x 93.34851pt.
-
-Overfull \hbox (12.0pt too wide) in paragraph at lines 235--235
+]
+Overfull \hbox (12.0pt too wide) in paragraph at lines 239--239
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 235--235
+Overfull \hbox (12.0pt too wide) in paragraph at lines 239--239
 [][]  
  []
 
@@ -2271,18 +2276,13 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 
 [46
 
- <d:/qjx/Paper/毕业相关论文/开题报告/ppt/smote.png>]
-File: smote.png Graphic file (type png)
- <use smote.png>
-Package pdftex.def Info: smote.png used on input line 235.
-(pdftex.def)             Requested size: 190.21016pt x 93.34851pt.
-
-Overfull \hbox (12.0pt too wide) in paragraph at lines 235--235
+]
+Overfull \hbox (12.0pt too wide) in paragraph at lines 239--239
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 235--235
+Overfull \hbox (12.0pt too wide) in paragraph at lines 239--239
 [][]  
  []
 
@@ -2293,13 +2293,18 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 
 [47
 
-]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 243--243
+] <smote.png, id=1687, 760.8425pt x 373.395pt>
+File: smote.png Graphic file (type png)
+ <use smote.png>
+Package pdftex.def Info: smote.png used on input line 247.
+(pdftex.def)             Requested size: 190.21016pt x 93.34851pt.
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 247--247
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 243--243
+Overfull \hbox (12.0pt too wide) in paragraph at lines 247--247
 [][]  
  []
 
@@ -2310,13 +2315,18 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 
 [48
 
-]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 243--243
+ <d:/qjx/Paper/毕业相关论文/开题报告/ppt/smote.png>]
+File: smote.png Graphic file (type png)
+ <use smote.png>
+Package pdftex.def Info: smote.png used on input line 247.
+(pdftex.def)             Requested size: 190.21016pt x 93.34851pt.
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 247--247
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 243--243
+Overfull \hbox (12.0pt too wide) in paragraph at lines 247--247
 [][]  
  []
 
@@ -2327,13 +2337,13 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 
 [49
 
-] (d:\qjx\Paper\毕业相关论文\开题报告\ppt\开题报告PPT.toc)
-Overfull \hbox (12.0pt too wide) in paragraph at lines 247--247
+]
+Overfull \hbox (12.0pt too wide) in paragraph at lines 255--255
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 247--247
+Overfull \hbox (12.0pt too wide) in paragraph at lines 255--255
 [][]  
  []
 
@@ -2345,12 +2355,12 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 [50
 
 ]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 261--261
+Overfull \hbox (12.0pt too wide) in paragraph at lines 255--255
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 261--261
+Overfull \hbox (12.0pt too wide) in paragraph at lines 255--255
 [][]  
  []
 
@@ -2361,13 +2371,13 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 
 [51
 
-]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 261--261
+] (d:\qjx\Paper\毕业相关论文\开题报告\ppt\开题报告PPT.toc)
+Overfull \hbox (12.0pt too wide) in paragraph at lines 259--259
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 261--261
+Overfull \hbox (12.0pt too wide) in paragraph at lines 259--259
 [][]  
  []
 
@@ -2378,13 +2388,13 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 
 [52
 
-] (d:\qjx\Paper\毕业相关论文\开题报告\ppt\开题报告PPT.toc)
-Overfull \hbox (12.0pt too wide) in paragraph at lines 263--263
+]
+Overfull \hbox (12.0pt too wide) in paragraph at lines 273--273
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 263--263
+Overfull \hbox (12.0pt too wide) in paragraph at lines 273--273
 [][]  
  []
 
@@ -2396,12 +2406,12 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 [53
 
 ]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 272--272
+Overfull \hbox (12.0pt too wide) in paragraph at lines 273--273
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 272--272
+Overfull \hbox (12.0pt too wide) in paragraph at lines 273--273
 [][]  
  []
 
@@ -2412,13 +2422,13 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 
 [54
 
-]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 282--282
+] (d:\qjx\Paper\毕业相关论文\开题报告\ppt\开题报告PPT.toc)
+Overfull \hbox (12.0pt too wide) in paragraph at lines 275--275
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 282--282
+Overfull \hbox (12.0pt too wide) in paragraph at lines 275--275
 [][]  
  []
 
@@ -2430,12 +2440,12 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 [55
 
 ]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 282--282
+Overfull \hbox (12.0pt too wide) in paragraph at lines 284--284
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 282--282
+Overfull \hbox (12.0pt too wide) in paragraph at lines 284--284
 [][]  
  []
 
@@ -2446,13 +2456,13 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 
 [56
 
-] (d:\qjx\Paper\毕业相关论文\开题报告\ppt\开题报告PPT.bbl)
-Overfull \hbox (12.0pt too wide) in paragraph at lines 288--288
+]
+Overfull \hbox (12.0pt too wide) in paragraph at lines 294--294
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 288--288
+Overfull \hbox (12.0pt too wide) in paragraph at lines 294--294
 [][]  
  []
 
@@ -2464,12 +2474,12 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 [57
 
 ]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 288--288
+Overfull \hbox (12.0pt too wide) in paragraph at lines 294--294
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 288--288
+Overfull \hbox (12.0pt too wide) in paragraph at lines 294--294
 [][]  
  []
 
@@ -2480,14 +2490,13 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 
 [58
 
-
-]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 288--288
+] (d:\qjx\Paper\毕业相关论文\开题报告\ppt\开题报告PPT.bbl)
+Overfull \hbox (12.0pt too wide) in paragraph at lines 300--300
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 288--288
+Overfull \hbox (12.0pt too wide) in paragraph at lines 300--300
 [][]  
  []
 
@@ -2498,14 +2507,13 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 
 [59
 
-
 ]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 288--288
+Overfull \hbox (12.0pt too wide) in paragraph at lines 300--300
 [][]  
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 288--288
+Overfull \hbox (12.0pt too wide) in paragraph at lines 300--300
 [][]  
  []
 
@@ -2518,29 +2526,65 @@ Overfull \hbox (48.02875pt too wide) has occurred while \output is active
 
 
 ]
+Overfull \hbox (12.0pt too wide) in paragraph at lines 300--300
+[][]  
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 300--300
+[][]  
+ []
+
+
+Overfull \hbox (48.02875pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] []  
+ []
+
+[61
+
+
+]
+Overfull \hbox (12.0pt too wide) in paragraph at lines 300--300
+[][]  
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 300--300
+[][]  
+ []
+
+
+Overfull \hbox (48.02875pt too wide) has occurred while \output is active
+  [] [] [] [] [] [] []  
+ []
+
+[62
+
+
+]
 \tf@nav=\write6
 \tf@toc=\write7
 \tf@snm=\write8
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 290.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 290.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 302.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 302.
  (d:\qjx\Paper\毕业相关论文\开题报告\ppt\开题报告PPT.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 290.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 290.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 302.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 302.
 Package rerunfilecheck Info: File `开题报告PPT.out' has not changed.
 (rerunfilecheck)             Checksum: E47A8D759E9513004BFF3997771AB9E9;676.
  ) 
 Here is how much of TeX's memory you used:
- 26855 strings out of 495354
- 462359 string characters out of 3183858
- 517571 words of memory out of 3000000
- 29031 multiletter control sequences out of 15000+200000
+ 26866 strings out of 495354
+ 462497 string characters out of 3183858
+ 517723 words of memory out of 3000000
+ 29037 multiletter control sequences out of 15000+200000
  64509 words of font info for 223 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 49i,16n,64p,923b,1866s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 49i,16n,64p,923b,1880s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/windows/Fonts/simsun.ttc><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb>
-Output written on 开题报告PPT.pdf (60 pages, 7677983 bytes).
+Output written on 开题报告PPT.pdf (62 pages, 8198280 bytes).
 PDF statistics:
- 2340 PDF objects out of 2487 (max. 8388607)
- 127 named destinations out of 1000 (max. 500000)
- 434 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2405 PDF objects out of 2487 (max. 8388607)
+ 131 named destinations out of 1000 (max. 500000)
+ 439 words of extra memory for PDF output out of 10000 (max. 10000000)
 

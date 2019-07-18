@@ -214,6 +214,18 @@
     针对这种情况，我们通过生成对抗网络或者变分自编码器，并设计相应的网络结构，训练生成模型用于生成有意义的少数类样本。
 \end{frame}
 
+
+\begin{frame}{主要研究内容1 Demo}\pause
+    \begin{figure}[htbp]
+        \centering    %居中
+        \includegraphics[scale=0.4]{generate1.png}
+        \caption{DCGAN生成的图像}
+    \end{figure}
+   
+
+\end{frame}
+
+
 \begin{frame}{主要研究内容2}\pause
     在对少数类样本进行上采样的过程中，已有的样本采样方法不能保证生成样本的多样性，导致生成的样本和已有的样本过于相似，不能增加有效的信息。为了保证生成样本的多样性，拟采用一个指标（如类内散度最大化）来评价生成样本的多样性，并指导样本的生成。从而可以有效的扩充少数类样本，增加有效的数据信息。
 \end{frame}
